@@ -19,8 +19,8 @@ jobs:
     steps:
       - name: Get schema file
         run: wget https://raw.githubusercontent.com/mdnoble73/aspen-discovery/22.02.00/install/aspen.sql
-      - name: Sleep 1s
-        run: sleep 1
+      - name: Sleep 10s
+        run: sleep 10
       - name: Make build dir
         run: mkdir build 
       - name: List docker containers
