@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       db:
-        image: postgres
+        image: mariadb
         env:
           MARIADB_ROOT_PASSWORD: password
           MARIADB_DATABASE: aspen
@@ -23,7 +23,7 @@ jobs:
       - name: Make build dir
         run: mkdir build 
       - name: Setup DB
-        run: mysql -u root -ppassword -h db < aspen.sql 
+        run: mysql -u root -ppassword -h db aspen < aspen.sql 
       - name: Execute schemaspy
         run: docker run -v "$PWD/build:/output" schemaspy/schemaspy:latest
       - name: Deploy gh-pages
