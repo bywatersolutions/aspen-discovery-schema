@@ -15,8 +15,6 @@ jobs:
         env:
           MARIADB_ROOT_PASSWORD: password
           MARIADB_DATABASE: aspen
-        ports:
-          - 3306:3306
         options: --name mydb
     steps:
       - name: Get schema file
