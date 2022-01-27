@@ -21,6 +21,10 @@ jobs:
         run: wget https://raw.githubusercontent.com/mdnoble73/aspen-discovery/22.02.00/install/aspen.sql
       - name: Sleep 10s
         run: sleep 10
+      - name: Create docker network
+        run: docker network create aspen-net
+      - name: Connect db container to docker network
+        run: docker network connect aspen-net mydb
       - name: Make build dir
         run: mkdir build 
       - name: List docker containers
@@ -28,7 +32,7 @@ jobs:
       - name: Setup DB
         run: docker exec -i mydb sh -c 'exec mysql -uroot -ppassword aspen' < aspen.sql 
       - name: Execute schemaspy
-        run: docker run -v "$PWD/build:/output" schemaspy/schemaspy:latest -t mysql -db aspen -host mydb -port 3306 -u root -p password
+        run: docker run --network aspen-net -v "$PWD/build:/output" schemaspy/schemaspy:latest -t mysql -db aspen -host mydb -port 3306 -u root -p password
       - name: Deploy gh-pages
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         env:
