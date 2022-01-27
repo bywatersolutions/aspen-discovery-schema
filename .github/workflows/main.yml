@@ -15,6 +15,7 @@ jobs:
         env:
           MARIADB_ROOT_PASSWORD: password
           MARIADB_DATABASE: aspen
+        ports: 3306:3306
     steps:
       - name: Get schema file
         run: wget https://raw.githubusercontent.com/mdnoble73/aspen-discovery/22.02.00/install/aspen.sql
