@@ -28,7 +28,7 @@ jobs:
       - name: List docker containers
         run: docker ps
       - name: Setup DB
-        run: docker exec -i mydb sh -c 'exec mysql -uroot -ppassword' < aspen.sql 
+        run: docker exec -i mydb sh -c 'exec mysql -uroot -ppassword -h127.0.0.1' < aspen.sql 
       - name: Execute schemaspy
         run: docker run -v "$PWD/build:/output" schemaspy/schemaspy:latest
       - name: Deploy gh-pages
