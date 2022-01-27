@@ -27,7 +27,7 @@ jobs:
       - name: Execute schemaspy
         run: docker run -v "$PWD/build:/output" schemaspy/schemaspy:latest
       - name: Deploy gh-pages
-        uses: JamesIves/github-pages-deploy-action@master
+        uses: JamesIves/github-pages-deploy-action@v4.2.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           BRANCH: gh-pages
