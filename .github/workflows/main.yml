@@ -32,7 +32,7 @@ jobs:
       - name: Setup DB
         run: docker exec -i mydb sh -c 'exec mysql -uroot -ppassword aspen' < aspen.sql 
       - name: Execute schemaspy
-        run: docker run --network aspen-net -v "$PWD/build:/output" schemaspy/schemaspy:latest -t mariadb -db aspen -host mydb -port 3306 -u root -p password
+        run: docker run --network aspen-net -v "$PWD/build:/output" schemaspy/schemaspy:latest -t mariadb -db aspen -host mydb -port 3306 -u root -p password -noschema 
       - name: Deploy gh-pages
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         env:
