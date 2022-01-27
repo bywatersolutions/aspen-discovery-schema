@@ -1,0 +1,36 @@
+name: Build_Aspen_SchemaSpy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_deploy:
+    name: Build schemaspy document and deploy gh-pages
+    runs-on: ubuntu-latest
+    services:
+      db:
+        image: postgres
+        env:
+          MARIADB_ROOT_PASSWORD: password
+          MARIADB_DATABASE: aspen
+    steps:
+      - name: Get schema file
+        run: wget https://raw.githubusercontent.com/mdnoble73/aspen-discovery/22.02.00/install/aspen.sql
+      - name: Sleep 1s
+        run: sleep 1
+      - name: Make build dir
+        run: mkdir build 
+      - name: Setup DB
+        run: mysql -u root -ppassword -h db < aspen.sql 
+      - name: Execute schemaspy
+        run: java -jar /schemaspy-6.0.0.jar -o ${GITHUB_WORKSPACE}/build -t pgsql -dp /drivers -host db -db petclinic -u petclinic -p petclinic
+      - name: Execute schemaspy
+        run: docker run -v "$PWD/build:/output" schemaspy/schemaspy:latest
+      - name: Deploy gh-pages
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: build
