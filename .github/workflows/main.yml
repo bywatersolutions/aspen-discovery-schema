@@ -24,6 +24,8 @@ jobs:
         run: sleep 1
       - name: Make build dir
         run: mkdir build 
+      - name: List docker containers
+        run: docker ps
       - name: Setup DB
         run: docker exec -i db sh -c 'exec mysql -uroot -ppassword' < aspen.sql 
       - name: Execute schemaspy
