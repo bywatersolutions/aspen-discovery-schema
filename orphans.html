@@ -1,0 +1,1576 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>aspen Database</title>
+        <!-- Tell the browser to be responsive to screen width -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicon.png">
+        <!-- Bootstrap 3.3.5 -->
+        <link rel="stylesheet" href="bower/admin-lte/bootstrap/css/bootstrap.min.css">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="bower/font-awesome/css/font-awesome.min.css">
+        <!-- Ionicons -->
+        <link rel="stylesheet" href="bower/ionicons/css/ionicons.min.css">
+        <!-- DataTables -->
+        <link rel="stylesheet" href="bower/datatables.net-bs/css/dataTables.bootstrap.min.css">
+        <link rel="stylesheet" href="bower/datatables.net-buttons-bs/css/buttons.bootstrap.min.css">
+        <!-- Code Mirror -->
+        <link rel="stylesheet" href="bower/codemirror/codemirror.css">
+        <!-- Fonts -->
+        <link href='fonts/indieflower/indie-flower.css' rel='stylesheet' type='text/css'>
+        <link href='fonts/source-sans-pro/source-sans-pro.css' rel='stylesheet' type='text/css'>
+
+        <!-- Theme style -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/AdminLTE.min.css">
+        <!-- Salvattore -->
+        <link rel="stylesheet" href="bower/salvattore/salvattore.css">
+        <!-- AdminLTE Skins. Choose a skin from the css/skins
+           folder instead of downloading all of them to reduce the load. -->
+        <link rel="stylesheet" href="bower/admin-lte/dist/css/skins/_all-skins.min.css">
+        <!-- SchemaSpy -->
+        <link rel="stylesheet" href="schemaSpy.css">
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="bower/html5shiv/html5shiv.min.js"></script>
+        <script src="bower/respond/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <!-- ADD THE CLASS layout-top-nav TO REMOVE THE SIDEBAR. -->
+    <body class="hold-transition skin-blue layout-top-nav">
+        <div class="wrapper">
+            <header class="main-header">
+                <nav class="navbar navbar-static-top">
+                    <div class="container">
+                        <div class="navbar-header">
+                            <a href="index.html" class="navbar-brand"><b>aspen</b> Database</a>
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
+                        </div>
+
+                        <!-- Collect the nav links, forms, and other content for toggling -->
+                        <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="index.html">Tables <span class="sr-only">(current)</span></a></li>
+                                <li><a href="columns.html" title="All of the columns in the schema">Columns</a></li>
+                                <li><a href="constraints.html" title="Useful for diagnosing error messages that just give constraint name or number">Constraints</a></li>
+                                <li><a href="relationships.html" title="Diagram of table relationships">Relationships</a></li>
+                                <li><a href="orphans.html" title="View of tables with neither parents nor children">Orphan&nbsp;Tables</a></li>
+                                <li><a href="anomalies.html" title="Things that might not be quite right">Anomalies</a></li>
+                                <li><a href="routines.html" title="Procedures and functions">Routines</a></li>
+                            </ul>
+                        </div>
+                        <!-- /.navbar-collapse -->
+                        <!-- Navbar Right Menu -->
+                    </div>
+                    <!-- /.container-fluid -->
+                </nav>
+            </header>
+            <!-- Main content -->
+            <!-- Full Width Column -->
+            <div class="content-wrapper">
+                <!-- Content Header (Page header) -->
+                <section class="content-header">
+                    <h1>Utility Tables</h1>
+                </section>
+                <!-- Main content -->
+                <section class="content">
+                    <div class="box box-primary">
+                        <div class="box-header with-border">
+                            <i class="fa fa-code-fork"></i>
+                            <h3 class="box-title">Orphan Tables</h3>
+                        </div>
+                        <div class="box-body">
+                            <div id="grid" data-columns>
+                                <div class="item">
+                                    <img id="coce_settingsDegreeImg" src="diagrams/orphans/coce_settings.1degree.png" usemap="#coce_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="db_updateDegreeImg" src="diagrams/orphans/db_update.1degree.png" usemap="#db_update" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="dpla_api_settingsDegreeImg" src="diagrams/orphans/dpla_api_settings.1degree.png" usemap="#dpla_api_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_facet_groupsDegreeImg" src="diagrams/orphans/grouped_work_facet_groups.1degree.png" usemap="#grouped_work_facet_groups" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_callnumberDegreeImg" src="diagrams/orphans/indexed_callNumber.1degree.png" usemap="#indexed_callNumber" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_econtentsourceDegreeImg" src="diagrams/orphans/indexed_eContentSource.1degree.png" usemap="#indexed_eContentSource" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_editionDegreeImg" src="diagrams/orphans/indexed_edition.1degree.png" usemap="#indexed_edition" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_formatDegreeImg" src="diagrams/orphans/indexed_format.1degree.png" usemap="#indexed_format" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_format_categoryDegreeImg" src="diagrams/orphans/indexed_format_category.1degree.png" usemap="#indexed_format_category" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_groupedstatusDegreeImg" src="diagrams/orphans/indexed_groupedStatus.1degree.png" usemap="#indexed_groupedStatus" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_itemtypeDegreeImg" src="diagrams/orphans/indexed_itemType.1degree.png" usemap="#indexed_itemType" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_languageDegreeImg" src="diagrams/orphans/indexed_language.1degree.png" usemap="#indexed_language" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_locationcodeDegreeImg" src="diagrams/orphans/indexed_locationCode.1degree.png" usemap="#indexed_locationCode" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_physicaldescriptionDegreeImg" src="diagrams/orphans/indexed_physicalDescription.1degree.png" usemap="#indexed_physicalDescription" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_publicationdateDegreeImg" src="diagrams/orphans/indexed_publicationDate.1degree.png" usemap="#indexed_publicationDate" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_publisherDegreeImg" src="diagrams/orphans/indexed_publisher.1degree.png" usemap="#indexed_publisher" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_shelflocationDegreeImg" src="diagrams/orphans/indexed_shelfLocation.1degree.png" usemap="#indexed_shelfLocation" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_statusDegreeImg" src="diagrams/orphans/indexed_status.1degree.png" usemap="#indexed_status" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_sublocationcodeDegreeImg" src="diagrams/orphans/indexed_subLocationCode.1degree.png" usemap="#indexed_subLocationCode" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="nyt_api_settingsDegreeImg" src="diagrams/orphans/nyt_api_settings.1degree.png" usemap="#nyt_api_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="omdb_settingsDegreeImg" src="diagrams/orphans/omdb_settings.1degree.png" usemap="#omdb_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_rolesDegreeImg" src="diagrams/orphans/user_roles.1degree.png" usemap="#user_roles" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_audienceDegreeImg" src="diagrams/orphans/web_builder_audience.1degree.png" usemap="#web_builder_audience" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_categoryDegreeImg" src="diagrams/orphans/web_builder_category.1degree.png" usemap="#web_builder_category" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="accelerated_reading_isbnDegreeImg" src="diagrams/orphans/accelerated_reading_isbn.1degree.png" usemap="#accelerated_reading_isbn" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="accelerated_reading_subjectDegreeImg" src="diagrams/orphans/accelerated_reading_subject.1degree.png" usemap="#accelerated_reading_subject" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="accelerated_reading_subject_to_titleDegreeImg" src="diagrams/orphans/accelerated_reading_subject_to_title.1degree.png" usemap="#accelerated_reading_subject_to_title" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="author_authoritiesDegreeImg" src="diagrams/orphans/author_authorities.1degree.png" usemap="#author_authorities" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="axis360_scopesDegreeImg" src="diagrams/orphans/axis360_scopes.1degree.png" usemap="#axis360_scopes" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="bad_wordsDegreeImg" src="diagrams/orphans/bad_words.1degree.png" usemap="#bad_words" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="cached_valuesDegreeImg" src="diagrams/orphans/cached_values.1degree.png" usemap="#cached_values" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ebsco_research_starterDegreeImg" src="diagrams/orphans/ebsco_research_starter.1degree.png" usemap="#ebsco_research_starter" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ebsco_research_starter_dismissalsDegreeImg" src="diagrams/orphans/ebsco_research_starter_dismissals.1degree.png" usemap="#ebsco_research_starter_dismissals" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ils_hold_summaryDegreeImg" src="diagrams/orphans/ils_hold_summary.1degree.png" usemap="#ils_hold_summary" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexed_record_sourceDegreeImg" src="diagrams/orphans/indexed_record_source.1degree.png" usemap="#indexed_record_source" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="javascript_snippet_libraryDegreeImg" src="diagrams/orphans/javascript_snippet_library.1degree.png" usemap="#javascript_snippet_library" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="javascript_snippet_locationDegreeImg" src="diagrams/orphans/javascript_snippet_location.1degree.png" usemap="#javascript_snippet_location" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="javascript_snippetsDegreeImg" src="diagrams/orphans/javascript_snippets.1degree.png" usemap="#javascript_snippets" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_cloud_library_scopeDegreeImg" src="diagrams/orphans/library_cloud_library_scope.1degree.png" usemap="#library_cloud_library_scope" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_link_languageDegreeImg" src="diagrams/orphans/library_link_language.1degree.png" usemap="#library_link_language" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_links_accessDegreeImg" src="diagrams/orphans/library_links_access.1degree.png" usemap="#library_links_access" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_open_archives_collectionDegreeImg" src="diagrams/orphans/library_open_archives_collection.1degree.png" usemap="#library_open_archives_collection" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_sideload_scopesDegreeImg" src="diagrams/orphans/library_sideload_scopes.1degree.png" usemap="#library_sideload_scopes" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_web_builder_basic_pageDegreeImg" src="diagrams/orphans/library_web_builder_basic_page.1degree.png" usemap="#library_web_builder_basic_page" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_web_builder_custom_formDegreeImg" src="diagrams/orphans/library_web_builder_custom_form.1degree.png" usemap="#library_web_builder_custom_form" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_web_builder_portal_pageDegreeImg" src="diagrams/orphans/library_web_builder_portal_page.1degree.png" usemap="#library_web_builder_portal_page" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_web_builder_resourceDegreeImg" src="diagrams/orphans/library_web_builder_resource.1degree.png" usemap="#library_web_builder_resource" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_website_indexingDegreeImg" src="diagrams/orphans/library_website_indexing.1degree.png" usemap="#library_website_indexing" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="location_cloud_library_scopeDegreeImg" src="diagrams/orphans/location_cloud_library_scope.1degree.png" usemap="#location_cloud_library_scope" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="location_open_archives_collectionDegreeImg" src="diagrams/orphans/location_open_archives_collection.1degree.png" usemap="#location_open_archives_collection" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="location_sideload_scopesDegreeImg" src="diagrams/orphans/location_sideload_scopes.1degree.png" usemap="#location_sideload_scopes" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="location_website_indexingDegreeImg" src="diagrams/orphans/location_website_indexing.1degree.png" usemap="#location_website_indexing" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="novelist_settingsDegreeImg" src="diagrams/orphans/novelist_settings.1degree.png" usemap="#novelist_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="open_archives_recordDegreeImg" src="diagrams/orphans/open_archives_record.1degree.png" usemap="#open_archives_record" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="placard_dismissalDegreeImg" src="diagrams/orphans/placard_dismissal.1degree.png" usemap="#placard_dismissal" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="placard_languageDegreeImg" src="diagrams/orphans/placard_language.1degree.png" usemap="#placard_language" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="placard_libraryDegreeImg" src="diagrams/orphans/placard_library.1degree.png" usemap="#placard_library" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="placard_locationDegreeImg" src="diagrams/orphans/placard_location.1degree.png" usemap="#placard_location" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="quipu_ecard_settingDegreeImg" src="diagrams/orphans/quipu_ecard_setting.1degree.png" usemap="#quipu_ecard_setting" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="recaptcha_settingsDegreeImg" src="diagrams/orphans/recaptcha_settings.1degree.png" usemap="#recaptcha_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="role_permissionsDegreeImg" src="diagrams/orphans/role_permissions.1degree.png" usemap="#role_permissions" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="rolesDegreeImg" src="diagrams/orphans/roles.1degree.png" usemap="#roles" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="system_message_dismissalDegreeImg" src="diagrams/orphans/system_message_dismissal.1degree.png" usemap="#system_message_dismissal" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="system_message_libraryDegreeImg" src="diagrams/orphans/system_message_library.1degree.png" usemap="#system_message_library" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="system_message_locationDegreeImg" src="diagrams/orphans/system_message_location.1degree.png" usemap="#system_message_location" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="title_authoritiesDegreeImg" src="diagrams/orphans/title_authorities.1degree.png" usemap="#title_authorities" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="variablesDegreeImg" src="diagrams/orphans/variables.1degree.png" usemap="#variables" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_basic_page_accessDegreeImg" src="diagrams/orphans/web_builder_basic_page_access.1degree.png" usemap="#web_builder_basic_page_access" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_basic_page_audienceDegreeImg" src="diagrams/orphans/web_builder_basic_page_audience.1degree.png" usemap="#web_builder_basic_page_audience" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_basic_page_categoryDegreeImg" src="diagrams/orphans/web_builder_basic_page_category.1degree.png" usemap="#web_builder_basic_page_category" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_portal_page_accessDegreeImg" src="diagrams/orphans/web_builder_portal_page_access.1degree.png" usemap="#web_builder_portal_page_access" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_portal_page_audienceDegreeImg" src="diagrams/orphans/web_builder_portal_page_audience.1degree.png" usemap="#web_builder_portal_page_audience" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_portal_page_categoryDegreeImg" src="diagrams/orphans/web_builder_portal_page_category.1degree.png" usemap="#web_builder_portal_page_category" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_resource_audienceDegreeImg" src="diagrams/orphans/web_builder_resource_audience.1degree.png" usemap="#web_builder_resource_audience" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_resource_categoryDegreeImg" src="diagrams/orphans/web_builder_resource_category.1degree.png" usemap="#web_builder_resource_category" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="author_authorityDegreeImg" src="diagrams/orphans/author_authority.1degree.png" usemap="#author_authority" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="author_authority_alternativeDegreeImg" src="diagrams/orphans/author_authority_alternative.1degree.png" usemap="#author_authority_alternative" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="author_enrichmentDegreeImg" src="diagrams/orphans/author_enrichment.1degree.png" usemap="#author_enrichment" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="browse_category_groupDegreeImg" src="diagrams/orphans/browse_category_group.1degree.png" usemap="#browse_category_group" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="browse_category_group_entryDegreeImg" src="diagrams/orphans/browse_category_group_entry.1degree.png" usemap="#browse_category_group_entry" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="browse_category_subcategoriesDegreeImg" src="diagrams/orphans/browse_category_subcategories.1degree.png" usemap="#browse_category_subcategories" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_primary_identifiersDegreeImg" src="diagrams/orphans/grouped_work_primary_identifiers.1degree.png" usemap="#grouped_work_primary_identifiers" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_record_item_urlDegreeImg" src="diagrams/orphans/grouped_work_record_item_url.1degree.png" usemap="#grouped_work_record_item_url" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_scheduled_indexDegreeImg" src="diagrams/orphans/grouped_work_scheduled_index.1degree.png" usemap="#grouped_work_scheduled_index" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="hold_request_confirmationDegreeImg" src="diagrams/orphans/hold_request_confirmation.1degree.png" usemap="#hold_request_confirmation" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="holidayDegreeImg" src="diagrams/orphans/holiday.1degree.png" usemap="#holiday" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_events_settingDegreeImg" src="diagrams/orphans/library_events_setting.1degree.png" usemap="#library_events_setting" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="list_indexing_settingsDegreeImg" src="diagrams/orphans/list_indexing_settings.1degree.png" usemap="#list_indexing_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="merged_grouped_worksDegreeImg" src="diagrams/orphans/merged_grouped_works.1degree.png" usemap="#merged_grouped_works" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="non_holdable_locationsDegreeImg" src="diagrams/orphans/non_holdable_locations.1degree.png" usemap="#non_holdable_locations" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="nongrouped_recordsDegreeImg" src="diagrams/orphans/nongrouped_records.1degree.png" usemap="#nongrouped_records" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="overdrive_api_product_identifiersDegreeImg" src="diagrams/orphans/overdrive_api_product_identifiers.1degree.png" usemap="#overdrive_api_product_identifiers" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="placard_triggerDegreeImg" src="diagrams/orphans/placard_trigger.1degree.png" usemap="#placard_trigger" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ptype_restricted_locationsDegreeImg" src="diagrams/orphans/ptype_restricted_locations.1degree.png" usemap="#ptype_restricted_locations" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="record_filesDegreeImg" src="diagrams/orphans/record_files.1degree.png" usemap="#record_files" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="record_identifiers_to_reloadDegreeImg" src="diagrams/orphans/record_identifiers_to_reload.1degree.png" usemap="#record_identifiers_to_reload" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="scopeDegreeImg" src="diagrams/orphans/scope.1degree.png" usemap="#scope" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="search_stats_newDegreeImg" src="diagrams/orphans/search_stats_new.1degree.png" usemap="#search_stats_new" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="sendgrid_settingsDegreeImg" src="diagrams/orphans/sendgrid_settings.1degree.png" usemap="#sendgrid_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="translation_map_valuesDegreeImg" src="diagrams/orphans/translation_map_values.1degree.png" usemap="#translation_map_values" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="translation_mapsDegreeImg" src="diagrams/orphans/translation_maps.1degree.png" usemap="#translation_maps" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_linkDegreeImg" src="diagrams/orphans/user_link.1degree.png" usemap="#user_link" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_link_blocksDegreeImg" src="diagrams/orphans/user_link_blocks.1degree.png" usemap="#user_link_blocks" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_not_interestedDegreeImg" src="diagrams/orphans/user_not_interested.1degree.png" usemap="#user_not_interested" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_staff_settingsDegreeImg" src="diagrams/orphans/user_staff_settings.1degree.png" usemap="#user_staff_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="worldpay_settingsDegreeImg" src="diagrams/orphans/worldpay_settings.1degree.png" usemap="#worldpay_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="comprise_settingsDegreeImg" src="diagrams/orphans/comprise_settings.1degree.png" usemap="#comprise_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="file_uploadsDegreeImg" src="diagrams/orphans/file_uploads.1degree.png" usemap="#file_uploads" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_more_detailsDegreeImg" src="diagrams/orphans/grouped_work_more_details.1degree.png" usemap="#grouped_work_more_details" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="host_informationDegreeImg" src="diagrams/orphans/host_information.1degree.png" usemap="#host_information" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ils_marc_checksumsDegreeImg" src="diagrams/orphans/ils_marc_checksums.1degree.png" usemap="#ils_marc_checksums" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="location_more_detailsDegreeImg" src="diagrams/orphans/location_more_details.1degree.png" usemap="#location_more_details" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="materials_request_fields_to_displayDegreeImg" src="diagrams/orphans/materials_request_fields_to_display.1degree.png" usemap="#materials_request_fields_to_display" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="millennium_cacheDegreeImg" src="diagrams/orphans/millennium_cache.1degree.png" usemap="#millennium_cache" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="paypal_settingsDegreeImg" src="diagrams/orphans/paypal_settings.1degree.png" usemap="#paypal_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="rbdigital_export_logDegreeImg" src="diagrams/orphans/rbdigital_export_log.1degree.png" usemap="#rbdigital_export_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_portal_pageDegreeImg" src="diagrams/orphans/web_builder_portal_page.1degree.png" usemap="#web_builder_portal_page" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="cloud_library_scopesDegreeImg" src="diagrams/orphans/cloud_library_scopes.1degree.png" usemap="#cloud_library_scopes" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="cron_logDegreeImg" src="diagrams/orphans/cron_log.1degree.png" usemap="#cron_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ebsco_eds_settingsDegreeImg" src="diagrams/orphans/ebsco_eds_settings.1degree.png" usemap="#ebsco_eds_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_alternate_titlesDegreeImg" src="diagrams/orphans/grouped_work_alternate_titles.1degree.png" usemap="#grouped_work_alternate_titles" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_variationDegreeImg" src="diagrams/orphans/grouped_work_variation.1degree.png" usemap="#grouped_work_variation" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="hoopla_record_usageDegreeImg" src="diagrams/orphans/hoopla_record_usage.1degree.png" usemap="#hoopla_record_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ils_volume_infoDegreeImg" src="diagrams/orphans/ils_volume_info.1degree.png" usemap="#ils_volume_info" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_combined_results_sectionDegreeImg" src="diagrams/orphans/library_combined_results_section.1degree.png" usemap="#library_combined_results_section" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="location_combined_results_sectionDegreeImg" src="diagrams/orphans/location_combined_results_section.1degree.png" usemap="#location_combined_results_section" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="materials_request_form_fieldsDegreeImg" src="diagrams/orphans/materials_request_form_fields.1degree.png" usemap="#materials_request_form_fields" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="permissionsDegreeImg" src="diagrams/orphans/permissions.1degree.png" usemap="#permissions" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="rbdigital_magazine_issueDegreeImg" src="diagrams/orphans/rbdigital_magazine_issue.1degree.png" usemap="#rbdigital_magazine_issue" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="rbdigital_magazine_issue_availabilityDegreeImg" src="diagrams/orphans/rbdigital_magazine_issue_availability.1degree.png" usemap="#rbdigital_magazine_issue_availability" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="sessionDegreeImg" src="diagrams/orphans/session.1degree.png" usemap="#session" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="sideload_filesDegreeImg" src="diagrams/orphans/sideload_files.1degree.png" usemap="#sideload_files" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="translationsDegreeImg" src="diagrams/orphans/translations.1degree.png" usemap="#translations" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_axis360_usageDegreeImg" src="diagrams/orphans/user_axis360_usage.1degree.png" usemap="#user_axis360_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_cloud_library_usageDegreeImg" src="diagrams/orphans/user_cloud_library_usage.1degree.png" usemap="#user_cloud_library_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_ebsco_eds_usageDegreeImg" src="diagrams/orphans/user_ebsco_eds_usage.1degree.png" usemap="#user_ebsco_eds_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_hoopla_usageDegreeImg" src="diagrams/orphans/user_hoopla_usage.1degree.png" usemap="#user_hoopla_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_overdrive_usageDegreeImg" src="diagrams/orphans/user_overdrive_usage.1degree.png" usemap="#user_overdrive_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_rbdigital_usageDegreeImg" src="diagrams/orphans/user_rbdigital_usage.1degree.png" usemap="#user_rbdigital_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="website_pagesDegreeImg" src="diagrams/orphans/website_pages.1degree.png" usemap="#website_pages" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="api_usageDegreeImg" src="diagrams/orphans/api_usage.1degree.png" usemap="#api_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="axis360_record_usageDegreeImg" src="diagrams/orphans/axis360_record_usage.1degree.png" usemap="#axis360_record_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="claim_authorship_requestsDegreeImg" src="diagrams/orphans/claim_authorship_requests.1degree.png" usemap="#claim_authorship_requests" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="cloud_library_record_usageDegreeImg" src="diagrams/orphans/cloud_library_record_usage.1degree.png" usemap="#cloud_library_record_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="contentcafe_settingsDegreeImg" src="diagrams/orphans/contentcafe_settings.1degree.png" usemap="#contentcafe_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ebsco_eds_usageDegreeImg" src="diagrams/orphans/ebsco_eds_usage.1degree.png" usemap="#ebsco_eds_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_workDegreeImg" src="diagrams/orphans/grouped_work.1degree.png" usemap="#grouped_work" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="layout_settingsDegreeImg" src="diagrams/orphans/layout_settings.1degree.png" usemap="#layout_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_records_ownedDegreeImg" src="diagrams/orphans/library_records_owned.1degree.png" usemap="#library_records_owned" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="lm_library_calendar_eventsDegreeImg" src="diagrams/orphans/lm_library_calendar_events.1degree.png" usemap="#lm_library_calendar_events" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="lm_library_calendar_settingsDegreeImg" src="diagrams/orphans/lm_library_calendar_settings.1degree.png" usemap="#lm_library_calendar_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="location_hoursDegreeImg" src="diagrams/orphans/location_hours.1degree.png" usemap="#location_hours" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="location_records_ownedDegreeImg" src="diagrams/orphans/location_records_owned.1degree.png" usemap="#location_records_owned" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="materials_request_formatsDegreeImg" src="diagrams/orphans/materials_request_formats.1degree.png" usemap="#materials_request_formats" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="open_archives_record_usageDegreeImg" src="diagrams/orphans/open_archives_record_usage.1degree.png" usemap="#open_archives_record_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="overdrive_record_usageDegreeImg" src="diagrams/orphans/overdrive_record_usage.1degree.png" usemap="#overdrive_record_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ptypeDegreeImg" src="diagrams/orphans/ptype.1degree.png" usemap="#ptype" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="rbdigital_magazine_usageDegreeImg" src="diagrams/orphans/rbdigital_magazine_usage.1degree.png" usemap="#rbdigital_magazine_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="rbdigital_record_usageDegreeImg" src="diagrams/orphans/rbdigital_record_usage.1degree.png" usemap="#rbdigital_record_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="reindex_logDegreeImg" src="diagrams/orphans/reindex_log.1degree.png" usemap="#reindex_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="sideload_record_usageDegreeImg" src="diagrams/orphans/sideload_record_usage.1degree.png" usemap="#sideload_record_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="status_map_valuesDegreeImg" src="diagrams/orphans/status_map_values.1degree.png" usemap="#status_map_values" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="time_to_reshelveDegreeImg" src="diagrams/orphans/time_to_reshelve.1degree.png" usemap="#time_to_reshelve" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="usage_trackingDegreeImg" src="diagrams/orphans/usage_tracking.1degree.png" usemap="#usage_tracking" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_events_usageDegreeImg" src="diagrams/orphans/user_events_usage.1degree.png" usemap="#user_events_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_open_archives_usageDegreeImg" src="diagrams/orphans/user_open_archives_usage.1degree.png" usemap="#user_open_archives_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_sideload_usageDegreeImg" src="diagrams/orphans/user_sideload_usage.1degree.png" usemap="#user_sideload_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_website_usageDegreeImg" src="diagrams/orphans/user_website_usage.1degree.png" usemap="#user_website_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_work_reviewDegreeImg" src="diagrams/orphans/user_work_review.1degree.png" usemap="#user_work_review" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_basic_pageDegreeImg" src="diagrams/orphans/web_builder_basic_page.1degree.png" usemap="#web_builder_basic_page" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_custom_formDegreeImg" src="diagrams/orphans/web_builder_custom_form.1degree.png" usemap="#web_builder_custom_form" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_custom_from_submissionDegreeImg" src="diagrams/orphans/web_builder_custom_from_submission.1degree.png" usemap="#web_builder_custom_from_submission" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_menuDegreeImg" src="diagrams/orphans/web_builder_menu.1degree.png" usemap="#web_builder_menu" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_portal_rowDegreeImg" src="diagrams/orphans/web_builder_portal_row.1degree.png" usemap="#web_builder_portal_row" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="website_page_usageDegreeImg" src="diagrams/orphans/website_page_usage.1degree.png" usemap="#website_page_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="accelerated_reading_settingsDegreeImg" src="diagrams/orphans/accelerated_reading_settings.1degree.png" usemap="#accelerated_reading_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="accelerated_reading_titlesDegreeImg" src="diagrams/orphans/accelerated_reading_titles.1degree.png" usemap="#accelerated_reading_titles" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="amazon_ses_settingsDegreeImg" src="diagrams/orphans/amazon_ses_settings.1degree.png" usemap="#amazon_ses_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="errorsDegreeImg" src="diagrams/orphans/errors.1degree.png" usemap="#errors" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="events_usageDegreeImg" src="diagrams/orphans/events_usage.1degree.png" usemap="#events_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="google_api_settingsDegreeImg" src="diagrams/orphans/google_api_settings.1degree.png" usemap="#google_api_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_display_infoDegreeImg" src="diagrams/orphans/grouped_work_display_info.1degree.png" usemap="#grouped_work_display_info" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="languagesDegreeImg" src="diagrams/orphans/languages.1degree.png" usemap="#languages" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_search_sourceDegreeImg" src="diagrams/orphans/library_search_source.1degree.png" usemap="#library_search_source" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="location_search_sourceDegreeImg" src="diagrams/orphans/location_search_source.1degree.png" usemap="#location_search_source" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="materials_request_statusDegreeImg" src="diagrams/orphans/materials_request_status.1degree.png" usemap="#materials_request_status" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="object_historyDegreeImg" src="diagrams/orphans/object_history.1degree.png" usemap="#object_history" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="overdrive_account_cacheDegreeImg" src="diagrams/orphans/overdrive_account_cache.1degree.png" usemap="#overdrive_account_cache" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="rbdigital_availabilityDegreeImg" src="diagrams/orphans/rbdigital_availability.1degree.png" usemap="#rbdigital_availability" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="staff_membersDegreeImg" src="diagrams/orphans/staff_members.1degree.png" usemap="#staff_members" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="axis360_settingsDegreeImg" src="diagrams/orphans/axis360_settings.1degree.png" usemap="#axis360_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="cloud_library_settingsDegreeImg" src="diagrams/orphans/cloud_library_settings.1degree.png" usemap="#cloud_library_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="marriageDegreeImg" src="diagrams/orphans/marriage.1degree.png" usemap="#marriage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="modulesDegreeImg" src="diagrams/orphans/modules.1degree.png" usemap="#modules" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="propay_settingsDegreeImg" src="diagrams/orphans/propay_settings.1degree.png" usemap="#propay_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="sideload_scopesDegreeImg" src="diagrams/orphans/sideload_scopes.1degree.png" usemap="#sideload_scopes" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="sierra_api_export_logDegreeImg" src="diagrams/orphans/sierra_api_export_log.1degree.png" usemap="#sierra_api_export_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="system_messagesDegreeImg" src="diagrams/orphans/system_messages.1degree.png" usemap="#system_messages" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_list_entryDegreeImg" src="diagrams/orphans/user_list_entry.1degree.png" usemap="#user_list_entry" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_custom_form_fieldDegreeImg" src="diagrams/orphans/web_builder_custom_form_field.1degree.png" usemap="#web_builder_custom_form_field" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="axis360_title_availabilityDegreeImg" src="diagrams/orphans/axis360_title_availability.1degree.png" usemap="#axis360_title_availability" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="cron_process_logDegreeImg" src="diagrams/orphans/cron_process_log.1degree.png" usemap="#cron_process_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="events_spotlightsDegreeImg" src="diagrams/orphans/events_spotlights.1degree.png" usemap="#events_spotlights" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="format_map_valuesDegreeImg" src="diagrams/orphans/format_map_values.1degree.png" usemap="#format_map_values" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="hoopla_settingsDegreeImg" src="diagrams/orphans/hoopla_settings.1degree.png" usemap="#hoopla_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ils_record_usageDegreeImg" src="diagrams/orphans/ils_record_usage.1degree.png" usemap="#ils_record_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ils_recordsDegreeImg" src="diagrams/orphans/ils_records.1degree.png" usemap="#ils_records" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="novelist_dataDegreeImg" src="diagrams/orphans/novelist_data.1degree.png" usemap="#novelist_data" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="nyt_update_logDegreeImg" src="diagrams/orphans/nyt_update_log.1degree.png" usemap="#nyt_update_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="obituaryDegreeImg" src="diagrams/orphans/obituary.1degree.png" usemap="#obituary" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="offline_holdDegreeImg" src="diagrams/orphans/offline_hold.1degree.png" usemap="#offline_hold" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="open_archives_collectionDegreeImg" src="diagrams/orphans/open_archives_collection.1degree.png" usemap="#open_archives_collection" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="overdrive_api_product_availabilityDegreeImg" src="diagrams/orphans/overdrive_api_product_availability.1degree.png" usemap="#overdrive_api_product_availability" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="placardsDegreeImg" src="diagrams/orphans/placards.1degree.png" usemap="#placards" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="searchDegreeImg" src="diagrams/orphans/search.1degree.png" usemap="#search" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="slow_pageDegreeImg" src="diagrams/orphans/slow_page.1degree.png" usemap="#slow_page" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="syndetics_dataDegreeImg" src="diagrams/orphans/syndetics_data.1degree.png" usemap="#syndetics_data" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="translation_termsDegreeImg" src="diagrams/orphans/translation_terms.1degree.png" usemap="#translation_terms" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_messagesDegreeImg" src="diagrams/orphans/user_messages.1degree.png" usemap="#user_messages" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="cloud_library_availabilityDegreeImg" src="diagrams/orphans/cloud_library_availability.1degree.png" usemap="#cloud_library_availability" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="cloud_library_titleDegreeImg" src="diagrams/orphans/cloud_library_title.1degree.png" usemap="#cloud_library_title" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="collection_spotlight_listsDegreeImg" src="diagrams/orphans/collection_spotlight_lists.1degree.png" usemap="#collection_spotlight_lists" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="events_indexing_logDegreeImg" src="diagrams/orphans/events_indexing_log.1degree.png" usemap="#events_indexing_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_recordsDegreeImg" src="diagrams/orphans/grouped_work_records.1degree.png" usemap="#grouped_work_records" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="list_indexing_logDegreeImg" src="diagrams/orphans/list_indexing_log.1degree.png" usemap="#list_indexing_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="slow_ajax_requestDegreeImg" src="diagrams/orphans/slow_ajax_request.1degree.png" usemap="#slow_ajax_request" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="usage_by_ip_addressDegreeImg" src="diagrams/orphans/usage_by_ip_address.1degree.png" usemap="#usage_by_ip_address" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_account_summaryDegreeImg" src="diagrams/orphans/user_account_summary.1degree.png" usemap="#user_account_summary" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_ils_usageDegreeImg" src="diagrams/orphans/user_ils_usage.1degree.png" usemap="#user_ils_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_paymentsDegreeImg" src="diagrams/orphans/user_payments.1degree.png" usemap="#user_payments" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_reading_history_workDegreeImg" src="diagrams/orphans/user_reading_history_work.1degree.png" usemap="#user_reading_history_work" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_resourceDegreeImg" src="diagrams/orphans/web_builder_resource.1degree.png" usemap="#web_builder_resource" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="website_index_logDegreeImg" src="diagrams/orphans/website_index_log.1degree.png" usemap="#website_index_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="website_indexing_settingsDegreeImg" src="diagrams/orphans/website_indexing_settings.1degree.png" usemap="#website_indexing_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="aspen_sitesDegreeImg" src="diagrams/orphans/aspen_sites.1degree.png" usemap="#aspen_sites" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="axis360_titleDegreeImg" src="diagrams/orphans/axis360_title.1degree.png" usemap="#axis360_title" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="bookcover_infoDegreeImg" src="diagrams/orphans/bookcover_info.1degree.png" usemap="#bookcover_info" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="image_uploadsDegreeImg" src="diagrams/orphans/image_uploads.1degree.png" usemap="#image_uploads" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ip_lookupDegreeImg" src="diagrams/orphans/ip_lookup.1degree.png" usemap="#ip_lookup" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="open_archives_export_logDegreeImg" src="diagrams/orphans/open_archives_export_log.1degree.png" usemap="#open_archives_export_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="overdrive_api_product_formatsDegreeImg" src="diagrams/orphans/overdrive_api_product_formats.1degree.png" usemap="#overdrive_api_product_formats" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="rbdigital_magazineDegreeImg" src="diagrams/orphans/rbdigital_magazine.1degree.png" usemap="#rbdigital_magazine" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="rosen_levelup_settingsDegreeImg" src="diagrams/orphans/rosen_levelup_settings.1degree.png" usemap="#rosen_levelup_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="syndetics_settingsDegreeImg" src="diagrams/orphans/syndetics_settings.1degree.png" usemap="#syndetics_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_listDegreeImg" src="diagrams/orphans/user_list.1degree.png" usemap="#user_list" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="axis360_statsDegreeImg" src="diagrams/orphans/axis360_stats.1degree.png" usemap="#axis360_stats" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="cloud_library_export_logDegreeImg" src="diagrams/orphans/cloud_library_export_log.1degree.png" usemap="#cloud_library_export_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="hoopla_export_logDegreeImg" src="diagrams/orphans/hoopla_export_log.1degree.png" usemap="#hoopla_export_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="offline_circulationDegreeImg" src="diagrams/orphans/offline_circulation.1degree.png" usemap="#offline_circulation" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="overdrive_scopesDegreeImg" src="diagrams/orphans/overdrive_scopes.1degree.png" usemap="#overdrive_scopes" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="overdrive_settingsDegreeImg" src="diagrams/orphans/overdrive_settings.1degree.png" usemap="#overdrive_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="rbdigital_titleDegreeImg" src="diagrams/orphans/rbdigital_title.1degree.png" usemap="#rbdigital_title" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="sideload_logDegreeImg" src="diagrams/orphans/sideload_log.1degree.png" usemap="#sideload_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="system_variablesDegreeImg" src="diagrams/orphans/system_variables.1degree.png" usemap="#system_variables" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="axis360_export_logDegreeImg" src="diagrams/orphans/axis360_export_log.1degree.png" usemap="#axis360_export_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_linksDegreeImg" src="diagrams/orphans/library_links.1degree.png" usemap="#library_links" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="overdrive_extract_logDegreeImg" src="diagrams/orphans/overdrive_extract_log.1degree.png" usemap="#overdrive_extract_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="sierra_export_field_mappingDegreeImg" src="diagrams/orphans/sierra_export_field_mapping.1degree.png" usemap="#sierra_export_field_mapping" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="archive_requestsDegreeImg" src="diagrams/orphans/archive_requests.1degree.png" usemap="#archive_requests" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="hoopla_exportDegreeImg" src="diagrams/orphans/hoopla_export.1degree.png" usemap="#hoopla_export" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="redwood_user_contributionDegreeImg" src="diagrams/orphans/redwood_user_contribution.1degree.png" usemap="#redwood_user_contribution" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="browse_categoryDegreeImg" src="diagrams/orphans/browse_category.1degree.png" usemap="#browse_category" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="ils_extract_logDegreeImg" src="diagrams/orphans/ils_extract_log.1degree.png" usemap="#ils_extract_log" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="overdrive_api_product_metadataDegreeImg" src="diagrams/orphans/overdrive_api_product_metadata.1degree.png" usemap="#overdrive_api_product_metadata" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_facetDegreeImg" src="diagrams/orphans/grouped_work_facet.1degree.png" usemap="#grouped_work_facet" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="overdrive_api_productsDegreeImg" src="diagrams/orphans/overdrive_api_products.1degree.png" usemap="#overdrive_api_products" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="overdrive_statsDegreeImg" src="diagrams/orphans/overdrive_stats.1degree.png" usemap="#overdrive_stats" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="collection_spotlightsDegreeImg" src="diagrams/orphans/collection_spotlights.1degree.png" usemap="#collection_spotlights" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="library_records_to_includeDegreeImg" src="diagrams/orphans/library_records_to_include.1degree.png" usemap="#library_records_to_include" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="location_records_to_includeDegreeImg" src="diagrams/orphans/location_records_to_include.1degree.png" usemap="#location_records_to_include" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="greenhouse_cacheDegreeImg" src="diagrams/orphans/greenhouse_cache.1degree.png" usemap="#greenhouse_cache" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="hoopla_scopesDegreeImg" src="diagrams/orphans/hoopla_scopes.1degree.png" usemap="#hoopla_scopes" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="aspen_usageDegreeImg" src="diagrams/orphans/aspen_usage.1degree.png" usemap="#aspen_usage" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_record_itemsDegreeImg" src="diagrams/orphans/grouped_work_record_items.1degree.png" usemap="#grouped_work_record_items" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="web_builder_portal_cellDegreeImg" src="diagrams/orphans/web_builder_portal_cell.1degree.png" usemap="#web_builder_portal_cell" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="account_profilesDegreeImg" src="diagrams/orphans/account_profiles.1degree.png" usemap="#account_profiles" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_holdDegreeImg" src="diagrams/orphans/user_hold.1degree.png" usemap="#user_hold" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="sideloadsDegreeImg" src="diagrams/orphans/sideloads.1degree.png" usemap="#sideloads" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="grouped_work_display_settingsDegreeImg" src="diagrams/orphans/grouped_work_display_settings.1degree.png" usemap="#grouped_work_display_settings" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="materials_requestDegreeImg" src="diagrams/orphans/materials_request.1degree.png" usemap="#materials_request" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="personDegreeImg" src="diagrams/orphans/person.1degree.png" usemap="#person" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="userDegreeImg" src="diagrams/orphans/user.1degree.png" usemap="#user" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="user_checkoutDegreeImg" src="diagrams/orphans/user_checkout.1degree.png" usemap="#user_checkout" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="locationDegreeImg" src="diagrams/orphans/location.1degree.png" usemap="#location" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="indexing_profilesDegreeImg" src="diagrams/orphans/indexing_profiles.1degree.png" usemap="#indexing_profiles" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="themesDegreeImg" src="diagrams/orphans/themes.1degree.png" usemap="#themes" style="max-width:100%;" border="0" align="top">
+                                </div>
+                                <div class="item">
+                                    <img id="libraryDegreeImg" src="diagrams/orphans/library.1degree.png" usemap="#library" style="max-width:100%;" border="0" align="top">
+                                </div>
+                            </div>
+                            <map id="coce_settings" name="coce_settings">
+<area shape="rect" id="node1" href="tables/coce_settings.html" target="_top" title="coce_settings" alt="" coords="5,5,268,133">
+</map><map id="db_update" name="db_update">
+<area shape="rect" id="node1" href="tables/db_update.html" target="_top" title="db_update" alt="" coords="5,5,261,133">
+</map><map id="dpla_api_settings" name="dpla_api_settings">
+<area shape="rect" id="node1" href="tables/dpla_api_settings.html" target="_top" title="dpla_api_settings" alt="" coords="5,5,285,133">
+</map><map id="grouped_work_facet_groups" name="grouped_work_facet_groups">
+<area shape="rect" id="node1" href="tables/grouped_work_facet_groups.html" target="_top" title="grouped_work_facet_groups" alt="" coords="5,5,403,133">
+</map><map id="indexed_callNumber" name="indexed_callNumber">
+<area shape="rect" id="node1" href="tables/indexed_callNumber.html" target="_top" title="indexed_callNumber" alt="" coords="5,5,321,133">
+</map><map id="indexed_eContentSource" name="indexed_eContentSource">
+<area shape="rect" id="node1" href="tables/indexed_eContentSource.html" target="_top" title="indexed_eContentSource" alt="" coords="5,5,355,133">
+</map><map id="indexed_edition" name="indexed_edition">
+<area shape="rect" id="node1" href="tables/indexed_edition.html" target="_top" title="indexed_edition" alt="" coords="5,5,293,133">
+</map><map id="indexed_format" name="indexed_format">
+<area shape="rect" id="node1" href="tables/indexed_format.html" target="_top" title="indexed_format" alt="" coords="5,5,283,133">
+</map><map id="indexed_format_category" name="indexed_format_category">
+<area shape="rect" id="node1" href="tables/indexed_format_category.html" target="_top" title="indexed_format_category" alt="" coords="5,5,359,133">
+</map><map id="indexed_groupedStatus" name="indexed_groupedStatus">
+<area shape="rect" id="node1" href="tables/indexed_groupedStatus.html" target="_top" title="indexed_groupedStatus" alt="" coords="5,5,336,133">
+</map><map id="indexed_itemType" name="indexed_itemType">
+<area shape="rect" id="node1" href="tables/indexed_itemType.html" target="_top" title="indexed_itemType" alt="" coords="5,5,301,133">
+</map><map id="indexed_language" name="indexed_language">
+<area shape="rect" id="node1" href="tables/indexed_language.html" target="_top" title="indexed_language" alt="" coords="5,5,300,133">
+</map><map id="indexed_locationCode" name="indexed_locationCode">
+<area shape="rect" id="node1" href="tables/indexed_locationCode.html" target="_top" title="indexed_locationCode" alt="" coords="5,5,332,133">
+</map><map id="indexed_physicalDescription" name="indexed_physicalDescription">
+<area shape="rect" id="node1" href="tables/indexed_physicalDescription.html" target="_top" title="indexed_physicalDescription" alt="" coords="5,5,393,133">
+</map><map id="indexed_publicationDate" name="indexed_publicationDate">
+<area shape="rect" id="node1" href="tables/indexed_publicationDate.html" target="_top" title="indexed_publicationDate" alt="" coords="5,5,356,133">
+</map><map id="indexed_publisher" name="indexed_publisher">
+<area shape="rect" id="node1" href="tables/indexed_publisher.html" target="_top" title="indexed_publisher" alt="" coords="5,5,303,133">
+</map><map id="indexed_shelfLocation" name="indexed_shelfLocation">
+<area shape="rect" id="node1" href="tables/indexed_shelfLocation.html" target="_top" title="indexed_shelfLocation" alt="" coords="5,5,335,133">
+</map><map id="indexed_status" name="indexed_status">
+<area shape="rect" id="node1" href="tables/indexed_status.html" target="_top" title="indexed_status" alt="" coords="5,5,269,133">
+</map><map id="indexed_subLocationCode" name="indexed_subLocationCode">
+<area shape="rect" id="node1" href="tables/indexed_subLocationCode.html" target="_top" title="indexed_subLocationCode" alt="" coords="5,5,364,133">
+</map><map id="nyt_api_settings" name="nyt_api_settings">
+<area shape="rect" id="node1" href="tables/nyt_api_settings.html" target="_top" title="nyt_api_settings" alt="" coords="5,5,277,133">
+</map><map id="omdb_settings" name="omdb_settings">
+<area shape="rect" id="node1" href="tables/omdb_settings.html" target="_top" title="omdb_settings" alt="" coords="5,5,265,133">
+</map><map id="user_roles" name="user_roles">
+<area shape="rect" id="node1" href="tables/user_roles.html" target="_top" title="user_roles" alt="" coords="5,5,195,133">
+</map><map id="web_builder_audience" name="web_builder_audience">
+<area shape="rect" id="node1" href="tables/web_builder_audience.html" target="_top" title="web_builder_audience" alt="" coords="5,5,333,133">
+</map><map id="web_builder_category" name="web_builder_category">
+<area shape="rect" id="node1" href="tables/web_builder_category.html" target="_top" title="web_builder_category" alt="" coords="5,5,329,133">
+</map><map id="accelerated_reading_isbn" name="accelerated_reading_isbn">
+<area shape="rect" id="node1" href="tables/accelerated_reading_isbn.html" target="_top" title="accelerated_reading_isbn" alt="" coords="5,5,349,163">
+</map><map id="accelerated_reading_subject" name="accelerated_reading_subject">
+<area shape="rect" id="node1" href="tables/accelerated_reading_subject.html" target="_top" title="accelerated_reading_subject" alt="" coords="5,5,383,163">
+</map><map id="accelerated_reading_subject_to_title" name="accelerated_reading_subject_to_title">
+<area shape="rect" id="node1" href="tables/accelerated_reading_subject_to_title.html" target="_top" title="accelerated_reading_subject_to_title" alt="" coords="5,5,403,163">
+</map><map id="author_authorities" name="author_authorities">
+<area shape="rect" id="node1" href="tables/author_authorities.html" target="_top" title="author_authorities" alt="" coords="5,5,311,163">
+</map><map id="axis360_scopes" name="axis360_scopes">
+<area shape="rect" id="node1" href="tables/axis360_scopes.html" target="_top" title="axis360_scopes" alt="" coords="5,5,268,163">
+</map><map id="bad_words" name="bad_words">
+<area shape="rect" id="node1" href="tables/bad_words.html" target="_top" title="bad_words" alt="" coords="5,5,251,163">
+</map><map id="cached_values" name="cached_values">
+<area shape="rect" id="node1" href="tables/cached_values.html" target="_top" title="cached_values" alt="" coords="5,5,297,163">
+</map><map id="ebsco_research_starter" name="ebsco_research_starter">
+<area shape="rect" id="node1" href="tables/ebsco_research_starter.html" target="_top" title="ebsco_research_starter" alt="" coords="5,5,341,163">
+</map><map id="ebsco_research_starter_dismissals" name="ebsco_research_starter_dismissals">
+<area shape="rect" id="node1" href="tables/ebsco_research_starter_dismissals.html" target="_top" title="ebsco_research_starter_dismissals" alt="" coords="5,5,387,163">
+</map><map id="ils_hold_summary" name="ils_hold_summary">
+<area shape="rect" id="node1" href="tables/ils_hold_summary.html" target="_top" title="ils_hold_summary" alt="" coords="5,5,291,163">
+</map><map id="indexed_record_source" name="indexed_record_source">
+<area shape="rect" id="node1" href="tables/indexed_record_source.html" target="_top" title="indexed_record_source" alt="" coords="5,5,339,163">
+</map><map id="javascript_snippet_library" name="javascript_snippet_library">
+<area shape="rect" id="node1" href="tables/javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="5,5,319,163">
+</map><map id="javascript_snippet_location" name="javascript_snippet_location">
+<area shape="rect" id="node1" href="tables/javascript_snippet_location.html" target="_top" title="javascript_snippet_location" alt="" coords="5,5,331,163">
+</map><map id="javascript_snippets" name="javascript_snippets">
+<area shape="rect" id="node1" href="tables/javascript_snippets.html" target="_top" title="javascript_snippets" alt="" coords="5,5,387,163">
+</map><map id="library_cloud_library_scope" name="library_cloud_library_scope">
+<area shape="rect" id="node1" href="tables/library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="5,5,329,163">
+</map><map id="library_link_language" name="library_link_language">
+<area shape="rect" id="node1" href="tables/library_link_language.html" target="_top" title="library_link_language" alt="" coords="5,5,283,163">
+</map><map id="library_links_access" name="library_links_access">
+<area shape="rect" id="node1" href="tables/library_links_access.html" target="_top" title="library_links_access" alt="" coords="5,5,269,163">
+</map><map id="library_open_archives_collection" name="library_open_archives_collection">
+<area shape="rect" id="node1" href="tables/library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="5,5,372,163">
+</map><map id="library_sideload_scopes" name="library_sideload_scopes">
+<area shape="rect" id="node1" href="tables/library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="5,5,301,163">
+</map><map id="library_web_builder_basic_page" name="library_web_builder_basic_page">
+<area shape="rect" id="node1" href="tables/library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="5,5,363,163">
+</map><map id="library_web_builder_custom_form" name="library_web_builder_custom_form">
+<area shape="rect" id="node1" href="tables/library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="5,5,383,163">
+</map><map id="library_web_builder_portal_page" name="library_web_builder_portal_page">
+<area shape="rect" id="node1" href="tables/library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="5,5,371,163">
+</map><map id="library_web_builder_resource" name="library_web_builder_resource">
+<area shape="rect" id="node1" href="tables/library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="5,5,348,163">
+</map><map id="library_website_indexing" name="library_website_indexing">
+<area shape="rect" id="node1" href="tables/library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="5,5,312,163">
+</map><map id="location_cloud_library_scope" name="location_cloud_library_scope">
+<area shape="rect" id="node1" href="tables/location_cloud_library_scope.html" target="_top" title="location_cloud_library_scope" alt="" coords="5,5,341,163">
+</map><map id="location_open_archives_collection" name="location_open_archives_collection">
+<area shape="rect" id="node1" href="tables/location_open_archives_collection.html" target="_top" title="location_open_archives_collection" alt="" coords="5,5,384,163">
+</map><map id="location_sideload_scopes" name="location_sideload_scopes">
+<area shape="rect" id="node1" href="tables/location_sideload_scopes.html" target="_top" title="location_sideload_scopes" alt="" coords="5,5,313,163">
+</map><map id="location_website_indexing" name="location_website_indexing">
+<area shape="rect" id="node1" href="tables/location_website_indexing.html" target="_top" title="location_website_indexing" alt="" coords="5,5,323,163">
+</map><map id="novelist_settings" name="novelist_settings">
+<area shape="rect" id="node1" href="tables/novelist_settings.html" target="_top" title="novelist_settings" alt="" coords="5,5,283,163">
+</map><map id="open_archives_record" name="open_archives_record">
+<area shape="rect" id="node1" href="tables/open_archives_record.html" target="_top" title="open_archives_record" alt="" coords="5,5,329,163">
+</map><map id="placard_dismissal" name="placard_dismissal">
+<area shape="rect" id="node1" href="tables/placard_dismissal.html" target="_top" title="placard_dismissal" alt="" coords="5,5,255,163">
+</map><map id="placard_language" name="placard_language">
+<area shape="rect" id="node1" href="tables/placard_language.html" target="_top" title="placard_language" alt="" coords="5,5,253,163">
+</map><map id="placard_library" name="placard_library">
+<area shape="rect" id="node1" href="tables/placard_library.html" target="_top" title="placard_library" alt="" coords="5,5,233,163">
+</map><map id="placard_location" name="placard_location">
+<area shape="rect" id="node1" href="tables/placard_location.html" target="_top" title="placard_location" alt="" coords="5,5,245,163">
+</map><map id="quipu_ecard_setting" name="quipu_ecard_setting">
+<area shape="rect" id="node1" href="tables/quipu_ecard_setting.html" target="_top" title="quipu_ecard_setting" alt="" coords="5,5,308,163">
+</map><map id="recaptcha_settings" name="recaptcha_settings">
+<area shape="rect" id="node1" href="tables/recaptcha_settings.html" target="_top" title="recaptcha_settings" alt="" coords="5,5,299,163">
+</map><map id="role_permissions" name="role_permissions">
+<area shape="rect" id="node1" href="tables/role_permissions.html" target="_top" title="role_permissions" alt="" coords="5,5,249,163">
+</map><map id="roles" name="roles">
+<area shape="rect" id="node1" href="tables/roles.html" target="_top" title="roles" alt="" coords="5,5,247,163">
+</map><map id="system_message_dismissal" name="system_message_dismissal">
+<area shape="rect" id="node1" href="tables/system_message_dismissal.html" target="_top" title="system_message_dismissal" alt="" coords="5,5,328,163">
+</map><map id="system_message_library" name="system_message_library">
+<area shape="rect" id="node1" href="tables/system_message_library.html" target="_top" title="system_message_library" alt="" coords="5,5,307,163">
+</map><map id="system_message_location" name="system_message_location">
+<area shape="rect" id="node1" href="tables/system_message_location.html" target="_top" title="system_message_location" alt="" coords="5,5,319,163">
+</map><map id="title_authorities" name="title_authorities">
+<area shape="rect" id="node1" href="tables/title_authorities.html" target="_top" title="title_authorities" alt="" coords="5,5,311,163">
+</map><map id="variables" name="variables">
+<area shape="rect" id="node1" href="tables/variables.html" target="_top" title="variables" alt="" coords="5,5,229,163">
+</map><map id="web_builder_basic_page_access" name="web_builder_basic_page_access">
+<area shape="rect" id="node1" href="tables/web_builder_basic_page_access.html" target="_top" title="web_builder_basic_page_access" alt="" coords="5,5,361,163">
+</map><map id="web_builder_basic_page_audience" name="web_builder_basic_page_audience">
+<area shape="rect" id="node1" href="tables/web_builder_basic_page_audience.html" target="_top" title="web_builder_basic_page_audience" alt="" coords="5,5,383,163">
+</map><map id="web_builder_basic_page_category" name="web_builder_basic_page_category">
+<area shape="rect" id="node1" href="tables/web_builder_basic_page_category.html" target="_top" title="web_builder_basic_page_category" alt="" coords="5,5,380,163">
+</map><map id="web_builder_portal_page_access" name="web_builder_portal_page_access">
+<area shape="rect" id="node1" href="tables/web_builder_portal_page_access.html" target="_top" title="web_builder_portal_page_access" alt="" coords="5,5,369,163">
+</map><map id="web_builder_portal_page_audience" name="web_builder_portal_page_audience">
+<area shape="rect" id="node1" href="tables/web_builder_portal_page_audience.html" target="_top" title="web_builder_portal_page_audience" alt="" coords="5,5,391,163">
+</map><map id="web_builder_portal_page_category" name="web_builder_portal_page_category">
+<area shape="rect" id="node1" href="tables/web_builder_portal_page_category.html" target="_top" title="web_builder_portal_page_category" alt="" coords="5,5,388,163">
+</map><map id="web_builder_resource_audience" name="web_builder_resource_audience">
+<area shape="rect" id="node1" href="tables/web_builder_resource_audience.html" target="_top" title="web_builder_resource_audience" alt="" coords="5,5,367,163">
+</map><map id="web_builder_resource_category" name="web_builder_resource_category">
+<area shape="rect" id="node1" href="tables/web_builder_resource_category.html" target="_top" title="web_builder_resource_category" alt="" coords="5,5,364,163">
+</map><map id="author_authority" name="author_authority">
+<area shape="rect" id="node1" href="tables/author_authority.html" target="_top" title="author_authority" alt="" coords="5,5,293,192">
+</map><map id="author_authority_alternative" name="author_authority_alternative">
+<area shape="rect" id="node1" href="tables/author_authority_alternative.html" target="_top" title="author_authority_alternative" alt="" coords="5,5,389,192">
+</map><map id="author_enrichment" name="author_enrichment">
+<area shape="rect" id="node1" href="tables/author_enrichment.html" target="_top" title="author_enrichment" alt="" coords="5,5,312,192">
+</map><map id="browse_category_group" name="browse_category_group">
+<area shape="rect" id="node1" href="tables/browse_category_group.html" target="_top" title="browse_category_group" alt="" coords="5,5,383,192">
+</map><map id="browse_category_group_entry" name="browse_category_group_entry">
+<area shape="rect" id="node1" href="tables/browse_category_group_entry.html" target="_top" title="browse_category_group_entry" alt="" coords="5,5,352,192">
+</map><map id="browse_category_subcategories" name="browse_category_subcategories">
+<area shape="rect" id="node1" href="tables/browse_category_subcategories.html" target="_top" title="browse_category_subcategories" alt="" coords="5,5,461,192">
+</map><map id="grouped_work_primary_identifiers" name="grouped_work_primary_identifiers">
+<area shape="rect" id="node1" href="tables/grouped_work_primary_identifiers.html" target="_top" title="grouped_work_primary_identifiers" alt="" coords="5,5,423,192">
+</map><map id="grouped_work_record_item_url" name="grouped_work_record_item_url">
+<area shape="rect" id="node1" href="tables/grouped_work_record_item_url.html" target="_top" title="grouped_work_record_item_url" alt="" coords="5,5,412,192">
+</map><map id="grouped_work_scheduled_index" name="grouped_work_scheduled_index">
+<area shape="rect" id="node1" href="tables/grouped_work_scheduled_index.html" target="_top" title="grouped_work_scheduled_index" alt="" coords="5,5,384,192">
+</map><map id="hold_request_confirmation" name="hold_request_confirmation">
+<area shape="rect" id="node1" href="tables/hold_request_confirmation.html" target="_top" title="hold_request_confirmation" alt="" coords="5,5,449,192">
+</map><map id="holiday" name="holiday">
+<area shape="rect" id="node1" href="tables/holiday.html" target="_top" title="holiday" alt="" coords="5,5,225,192">
+</map><map id="library_events_setting" name="library_events_setting">
+<area shape="rect" id="node1" href="tables/library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="5,5,324,192">
+</map><map id="list_indexing_settings" name="list_indexing_settings">
+<area shape="rect" id="node1" href="tables/list_indexing_settings.html" target="_top" title="list_indexing_settings" alt="" coords="5,5,344,192">
+</map><map id="merged_grouped_works" name="merged_grouped_works">
+<area shape="rect" id="node1" href="tables/merged_grouped_works.html" target="_top" title="merged_grouped_works" alt="" coords="5,5,376,192">
+</map><map id="non_holdable_locations" name="non_holdable_locations">
+<area shape="rect" id="node1" href="tables/non_holdable_locations.html" target="_top" title="non_holdable_locations" alt="" coords="5,5,335,192">
+</map><map id="nongrouped_records" name="nongrouped_records">
+<area shape="rect" id="node1" href="tables/nongrouped_records.html" target="_top" title="nongrouped_records" alt="" coords="5,5,321,192">
+</map><map id="overdrive_api_product_identifiers" name="overdrive_api_product_identifiers">
+<area shape="rect" id="node1" href="tables/overdrive_api_product_identifiers.html" target="_top" title="overdrive_api_product_identifiers" alt="" coords="5,5,415,192">
+</map><map id="placard_trigger" name="placard_trigger">
+<area shape="rect" id="node1" href="tables/placard_trigger.html" target="_top" title="placard_trigger" alt="" coords="5,5,277,192">
+</map><map id="ptype_restricted_locations" name="ptype_restricted_locations">
+<area shape="rect" id="node1" href="tables/ptype_restricted_locations.html" target="_top" title="ptype_restricted_locations" alt="" coords="5,5,359,192">
+</map><map id="record_files" name="record_files">
+<area shape="rect" id="node1" href="tables/record_files.html" target="_top" title="record_files" alt="" coords="5,5,241,192">
+</map><map id="record_identifiers_to_reload" name="record_identifiers_to_reload">
+<area shape="rect" id="node1" href="tables/record_identifiers_to_reload.html" target="_top" title="record_identifiers_to_reload" alt="" coords="5,5,372,192">
+</map><map id="scope" name="scope">
+<area shape="rect" id="node1" href="tables/scope.html" target="_top" title="scope" alt="" coords="5,5,285,192">
+</map><map id="search_stats_new" name="search_stats_new">
+<area shape="rect" id="node1" href="tables/search_stats_new.html" target="_top" title="search_stats_new" alt="" coords="5,5,296,192">
+</map><map id="sendgrid_settings" name="sendgrid_settings">
+<area shape="rect" id="node1" href="tables/sendgrid_settings.html" target="_top" title="sendgrid_settings" alt="" coords="5,5,296,192">
+</map><map id="translation_map_values" name="translation_map_values">
+<area shape="rect" id="node1" href="tables/translation_map_values.html" target="_top" title="translation_map_values" alt="" coords="5,5,347,192">
+</map><map id="translation_maps" name="translation_maps">
+<area shape="rect" id="node1" href="tables/translation_maps.html" target="_top" title="translation_maps" alt="" coords="5,5,340,192">
+</map><map id="user_link" name="user_link">
+<area shape="rect" id="node1" href="tables/user_link.html" target="_top" title="user_link" alt="" coords="5,5,276,192">
+</map><map id="user_link_blocks" name="user_link_blocks">
+<area shape="rect" id="node1" href="tables/user_link_blocks.html" target="_top" title="user_link_blocks" alt="" coords="5,5,376,192">
+</map><map id="user_not_interested" name="user_not_interested">
+<area shape="rect" id="node1" href="tables/user_not_interested.html" target="_top" title="user_not_interested" alt="" coords="5,5,376,192">
+</map><map id="user_staff_settings" name="user_staff_settings">
+<area shape="rect" id="node1" href="tables/user_staff_settings.html" target="_top" title="user_staff_settings" alt="" coords="5,5,449,192">
+</map><map id="worldpay_settings" name="worldpay_settings">
+<area shape="rect" id="node1" href="tables/worldpay_settings.html" target="_top" title="worldpay_settings" alt="" coords="5,5,293,192">
+</map><map id="comprise_settings" name="comprise_settings">
+<area shape="rect" id="node1" href="tables/comprise_settings.html" target="_top" title="comprise_settings" alt="" coords="5,5,300,221">
+</map><map id="file_uploads" name="file_uploads">
+<area shape="rect" id="node1" href="tables/file_uploads.html" target="_top" title="file_uploads" alt="" coords="5,5,277,221">
+</map><map id="grouped_work_more_details" name="grouped_work_more_details">
+<area shape="rect" id="node1" href="tables/grouped_work_more_details.html" target="_top" title="grouped_work_more_details" alt="" coords="5,5,372,221">
+</map><map id="host_information" name="host_information">
+<area shape="rect" id="node1" href="tables/host_information.html" target="_top" title="host_information" alt="" coords="5,5,295,221">
+</map><map id="ils_marc_checksums" name="ils_marc_checksums">
+<area shape="rect" id="node1" href="tables/ils_marc_checksums.html" target="_top" title="ils_marc_checksums" alt="" coords="5,5,363,221">
+</map><map id="location_more_details" name="location_more_details">
+<area shape="rect" id="node1" href="tables/location_more_details.html" target="_top" title="location_more_details" alt="" coords="5,5,323,221">
+</map><map id="materials_request_fields_to_display" name="materials_request_fields_to_display">
+<area shape="rect" id="node1" href="tables/materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="5,5,491,221">
+</map><map id="millennium_cache" name="millennium_cache">
+<area shape="rect" id="node1" href="tables/millennium_cache.html" target="_top" title="millennium_cache" alt="" coords="5,5,369,221">
+</map><map id="paypal_settings" name="paypal_settings">
+<area shape="rect" id="node1" href="tables/paypal_settings.html" target="_top" title="paypal_settings" alt="" coords="5,5,272,221">
+</map><map id="rbdigital_export_log" name="rbdigital_export_log">
+<area shape="rect" id="node1" href="tables/rbdigital_export_log.html" target="_top" title="rbdigital_export_log" alt="" coords="5,5,392,221">
+</map><map id="web_builder_portal_page" name="web_builder_portal_page">
+<area shape="rect" id="node1" href="tables/web_builder_portal_page.html" target="_top" title="web_builder_portal_page" alt="" coords="5,5,353,221">
+</map><map id="cloud_library_scopes" name="cloud_library_scopes">
+<area shape="rect" id="node1" href="tables/cloud_library_scopes.html" target="_top" title="cloud_library_scopes" alt="" coords="5,5,371,251">
+</map><map id="cron_log" name="cron_log">
+<area shape="rect" id="node1" href="tables/cron_log.html" target="_top" title="cron_log" alt="" coords="5,5,321,251">
+</map><map id="ebsco_eds_settings" name="ebsco_eds_settings">
+<area shape="rect" id="node1" href="tables/ebsco_eds_settings.html" target="_top" title="ebsco_eds_settings" alt="" coords="5,5,299,251">
+</map><map id="grouped_work_alternate_titles" name="grouped_work_alternate_titles">
+<area shape="rect" id="node1" href="tables/grouped_work_alternate_titles.html" target="_top" title="grouped_work_alternate_titles" alt="" coords="5,5,400,251">
+</map><map id="grouped_work_variation" name="grouped_work_variation">
+<area shape="rect" id="node1" href="tables/grouped_work_variation.html" target="_top" title="grouped_work_variation" alt="" coords="5,5,307,251">
+</map><map id="hoopla_record_usage" name="hoopla_record_usage">
+<area shape="rect" id="node1" href="tables/hoopla_record_usage.html" target="_top" title="hoopla_record_usage" alt="" coords="5,5,324,251">
+</map><map id="ils_volume_info" name="ils_volume_info">
+<area shape="rect" id="node1" href="tables/ils_volume_info.html" target="_top" title="ils_volume_info" alt="" coords="5,5,279,251">
+</map><map id="library_combined_results_section" name="library_combined_results_section">
+<area shape="rect" id="node1" href="tables/library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="5,5,445,251">
+</map><map id="location_combined_results_section" name="location_combined_results_section">
+<area shape="rect" id="node1" href="tables/location_combined_results_section.html" target="_top" title="location_combined_results_section" alt="" coords="5,5,457,251">
+</map><map id="materials_request_form_fields" name="materials_request_form_fields">
+<area shape="rect" id="node1" href="tables/materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="5,5,449,251">
+</map><map id="permissions" name="permissions">
+<area shape="rect" id="node1" href="tables/permissions.html" target="_top" title="permissions" alt="" coords="5,5,285,251">
+</map><map id="rbdigital_magazine_issue" name="rbdigital_magazine_issue">
+<area shape="rect" id="node1" href="tables/rbdigital_magazine_issue.html" target="_top" title="rbdigital_magazine_issue" alt="" coords="5,5,355,251">
+</map><map id="rbdigital_magazine_issue_availability" name="rbdigital_magazine_issue_availability">
+<area shape="rect" id="node1" href="tables/rbdigital_magazine_issue_availability.html" target="_top" title="rbdigital_magazine_issue_availability" alt="" coords="5,5,425,251">
+</map><map id="session" name="session">
+<area shape="rect" id="node1" href="tables/session.html" target="_top" title="session" alt="" coords="5,5,341,251">
+</map><map id="sideload_files" name="sideload_files">
+<area shape="rect" id="node1" href="tables/sideload_files.html" target="_top" title="sideload_files" alt="" coords="5,5,264,251">
+</map><map id="translations" name="translations">
+<area shape="rect" id="node1" href="tables/translations.html" target="_top" title="translations" alt="" coords="5,5,253,251">
+</map><map id="user_axis360_usage" name="user_axis360_usage">
+<area shape="rect" id="node1" href="tables/user_axis360_usage.html" target="_top" title="user_axis360_usage" alt="" coords="5,5,311,251">
+</map><map id="user_cloud_library_usage" name="user_cloud_library_usage">
+<area shape="rect" id="node1" href="tables/user_cloud_library_usage.html" target="_top" title="user_cloud_library_usage" alt="" coords="5,5,355,251">
+</map><map id="user_ebsco_eds_usage" name="user_ebsco_eds_usage">
+<area shape="rect" id="node1" href="tables/user_ebsco_eds_usage.html" target="_top" title="user_ebsco_eds_usage" alt="" coords="5,5,332,251">
+</map><map id="user_hoopla_usage" name="user_hoopla_usage">
+<area shape="rect" id="node1" href="tables/user_hoopla_usage.html" target="_top" title="user_hoopla_usage" alt="" coords="5,5,307,251">
+</map><map id="user_overdrive_usage" name="user_overdrive_usage">
+<area shape="rect" id="node1" href="tables/user_overdrive_usage.html" target="_top" title="user_overdrive_usage" alt="" coords="5,5,328,251">
+</map><map id="user_rbdigital_usage" name="user_rbdigital_usage">
+<area shape="rect" id="node1" href="tables/user_rbdigital_usage.html" target="_top" title="user_rbdigital_usage" alt="" coords="5,5,320,251">
+</map><map id="website_pages" name="website_pages">
+<area shape="rect" id="node1" href="tables/website_pages.html" target="_top" title="website_pages" alt="" coords="5,5,272,251">
+</map><map id="api_usage" name="api_usage">
+<area shape="rect" id="node1" href="tables/api_usage.html" target="_top" title="api_usage" alt="" coords="5,5,235,280">
+</map><map id="axis360_record_usage" name="axis360_record_usage">
+<area shape="rect" id="node1" href="tables/axis360_record_usage.html" target="_top" title="axis360_record_usage" alt="" coords="5,5,328,280">
+</map><map id="claim_authorship_requests" name="claim_authorship_requests">
+<area shape="rect" id="node1" href="tables/claim_authorship_requests.html" target="_top" title="claim_authorship_requests" alt="" coords="5,5,439,280">
+</map><map id="cloud_library_record_usage" name="cloud_library_record_usage">
+<area shape="rect" id="node1" href="tables/cloud_library_record_usage.html" target="_top" title="cloud_library_record_usage" alt="" coords="5,5,372,280">
+</map><map id="contentcafe_settings" name="contentcafe_settings">
+<area shape="rect" id="node1" href="tables/contentcafe_settings.html" target="_top" title="contentcafe_settings" alt="" coords="5,5,315,280">
+</map><map id="ebsco_eds_usage" name="ebsco_eds_usage">
+<area shape="rect" id="node1" href="tables/ebsco_eds_usage.html" target="_top" title="ebsco_eds_usage" alt="" coords="5,5,329,280">
+</map><map id="grouped_work" name="grouped_work">
+<area shape="rect" id="node1" href="tables/grouped_work.html" target="_top" title="grouped_work" alt="" coords="5,5,304,280">
+</map><map id="layout_settings" name="layout_settings">
+<area shape="rect" id="node1" href="tables/layout_settings.html" target="_top" title="layout_settings" alt="" coords="5,5,471,280">
+</map><map id="library_records_owned" name="library_records_owned">
+<area shape="rect" id="node1" href="tables/library_records_owned.html" target="_top" title="library_records_owned" alt="" coords="5,5,343,280">
+</map><map id="lm_library_calendar_events" name="lm_library_calendar_events">
+<area shape="rect" id="node1" href="tables/lm_library_calendar_events.html" target="_top" title="lm_library_calendar_events" alt="" coords="5,5,441,280">
+</map><map id="lm_library_calendar_settings" name="lm_library_calendar_settings">
+<area shape="rect" id="node1" href="tables/lm_library_calendar_settings.html" target="_top" title="lm_library_calendar_settings" alt="" coords="5,5,384,280">
+</map><map id="location_hours" name="location_hours">
+<area shape="rect" id="node1" href="tables/location_hours.html" target="_top" title="location_hours" alt="" coords="5,5,275,280">
+</map><map id="location_records_owned" name="location_records_owned">
+<area shape="rect" id="node1" href="tables/location_records_owned.html" target="_top" title="location_records_owned" alt="" coords="5,5,348,280">
+</map><map id="materials_request_formats" name="materials_request_formats">
+<area shape="rect" id="node1" href="tables/materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="5,5,424,280">
+</map><map id="open_archives_record_usage" name="open_archives_record_usage">
+<area shape="rect" id="node1" href="tables/open_archives_record_usage.html" target="_top" title="open_archives_record_usage" alt="" coords="5,5,383,280">
+</map><map id="overdrive_record_usage" name="overdrive_record_usage">
+<area shape="rect" id="node1" href="tables/overdrive_record_usage.html" target="_top" title="overdrive_record_usage" alt="" coords="5,5,345,280">
+</map><map id="ptype" name="ptype">
+<area shape="rect" id="node1" href="tables/ptype.html" target="_top" title="ptype" alt="" coords="5,5,315,280">
+</map><map id="rbdigital_magazine_usage" name="rbdigital_magazine_usage">
+<area shape="rect" id="node1" href="tables/rbdigital_magazine_usage.html" target="_top" title="rbdigital_magazine_usage" alt="" coords="5,5,361,280">
+</map><map id="rbdigital_record_usage" name="rbdigital_record_usage">
+<area shape="rect" id="node1" href="tables/rbdigital_record_usage.html" target="_top" title="rbdigital_record_usage" alt="" coords="5,5,336,280">
+</map><map id="reindex_log" name="reindex_log">
+<area shape="rect" id="node1" href="tables/reindex_log.html" target="_top" title="reindex_log" alt="" coords="5,5,401,280">
+</map><map id="sideload_record_usage" name="sideload_record_usage">
+<area shape="rect" id="node1" href="tables/sideload_record_usage.html" target="_top" title="sideload_record_usage" alt="" coords="5,5,336,280">
+</map><map id="status_map_values" name="status_map_values">
+<area shape="rect" id="node1" href="tables/status_map_values.html" target="_top" title="status_map_values" alt="" coords="5,5,299,280">
+</map><map id="time_to_reshelve" name="time_to_reshelve">
+<area shape="rect" id="node1" href="tables/time_to_reshelve.html" target="_top" title="time_to_reshelve" alt="" coords="5,5,331,280">
+</map><map id="usage_tracking" name="usage_tracking">
+<area shape="rect" id="node1" href="tables/usage_tracking.html" target="_top" title="usage_tracking" alt="" coords="5,5,256,280">
+</map><map id="user_events_usage" name="user_events_usage">
+<area shape="rect" id="node1" href="tables/user_events_usage.html" target="_top" title="user_events_usage" alt="" coords="5,5,297,280">
+</map><map id="user_open_archives_usage" name="user_open_archives_usage">
+<area shape="rect" id="node1" href="tables/user_open_archives_usage.html" target="_top" title="user_open_archives_usage" alt="" coords="5,5,365,280">
+</map><map id="user_sideload_usage" name="user_sideload_usage">
+<area shape="rect" id="node1" href="tables/user_sideload_usage.html" target="_top" title="user_sideload_usage" alt="" coords="5,5,319,280">
+</map><map id="user_website_usage" name="user_website_usage">
+<area shape="rect" id="node1" href="tables/user_website_usage.html" target="_top" title="user_website_usage" alt="" coords="5,5,315,280">
+</map><map id="user_work_review" name="user_work_review">
+<area shape="rect" id="node1" href="tables/user_work_review.html" target="_top" title="user_work_review" alt="" coords="5,5,452,280">
+</map><map id="web_builder_basic_page" name="web_builder_basic_page">
+<area shape="rect" id="node1" href="tables/web_builder_basic_page.html" target="_top" title="web_builder_basic_page" alt="" coords="5,5,415,280">
+</map><map id="web_builder_custom_form" name="web_builder_custom_form">
+<area shape="rect" id="node1" href="tables/web_builder_custom_form.html" target="_top" title="web_builder_custom_form" alt="" coords="5,5,433,280">
+</map><map id="web_builder_custom_from_submission" name="web_builder_custom_from_submission">
+<area shape="rect" id="node1" href="tables/web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="5,5,531,280">
+</map><map id="web_builder_menu" name="web_builder_menu">
+<area shape="rect" id="node1" href="tables/web_builder_menu.html" target="_top" title="web_builder_menu" alt="" coords="5,5,307,280">
+</map><map id="web_builder_portal_row" name="web_builder_portal_row">
+<area shape="rect" id="node1" href="tables/web_builder_portal_row.html" target="_top" title="web_builder_portal_row" alt="" coords="5,5,347,280">
+</map><map id="website_page_usage" name="website_page_usage">
+<area shape="rect" id="node1" href="tables/website_page_usage.html" target="_top" title="website_page_usage" alt="" coords="5,5,329,280">
+</map><map id="accelerated_reading_settings" name="accelerated_reading_settings">
+<area shape="rect" id="node1" href="tables/accelerated_reading_settings.html" target="_top" title="accelerated_reading_settings" alt="" coords="5,5,388,309">
+</map><map id="accelerated_reading_titles" name="accelerated_reading_titles">
+<area shape="rect" id="node1" href="tables/accelerated_reading_titles.html" target="_top" title="accelerated_reading_titles" alt="" coords="5,5,365,309">
+</map><map id="amazon_ses_settings" name="amazon_ses_settings">
+<area shape="rect" id="node1" href="tables/amazon_ses_settings.html" target="_top" title="amazon_ses_settings" alt="" coords="5,5,323,309">
+</map><map id="errors" name="errors">
+<area shape="rect" id="node1" href="tables/errors.html" target="_top" title="errors" alt="" coords="5,5,321,309">
+</map><map id="events_usage" name="events_usage">
+<area shape="rect" id="node1" href="tables/events_usage.html" target="_top" title="events_usage" alt="" coords="5,5,321,309">
+</map><map id="google_api_settings" name="google_api_settings">
+<area shape="rect" id="node1" href="tables/google_api_settings.html" target="_top" title="google_api_settings" alt="" coords="5,5,488,309">
+</map><map id="grouped_work_display_info" name="grouped_work_display_info">
+<area shape="rect" id="node1" href="tables/grouped_work_display_info.html" target="_top" title="grouped_work_display_info" alt="" coords="5,5,372,309">
+</map><map id="languages" name="languages">
+<area shape="rect" id="node1" href="tables/languages.html" target="_top" title="languages" alt="" coords="5,5,361,309">
+</map><map id="library_search_source" name="library_search_source">
+<area shape="rect" id="node1" href="tables/library_search_source.html" target="_top" title="library_search_source" alt="" coords="5,5,407,309">
+</map><map id="location_search_source" name="location_search_source">
+<area shape="rect" id="node1" href="tables/location_search_source.html" target="_top" title="location_search_source" alt="" coords="5,5,419,309">
+</map><map id="materials_request_status" name="materials_request_status">
+<area shape="rect" id="node1" href="tables/materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="5,5,435,309">
+</map><map id="object_history" name="object_history">
+<area shape="rect" id="node1" href="tables/object_history.html" target="_top" title="object_history" alt="" coords="5,5,267,309">
+</map><map id="overdrive_account_cache" name="overdrive_account_cache">
+<area shape="rect" id="node1" href="tables/overdrive_account_cache.html" target="_top" title="overdrive_account_cache" alt="" coords="5,5,433,309">
+</map><map id="rbdigital_availability" name="rbdigital_availability">
+<area shape="rect" id="node1" href="tables/rbdigital_availability.html" target="_top" title="rbdigital_availability" alt="" coords="5,5,388,309">
+</map><map id="staff_members" name="staff_members">
+<area shape="rect" id="node1" href="tables/staff_members.html" target="_top" title="staff_members" alt="" coords="5,5,344,309">
+</map><map id="axis360_settings" name="axis360_settings">
+<area shape="rect" id="node1" href="tables/axis360_settings.html" target="_top" title="axis360_settings" alt="" coords="5,5,396,339">
+</map><map id="cloud_library_settings" name="cloud_library_settings">
+<area shape="rect" id="node1" href="tables/cloud_library_settings.html" target="_top" title="cloud_library_settings" alt="" coords="5,5,396,339">
+</map><map id="marriage" name="marriage">
+<area shape="rect" id="node1" href="tables/marriage.html" target="_top" title="marriage" alt="" coords="5,5,388,339">
+</map><map id="modules" name="modules">
+<area shape="rect" id="node1" href="tables/modules.html" target="_top" title="modules" alt="" coords="5,5,313,339">
+</map><map id="propay_settings" name="propay_settings">
+<area shape="rect" id="node1" href="tables/propay_settings.html" target="_top" title="propay_settings" alt="" coords="5,5,317,339">
+</map><map id="sideload_scopes" name="sideload_scopes">
+<area shape="rect" id="node1" href="tables/sideload_scopes.html" target="_top" title="sideload_scopes" alt="" coords="5,5,379,339">
+</map><map id="sierra_api_export_log" name="sierra_api_export_log">
+<area shape="rect" id="node1" href="tables/sierra_api_export_log.html" target="_top" title="sierra_api_export_log" alt="" coords="5,5,420,339">
+</map><map id="system_messages" name="system_messages">
+<area shape="rect" id="node1" href="tables/system_messages.html" target="_top" title="system_messages" alt="" coords="5,5,375,339">
+</map><map id="user_list_entry" name="user_list_entry">
+<area shape="rect" id="node1" href="tables/user_list_entry.html" target="_top" title="user_list_entry" alt="" coords="5,5,341,339">
+</map><map id="web_builder_custom_form_field" name="web_builder_custom_form_field">
+<area shape="rect" id="node1" href="tables/web_builder_custom_form_field.html" target="_top" title="web_builder_custom_form_field" alt="" coords="5,5,408,339">
+</map><map id="axis360_title_availability" name="axis360_title_availability">
+<area shape="rect" id="node1" href="tables/axis360_title_availability.html" target="_top" title="axis360_title_availability" alt="" coords="5,5,419,368">
+</map><map id="cron_process_log" name="cron_process_log">
+<area shape="rect" id="node1" href="tables/cron_process_log.html" target="_top" title="cron_process_log" alt="" coords="5,5,368,368">
+</map><map id="events_spotlights" name="events_spotlights">
+<area shape="rect" id="node1" href="tables/events_spotlights.html" target="_top" title="events_spotlights" alt="" coords="5,5,421,368">
+</map><map id="format_map_values" name="format_map_values">
+<area shape="rect" id="node1" href="tables/format_map_values.html" target="_top" title="format_map_values" alt="" coords="5,5,388,368">
+</map><map id="hoopla_settings" name="hoopla_settings">
+<area shape="rect" id="node1" href="tables/hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="5,5,507,368">
+</map><map id="ils_record_usage" name="ils_record_usage">
+<area shape="rect" id="node1" href="tables/ils_record_usage.html" target="_top" title="ils_record_usage" alt="" coords="5,5,424,368">
+</map><map id="ils_records" name="ils_records">
+<area shape="rect" id="node1" href="tables/ils_records.html" target="_top" title="ils_records" alt="" coords="5,5,467,368">
+</map><map id="novelist_data" name="novelist_data">
+<area shape="rect" id="node1" href="tables/novelist_data.html" target="_top" title="novelist_data" alt="" coords="5,5,467,368">
+</map><map id="nyt_update_log" name="nyt_update_log">
+<area shape="rect" id="node1" href="tables/nyt_update_log.html" target="_top" title="nyt_update_log" alt="" coords="5,5,355,368">
+</map><map id="obituary" name="obituary">
+<area shape="rect" id="node1" href="tables/obituary.html" target="_top" title="obituary" alt="" coords="5,5,316,368">
+</map><map id="offline_hold" name="offline_hold">
+<area shape="rect" id="node1" href="tables/offline_hold.html" target="_top" title="offline_hold" alt="" coords="5,5,276,368">
+</map><map id="open_archives_collection" name="open_archives_collection">
+<area shape="rect" id="node1" href="tables/open_archives_collection.html" target="_top" title="open_archives_collection" alt="" coords="5,5,423,368">
+</map><map id="overdrive_api_product_availability" name="overdrive_api_product_availability">
+<area shape="rect" id="node1" href="tables/overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="5,5,421,368">
+</map><map id="placards" name="placards">
+<area shape="rect" id="node1" href="tables/placards.html" target="_top" title="placards" alt="" coords="5,5,328,368">
+</map><map id="search" name="search">
+<area shape="rect" id="node1" href="tables/search.html" target="_top" title="search" alt="" coords="5,5,275,368">
+</map><map id="slow_page" name="slow_page">
+<area shape="rect" id="node1" href="tables/slow_page.html" target="_top" title="slow_page" alt="" coords="5,5,281,368">
+</map><map id="syndetics_data" name="syndetics_data">
+<area shape="rect" id="node1" href="tables/syndetics_data.html" target="_top" title="syndetics_data" alt="" coords="5,5,452,368">
+</map><map id="translation_terms" name="translation_terms">
+<area shape="rect" id="node1" href="tables/translation_terms.html" target="_top" title="translation_terms" alt="" coords="5,5,332,368">
+</map><map id="user_messages" name="user_messages">
+<area shape="rect" id="node1" href="tables/user_messages.html" target="_top" title="user_messages" alt="" coords="5,5,344,368">
+</map><map id="cloud_library_availability" name="cloud_library_availability">
+<area shape="rect" id="node1" href="tables/cloud_library_availability.html" target="_top" title="cloud_library_availability" alt="" coords="5,5,424,397">
+</map><map id="cloud_library_title" name="cloud_library_title">
+<area shape="rect" id="node1" href="tables/cloud_library_title.html" target="_top" title="cloud_library_title" alt="" coords="5,5,369,397">
+</map><map id="collection_spotlight_lists" name="collection_spotlight_lists">
+<area shape="rect" id="node1" href="tables/collection_spotlight_lists.html" target="_top" title="collection_spotlight_lists" alt="" coords="5,5,429,397">
+</map><map id="events_indexing_log" name="events_indexing_log">
+<area shape="rect" id="node1" href="tables/events_indexing_log.html" target="_top" title="events_indexing_log" alt="" coords="5,5,393,397">
+</map><map id="grouped_work_records" name="grouped_work_records">
+<area shape="rect" id="node1" href="tables/grouped_work_records.html" target="_top" title="grouped_work_records" alt="" coords="5,5,329,397">
+</map><map id="list_indexing_log" name="list_indexing_log">
+<area shape="rect" id="node1" href="tables/list_indexing_log.html" target="_top" title="list_indexing_log" alt="" coords="5,5,364,397">
+</map><map id="slow_ajax_request" name="slow_ajax_request">
+<area shape="rect" id="node1" href="tables/slow_ajax_request.html" target="_top" title="slow_ajax_request" alt="" coords="5,5,293,397">
+</map><map id="usage_by_ip_address" name="usage_by_ip_address">
+<area shape="rect" id="node1" href="tables/usage_by_ip_address.html" target="_top" title="usage_by_ip_address" alt="" coords="5,5,360,397">
+</map><map id="user_account_summary" name="user_account_summary">
+<area shape="rect" id="node1" href="tables/user_account_summary.html" target="_top" title="user_account_summary" alt="" coords="5,5,355,397">
+</map><map id="user_ils_usage" name="user_ils_usage">
+<area shape="rect" id="node1" href="tables/user_ils_usage.html" target="_top" title="user_ils_usage" alt="" coords="5,5,424,397">
+</map><map id="user_payments" name="user_payments">
+<area shape="rect" id="node1" href="tables/user_payments.html" target="_top" title="user_payments" alt="" coords="5,5,296,397">
+</map><map id="user_reading_history_work" name="user_reading_history_work">
+<area shape="rect" id="node1" href="tables/user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="5,5,371,397">
+</map><map id="web_builder_resource" name="web_builder_resource">
+<area shape="rect" id="node1" href="tables/web_builder_resource.html" target="_top" title="web_builder_resource" alt="" coords="5,5,399,397">
+</map><map id="website_index_log" name="website_index_log">
+<area shape="rect" id="node1" href="tables/website_index_log.html" target="_top" title="website_index_log" alt="" coords="5,5,377,397">
+</map><map id="website_indexing_settings" name="website_indexing_settings">
+<area shape="rect" id="node1" href="tables/website_indexing_settings.html" target="_top" title="website_indexing_settings" alt="" coords="5,5,433,397">
+</map><map id="aspen_sites" name="aspen_sites">
+<area shape="rect" id="node1" href="tables/aspen_sites.html" target="_top" title="aspen_sites" alt="" coords="5,5,337,427">
+</map><map id="axis360_title" name="axis360_title">
+<area shape="rect" id="node1" href="tables/axis360_title.html" target="_top" title="axis360_title" alt="" coords="5,5,369,427">
+</map><map id="bookcover_info" name="bookcover_info">
+<area shape="rect" id="node1" href="tables/bookcover_info.html" target="_top" title="bookcover_info" alt="" coords="5,5,291,427">
+</map><map id="image_uploads" name="image_uploads">
+<area shape="rect" id="node1" href="tables/image_uploads.html" target="_top" title="image_uploads" alt="" coords="5,5,325,427">
+</map><map id="ip_lookup" name="ip_lookup">
+<area shape="rect" id="node1" href="tables/ip_lookup.html" target="_top" title="ip_lookup" alt="" coords="5,5,421,427">
+</map><map id="open_archives_export_log" name="open_archives_export_log">
+<area shape="rect" id="node1" href="tables/open_archives_export_log.html" target="_top" title="open_archives_export_log" alt="" coords="5,5,437,427">
+</map><map id="overdrive_api_product_formats" name="overdrive_api_product_formats">
+<area shape="rect" id="node1" href="tables/overdrive_api_product_formats.html" target="_top" title="overdrive_api_product_formats" alt="" coords="5,5,404,427">
+</map><map id="rbdigital_magazine" name="rbdigital_magazine">
+<area shape="rect" id="node1" href="tables/rbdigital_magazine.html" target="_top" title="rbdigital_magazine" alt="" coords="5,5,376,427">
+</map><map id="rosen_levelup_settings" name="rosen_levelup_settings">
+<area shape="rect" id="node1" href="tables/rosen_levelup_settings.html" target="_top" title="rosen_levelup_settings" alt="" coords="5,5,333,427">
+</map><map id="syndetics_settings" name="syndetics_settings">
+<area shape="rect" id="node1" href="tables/syndetics_settings.html" target="_top" title="syndetics_settings" alt="" coords="5,5,352,427">
+</map><map id="user_list" name="user_list">
+<area shape="rect" id="node1" href="tables/user_list.html" target="_top" title="user_list" alt="" coords="5,5,351,427">
+</map><map id="axis360_stats" name="axis360_stats">
+<area shape="rect" id="node1" href="tables/axis360_stats.html" target="_top" title="axis360_stats" alt="" coords="5,5,348,456">
+</map><map id="cloud_library_export_log" name="cloud_library_export_log">
+<area shape="rect" id="node1" href="tables/cloud_library_export_log.html" target="_top" title="cloud_library_export_log" alt="" coords="5,5,428,456">
+</map><map id="hoopla_export_log" name="hoopla_export_log">
+<area shape="rect" id="node1" href="tables/hoopla_export_log.html" target="_top" title="hoopla_export_log" alt="" coords="5,5,455,456">
+</map><map id="offline_circulation" name="offline_circulation">
+<area shape="rect" id="node1" href="tables/offline_circulation.html" target="_top" title="offline_circulation" alt="" coords="5,5,301,456">
+</map><map id="overdrive_scopes" name="overdrive_scopes">
+<area shape="rect" id="node1" href="tables/overdrive_scopes.html" target="_top" title="overdrive_scopes" alt="" coords="5,5,419,456">
+</map><map id="overdrive_settings" name="overdrive_settings">
+<area shape="rect" id="node1" href="tables/overdrive_settings.html" target="_top" title="overdrive_settings" alt="" coords="5,5,396,456">
+</map><map id="rbdigital_title" name="rbdigital_title">
+<area shape="rect" id="node1" href="tables/rbdigital_title.html" target="_top" title="rbdigital_title" alt="" coords="5,5,369,456">
+</map><map id="sideload_log" name="sideload_log">
+<area shape="rect" id="node1" href="tables/sideload_log.html" target="_top" title="sideload_log" alt="" coords="5,5,419,456">
+</map><map id="system_variables" name="system_variables">
+<area shape="rect" id="node1" href="tables/system_variables.html" target="_top" title="system_variables" alt="" coords="5,5,453,456">
+</map><map id="axis360_export_log" name="axis360_export_log">
+<area shape="rect" id="node1" href="tables/axis360_export_log.html" target="_top" title="axis360_export_log" alt="" coords="5,5,428,485">
+</map><map id="library_links" name="library_links">
+<area shape="rect" id="node1" href="tables/library_links.html" target="_top" title="library_links" alt="" coords="5,5,447,485">
+</map><map id="overdrive_extract_log" name="overdrive_extract_log">
+<area shape="rect" id="node1" href="tables/overdrive_extract_log.html" target="_top" title="overdrive_extract_log" alt="" coords="5,5,428,485">
+</map><map id="sierra_export_field_mapping" name="sierra_export_field_mapping">
+<area shape="rect" id="node1" href="tables/sierra_export_field_mapping.html" target="_top" title="sierra_export_field_mapping" alt="" coords="5,5,413,485">
+</map><map id="archive_requests" name="archive_requests">
+<area shape="rect" id="node1" href="tables/archive_requests.html" target="_top" title="archive_requests" alt="" coords="5,5,360,515">
+</map><map id="hoopla_export" name="hoopla_export">
+<area shape="rect" id="node1" href="tables/hoopla_export.html" target="_top" title="hoopla_export" alt="" coords="5,5,384,515">
+</map><map id="redwood_user_contribution" name="redwood_user_contribution">
+<area shape="rect" id="node1" href="tables/redwood_user_contribution.html" target="_top" title="redwood_user_contribution" alt="" coords="5,5,444,515">
+</map><map id="browse_category" name="browse_category">
+<area shape="rect" id="node1" href="tables/browse_category.html" target="_top" title="browse_category" alt="" coords="5,5,395,544">
+</map><map id="ils_extract_log" name="ils_extract_log">
+<area shape="rect" id="node1" href="tables/ils_extract_log.html" target="_top" title="ils_extract_log" alt="" coords="5,5,455,544">
+</map><map id="overdrive_api_product_metadata" name="overdrive_api_product_metadata">
+<area shape="rect" id="node1" href="tables/overdrive_api_product_metadata.html" target="_top" title="overdrive_api_product_metadata" alt="" coords="5,5,501,544">
+</map><map id="grouped_work_facet" name="grouped_work_facet">
+<area shape="rect" id="node1" href="tables/grouped_work_facet.html" target="_top" title="grouped_work_facet" alt="" coords="5,5,383,573">
+</map><map id="overdrive_api_products" name="overdrive_api_products">
+<area shape="rect" id="node1" href="tables/overdrive_api_products.html" target="_top" title="overdrive_api_products" alt="" coords="5,5,343,603">
+</map><map id="overdrive_stats" name="overdrive_stats">
+<area shape="rect" id="node1" href="tables/overdrive_stats.html" target="_top" title="overdrive_stats" alt="" coords="5,5,348,603">
+</map><map id="collection_spotlights" name="collection_spotlights">
+<area shape="rect" id="node1" href="tables/collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="5,5,412,632">
+</map><map id="library_records_to_include" name="library_records_to_include">
+<area shape="rect" id="node1" href="tables/library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="5,5,365,632">
+</map><map id="location_records_to_include" name="location_records_to_include">
+<area shape="rect" id="node1" href="tables/location_records_to_include.html" target="_top" title="location_records_to_include" alt="" coords="5,5,377,632">
+</map><map id="greenhouse_cache" name="greenhouse_cache">
+<area shape="rect" id="node1" href="tables/greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="5,5,377,661">
+</map><map id="hoopla_scopes" name="hoopla_scopes">
+<area shape="rect" id="node1" href="tables/hoopla_scopes.html" target="_top" title="hoopla_scopes" alt="" coords="5,5,424,661">
+</map><map id="aspen_usage" name="aspen_usage">
+<area shape="rect" id="node1" href="tables/aspen_usage.html" target="_top" title="aspen_usage" alt="" coords="5,5,421,691">
+</map><map id="grouped_work_record_items" name="grouped_work_record_items">
+<area shape="rect" id="node1" href="tables/grouped_work_record_items.html" target="_top" title="grouped_work_record_items" alt="" coords="5,5,391,691">
+</map><map id="web_builder_portal_cell" name="web_builder_portal_cell">
+<area shape="rect" id="node1" href="tables/web_builder_portal_cell.html" target="_top" title="web_builder_portal_cell" alt="" coords="5,5,411,691">
+</map><map id="account_profiles" name="account_profiles">
+<area shape="rect" id="node1" href="tables/account_profiles.html" target="_top" title="account_profiles" alt="" coords="5,5,339,867">
+</map><map id="user_hold" name="user_hold">
+<area shape="rect" id="node1" href="tables/user_hold.html" target="_top" title="user_hold" alt="" coords="5,5,377,1043">
+</map><map id="sideloads" name="sideloads">
+<area shape="rect" id="node1" href="tables/sideloads.html" target="_top" title="sideloads" alt="" coords="5,5,517,1072">
+</map><map id="grouped_work_display_settings" name="grouped_work_display_settings">
+<area shape="rect" id="node1" href="tables/grouped_work_display_settings.html" target="_top" title="grouped_work_display_settings" alt="" coords="5,5,531,1131">
+</map><map id="materials_request" name="materials_request">
+<area shape="rect" id="node1" href="tables/materials_request.html" target="_top" title="materials_request" alt="" coords="5,5,433,1219">
+</map><map id="person" name="person">
+<area shape="rect" id="node1" href="tables/person.html" target="_top" title="person" alt="" coords="5,5,408,1277">
+</map><map id="user" name="user">
+<area shape="rect" id="node1" href="tables/user.html" target="_top" title="user" alt="" coords="5,5,480,1277">
+</map><map id="user_checkout" name="user_checkout">
+<area shape="rect" id="node1" href="tables/user_checkout.html" target="_top" title="user_checkout" alt="" coords="5,5,420,1571">
+</map><map id="location" name="location">
+<area shape="rect" id="node1" href="tables/location.html" target="_top" title="location" alt="" coords="5,5,575,2245">
+</map><map id="indexing_profiles" name="indexing_profiles">
+<area shape="rect" id="node1" href="tables/indexing_profiles.html" target="_top" title="indexing_profiles" alt="" coords="5,5,484,2773">
+</map><map id="themes" name="themes">
+<area shape="rect" id="node1" href="tables/themes.html" target="_top" title="themes" alt="" coords="5,5,648,6352">
+</map><map id="library" name="library">
+<area shape="rect" id="node1" href="tables/library.html" target="_top" title="library" alt="" coords="5,5,659,6469">
+</map>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- /.content-wrapper -->
+            <footer class="main-footer">
+                <div>
+                    <div class="pull-right hidden-xs">
+                        <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
+                        <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
+                    </div>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                </div>
+                <!-- /.container -->
+            </footer>
+        </div>
+        <!-- ./wrapper -->
+
+        <!-- jQuery 2.2.3 -->
+        <script src="bower/admin-lte/plugins/jQuery/jquery-2.2.3.min.js"></script>
+        <script src="bower/admin-lte/plugins/jQueryUI/jquery-ui.min.js"></script>
+        <!-- Bootstrap 3.3.5 -->
+        <script src="bower/admin-lte/bootstrap/js/bootstrap.min.js"></script>
+        <!-- DataTables -->
+        <script src="bower/datatables.net/jquery.dataTables.min.js"></script>
+        <script src="bower/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/dataTables.buttons.min.js"></script>
+        <script src="bower/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.html5.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.print.min.js"></script>
+        <script src="bower/datatables.net-buttons/buttons.colVis.min.js"></script>
+        <!-- SheetJS -->
+        <script src="bower/js-xlsx/xlsx.full.min.js"></script>
+        <!-- pdfmake -->
+        <script src="bower/pdfmake/pdfmake.min.js"></script>
+        <script src="bower/pdfmake/vfs_fonts.js"></script>
+        <!-- SlimScroll -->
+        <script src="bower/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js"></script>
+        <!-- FastClick -->
+        <script src="bower/admin-lte/plugins/fastclick/fastclick.js"></script>
+        <!-- Salvattore -->
+        <script src="bower/salvattore/salvattore.min.js"></script>
+        <!-- AnchorJS -->
+        <script src="bower/anchor-js/anchor.min.js"></script>
+        <!-- CodeMirror -->
+        <script src="bower/codemirror/codemirror.js"></script>
+        <script src="bower/codemirror/sql.js"></script>
+        <!-- AdminLTE App -->
+        <script src="bower/admin-lte/dist/js/app.min.js"></script>
+        <script src=""></script>
+        <script src="schemaSpy.js"></script>
+    </body>
+</html>

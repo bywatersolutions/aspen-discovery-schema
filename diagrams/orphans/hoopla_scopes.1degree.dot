@@ -1,0 +1,49 @@
+digraph "hoopla_scopes" {
+  graph [
+    rankdir="RL"
+    bgcolor="#ffffff"
+    nodesep="0.18"
+    ranksep="0.46"
+    fontname="Helvetica"
+    fontsize="11"
+    ration="compress"
+  ];
+  node [
+    fontname="Helvetica"
+    fontsize="11"
+    shape="plaintext"
+  ];
+  edge [
+    arrowsize="0.8"
+  ];
+  "hoopla_scopes" [
+   label=<
+    <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="4"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT"><B>hoopla_scopes</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="name" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">name</TD></TR></TABLE></TD><TD PORT="name.type" ALIGN="LEFT">varchar[50]</TD></TR>
+      <TR><TD PORT="includeEBooks" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">includeEBooks</TD></TR></TABLE></TD><TD PORT="includeEBooks.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="maxCostPerCheckoutEBooks" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">maxCostPerCheckoutEBooks</TD></TR></TABLE></TD><TD PORT="maxCostPerCheckoutEBooks.type" ALIGN="LEFT">float[12]</TD></TR>
+      <TR><TD PORT="includeEComics" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">includeEComics</TD></TR></TABLE></TD><TD PORT="includeEComics.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="maxCostPerCheckoutEComics" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">maxCostPerCheckoutEComics</TD></TR></TABLE></TD><TD PORT="maxCostPerCheckoutEComics.type" ALIGN="LEFT">float[12]</TD></TR>
+      <TR><TD PORT="includeEAudiobook" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">includeEAudiobook</TD></TR></TABLE></TD><TD PORT="includeEAudiobook.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="maxCostPerCheckoutEAudiobook" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">maxCostPerCheckoutEAudiobook</TD></TR></TABLE></TD><TD PORT="maxCostPerCheckoutEAudiobook.type" ALIGN="LEFT">float[12]</TD></TR>
+      <TR><TD PORT="includeMovies" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">includeMovies</TD></TR></TABLE></TD><TD PORT="includeMovies.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="maxCostPerCheckoutMovies" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">maxCostPerCheckoutMovies</TD></TR></TABLE></TD><TD PORT="maxCostPerCheckoutMovies.type" ALIGN="LEFT">float[12]</TD></TR>
+      <TR><TD PORT="includeMusic" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">includeMusic</TD></TR></TABLE></TD><TD PORT="includeMusic.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="maxCostPerCheckoutMusic" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">maxCostPerCheckoutMusic</TD></TR></TABLE></TD><TD PORT="maxCostPerCheckoutMusic.type" ALIGN="LEFT">float[12]</TD></TR>
+      <TR><TD PORT="includeTelevision" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">includeTelevision</TD></TR></TABLE></TD><TD PORT="includeTelevision.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="maxCostPerCheckoutTelevision" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">maxCostPerCheckoutTelevision</TD></TR></TABLE></TD><TD PORT="maxCostPerCheckoutTelevision.type" ALIGN="LEFT">float[12]</TD></TR>
+      <TR><TD PORT="restrictToChildrensMaterial" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">restrictToChildrensMaterial</TD></TR></TABLE></TD><TD PORT="restrictToChildrensMaterial.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="ratingsToExclude" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">ratingsToExclude</TD></TR></TABLE></TD><TD PORT="ratingsToExclude.type" ALIGN="LEFT">varchar[100]</TD></TR>
+      <TR><TD PORT="excludeAbridged" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">excludeAbridged</TD></TR></TABLE></TD><TD PORT="excludeAbridged.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="excludeParentalAdvisory" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">excludeParentalAdvisory</TD></TR></TABLE></TD><TD PORT="excludeParentalAdvisory.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="excludeProfanity" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">excludeProfanity</TD></TR></TABLE></TD><TD PORT="excludeProfanity.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="settingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="200" HEIGHT="16">settingId</TD></TR></TABLE></TD><TD PORT="settingId.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
+    </TABLE>>
+    URL="tables/hoopla_scopes.html"
+    target="_top"
+    tooltip="hoopla_scopes"
+  ];
+}
