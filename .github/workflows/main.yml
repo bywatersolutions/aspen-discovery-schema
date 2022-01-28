@@ -34,7 +34,7 @@ jobs:
       - name: Path to build dir
         run: realpath build
       - name: Execute schemaspy
-        run: docker run --network aspen-net -v "$PWD/build:/output" schemaspy/schemaspy:latest -t mariadb -db aspen -host mydb -port 3306 -u root -p password -s aspen 
+        run: docker run --network aspen-net -v  /home/runner/work/aspen-discovery-schema/aspen-discovery-schema/build:/output schemaspy/schemaspy:latest -t mariadb -db aspen -host mydb -port 3306 -u root -p password -s aspen 
       - name: Deploy gh-pages
         uses: JamesIves/github-pages-deploy-action@v4.2.2
         env:
