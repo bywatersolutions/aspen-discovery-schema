@@ -1797,27 +1797,6 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="ils_marc_checksums" numRows="0" remarks="" type="TABLE">
-         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="ilsId" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="checksum" nullable="false" remarks="" size="20" type="BIGINT UNSIGNED" typeCode="-5"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="dateFirstDetected" nullable="true" remarks="" size="19" type="BIGINT" typeCode="-5"/>
-         <column autoUpdated="false" defaultValue="'ils'" digits="0" id="4" name="source" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
-         <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="ils_marc_checksums_s_pk" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="ilsId" unique="true">
-            <column ascending="true" name="ilsId"/>
-         </index>
-         <index name="PRIMARY" unique="true">
-            <column ascending="true" name="id"/>
-         </index>
-         <index name="source" unique="true">
-            <column ascending="true" name="source"/>
-            <column ascending="true" name="ilsId"/>
-         </index>
-      </table>
       <table catalog="aspen" name="ils_record_usage" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="indexingProfileId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>

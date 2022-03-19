@@ -142,7 +142,6 @@ image_uploads
 ils_volume_info
 ils_records
 ils_record_usage
-ils_marc_checksums
 ils_hold_summary
 ils_extract_log
 hoopla_scopes

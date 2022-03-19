@@ -140,7 +140,6 @@ hoopla_record_usage
 hoopla_scopes
 ils_extract_log
 ils_hold_summary
-ils_marc_checksums
 ils_record_usage
 ils_records
 ils_volume_info
