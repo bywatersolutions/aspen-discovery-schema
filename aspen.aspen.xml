@@ -1310,7 +1310,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="grouped_work_display_settings" numRows="2" remarks="" type="TABLE">
+      <table catalog="aspen" name="grouped_work_display_settings" numRows="5" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT UNSIGNED" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="2" name="applyNumberOfHoldingsBoost" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
@@ -1358,7 +1358,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="grouped_work_facet" numRows="0" remarks="" type="TABLE">
+      <table catalog="aspen" name="grouped_work_facet" numRows="80" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="facetGroupId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="displayName" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
