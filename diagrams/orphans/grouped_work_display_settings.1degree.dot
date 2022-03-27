@@ -56,7 +56,7 @@ digraph "grouped_work_display_settings" {
       <TR><TD PORT="defaultAvailabilityToggle" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="262" HEIGHT="16">defaultAvailabilityToggle</TD></TR></TABLE></TD><TD PORT="defaultAvailabilityToggle.type" ALIGN="LEFT">varchar[20]</TD></TR>
       <TR><TD PORT="isDefault" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="262" HEIGHT="16">isDefault</TD></TR></TABLE></TD><TD PORT="isDefault.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="showItemDueDates" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="262" HEIGHT="16">showItemDueDates</TD></TR></TABLE></TD><TD PORT="showItemDueDates.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">5 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="tables/grouped_work_display_settings.html"
     target="_top"
