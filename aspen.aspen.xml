@@ -1358,7 +1358,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="grouped_work_facet" numRows="80" remarks="" type="TABLE">
+      <table catalog="aspen" name="grouped_work_facet" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="facetGroupId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="displayName" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
@@ -1388,7 +1388,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="grouped_work_facet_groups" numRows="4" remarks="" type="TABLE">
+      <table catalog="aspen" name="grouped_work_facet_groups" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT UNSIGNED" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
@@ -3518,7 +3518,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="materials_request_status" numRows="20" remarks="" type="TABLE">
+      <table catalog="aspen" name="materials_request_status" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="description" nullable="true" remarks="" size="80" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="2" name="isDefault" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
@@ -3601,7 +3601,7 @@
             <column ascending="true" name="scope"/>
          </index>
       </table>
-      <table catalog="aspen" name="modules" numRows="19" remarks="" type="TABLE">
+      <table catalog="aspen" name="modules" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="2" name="enabled" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
@@ -4277,7 +4277,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="permissions" numRows="137" remarks="" type="TABLE">
+      <table catalog="aspen" name="permissions" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="75" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="sectionName" nullable="false" remarks="" size="75" type="VARCHAR" typeCode="12"/>
@@ -4806,7 +4806,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="role_permissions" numRows="213" remarks="" type="TABLE">
+      <table catalog="aspen" name="role_permissions" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="roleId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="aspen" column="roleId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="roles"/>
@@ -4827,7 +4827,7 @@
             <column ascending="true" name="permissionId"/>
          </index>
       </table>
-      <table catalog="aspen" name="roles" numRows="20" remarks="A role identifying what the user can do." type="TABLE">
+      <table catalog="aspen" name="roles" numRows="0" remarks="A role identifying what the user can do." type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="roleId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="aspen" column="roleId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="role_permissions"/>
          </column>
@@ -5794,7 +5794,7 @@
             <column ascending="true" name="usageId"/>
          </index>
       </table>
-      <table catalog="aspen" name="user" numRows="2" remarks="" type="TABLE">
+      <table catalog="aspen" name="user" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="browse_category"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="ebsco_research_starter_dismissals"/>
@@ -6535,7 +6535,7 @@
             <column ascending="true" name="author"/>
          </index>
       </table>
-      <table catalog="aspen" name="user_roles" numRows="3" remarks="Links users with roles so users can perform administration f" type="TABLE">
+      <table catalog="aspen" name="user_roles" numRows="0" remarks="Links users with roles so users can perform administration f" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="userId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="roleId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="roleId" sequenceNumberInPK="1"/>
@@ -6660,7 +6660,7 @@
             <column ascending="true" name="userId"/>
          </index>
       </table>
-      <table catalog="aspen" name="variables" numRows="18" remarks="" type="TABLE">
+      <table catalog="aspen" name="variables" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="128" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="value" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
@@ -6759,7 +6759,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="web_builder_category" numRows="11" remarks="" type="TABLE">
+      <table catalog="aspen" name="web_builder_category" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="name" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
