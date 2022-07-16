@@ -2148,14 +2148,14 @@
     {
         "tableName": "browse_category",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>textId",
-        "type": "VARCHAR",
-        "length": 60,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "numTimesShown",
+        "type": "MEDIUMINT",
+        "length": 7,
         "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "'-1'",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -2800,12 +2800,12 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "sharing",
-        "type": "enum('private', 'location', 'library', 'everyone')",
-        "length": 8,
+        "name": "sourceListId",
+        "type": "MEDIUMINT",
+        "length": 7,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "'everyone'",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -4176,14 +4176,14 @@
     {
         "tableName": "browse_category",
         "tableType": "Table",
-        "keyClass": "foreignKey",
-        "keyTitle": "Foreign Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>userId",
-        "type": "INT",
-        "length": 10,
-        "nullable": "√",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "numTitlesClickedOn",
+        "type": "MEDIUMINT",
+        "length": 7,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -5058,16 +5058,16 @@
         "comments": ""
     },
     {
-        "tableName": "browse_category",
+        "tableName": "overdrive_account_cache",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "numTimesShown",
-        "type": "MEDIUMINT",
-        "length": 7,
-        "nullable": "",
+        "keyClass": "foreignKey",
+        "keyTitle": "Foreign Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>userId",
+        "type": "INT",
+        "length": 10,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -5123,16 +5123,16 @@
         "comments": ""
     },
     {
-        "tableName": "staff_members",
+        "tableName": "lm_library_calendar_events",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "email",
+        "name": "title",
         "type": "VARCHAR",
         "length": 255,
-        "nullable": "√",
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -5721,17 +5721,17 @@
         "comments": ""
     },
     {
-        "tableName": "bad_words",
+        "tableName": "location_hours",
         "tableType": "Table",
-        "keyClass": "primaryKey",
-        "keyTitle": "Primary Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "INT",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>open",
+        "type": "VARCHAR",
         "length": 10,
         "nullable": "",
-        "autoUpdated": "√",
+        "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>A unique Id for bad_word<\/p>"
+        "comments": "<p>Open hour (24hr format) HH:MM<\/p>"
     },
     {
         "tableName": "web_builder_custom_from_submission",
@@ -5825,13 +5825,13 @@
         "comments": ""
     },
     {
-        "tableName": "staff_members",
+        "tableName": "lm_library_calendar_events",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "phone",
-        "type": "VARCHAR",
-        "length": 13,
+        "name": "rawChecksum",
+        "type": "BIGINT",
+        "length": 19,
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL",
@@ -7099,13 +7099,13 @@
         "comments": ""
     },
     {
-        "tableName": "staff_members",
+        "tableName": "lm_library_calendar_events",
         "tableType": "Table",
-        "keyClass": "foreignKey",
-        "keyTitle": "Foreign Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>libraryId",
-        "type": "INT",
-        "length": 10,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "rawResponse",
+        "type": "LONGTEXT",
+        "length": 2147483647,
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL",
@@ -7424,17 +7424,17 @@
         "comments": ""
     },
     {
-        "tableName": "location_hours",
+        "tableName": "bad_words",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>day",
-        "type": "INT",
-        "length": 10,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "replacement",
+        "type": "VARCHAR",
+        "length": 50,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Day of the week 0 to 7 (Sun to Monday)<\/p>"
+        "comments": "<p>A replacement value for the word.<\/p>"
     },
     {
         "tableName": "themes",
@@ -8182,13 +8182,13 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "notes",
-        "type": "VARCHAR",
-        "length": 255,
-        "nullable": "√",
+        "name": "closed",
+        "type": "TINYINT",
+        "length": 3,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "NULL",
-        "comments": ""
+        "defaultValue": "0",
+        "comments": "<p>Whether or not the library is closed on this day<\/p>"
     },
     {
         "tableName": "user_account_summary",
@@ -8557,15 +8557,15 @@
     {
         "tableName": "location_hours",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "closed",
-        "type": "TINYINT",
-        "length": 3,
+        "keyClass": "primaryKey",
+        "keyTitle": "Primary Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
+        "type": "INT",
+        "length": 10,
         "nullable": "",
-        "autoUpdated": "",
-        "defaultValue": "0",
-        "comments": "<p>Whether or not the library is closed on this day<\/p>"
+        "autoUpdated": "√",
+        "defaultValue": "null",
+        "comments": "<p>The id of hours entry<\/p>"
     },
     {
         "tableName": "sierra_api_export_log",
@@ -10726,13 +10726,13 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_account_cache",
+        "tableName": "browse_category",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "holdPage",
-        "type": "LONGTEXT",
-        "length": 2147483647,
+        "keyClass": "foreignKey",
+        "keyTitle": "Foreign Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>userId",
+        "type": "INT",
+        "length": 10,
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL",
@@ -12000,7 +12000,7 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_account_cache",
+        "tableName": "browse_category",
         "tableType": "Table",
         "keyClass": "primaryKey",
         "keyTitle": "Primary Key",
@@ -13029,14 +13029,14 @@
     {
         "tableName": "browse_category",
         "tableType": "Table",
-        "keyClass": "primaryKey",
-        "keyTitle": "Primary Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "INT",
-        "length": 10,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "searchTerm",
+        "type": "VARCHAR",
+        "length": 500,
         "nullable": "",
-        "autoUpdated": "√",
-        "defaultValue": "null",
+        "autoUpdated": "",
+        "defaultValue": "''",
         "comments": ""
     },
     {
@@ -13469,17 +13469,17 @@
         "comments": ""
     },
     {
-        "tableName": "bad_words",
+        "tableName": "location_hours",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "word",
+        "name": "close",
         "type": "VARCHAR",
-        "length": 50,
+        "length": 10,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>The bad word that will be replaced<\/p>"
+        "comments": "<p>Close hour (24hr format) HH:MM<\/p>"
     },
     {
         "tableName": "location",
@@ -14847,16 +14847,16 @@
         "comments": ""
     },
     {
-        "tableName": "lm_library_calendar_events",
+        "tableName": "staff_members",
         "tableType": "Table",
-        "keyClass": "primaryKey",
-        "keyTitle": "Primary Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
-        "autoUpdated": "√",
-        "defaultValue": "null",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "name",
+        "type": "VARCHAR",
+        "length": 100,
+        "nullable": "√",
+        "autoUpdated": "",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -15445,16 +15445,16 @@
         "comments": ""
     },
     {
-        "tableName": "lm_library_calendar_events",
+        "tableName": "staff_members",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>externalId",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "email",
         "type": "VARCHAR",
-        "length": 36,
-        "nullable": "",
+        "length": 255,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -15514,12 +15514,12 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "defaultFilter",
-        "type": "MEDIUMTEXT",
-        "length": 16777215,
+        "name": "startDate",
+        "type": "INT",
+        "length": 10,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -16539,14 +16539,14 @@
     {
         "tableName": "browse_category",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "description",
-        "type": "LONGTEXT",
-        "length": 2147483647,
+        "keyClass": "foreignKey",
+        "keyTitle": "Foreign Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>libraryId",
+        "type": "INT",
+        "length": 10,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "-1",
         "comments": ""
     },
     {
@@ -16875,16 +16875,16 @@
         "comments": ""
     },
     {
-        "tableName": "browse_category",
+        "tableName": "overdrive_account_cache",
         "tableType": "Table",
-        "keyClass": "foreignKey",
-        "keyTitle": "Foreign Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>libraryId",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "bookshelfPageLastLoaded",
         "type": "INT",
         "length": 10,
-        "nullable": "√",
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "-1",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -16929,15 +16929,15 @@
     {
         "tableName": "location_hours",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "close",
-        "type": "VARCHAR",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>day",
+        "type": "INT",
         "length": 10,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Close hour (24hr format) HH:MM<\/p>"
+        "comments": "<p>Day of the week 0 to 7 (Sun to Monday)<\/p>"
     },
     {
         "tableName": "variables",
@@ -18396,16 +18396,16 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_account_cache",
+        "tableName": "browse_category",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "bookshelfPage",
-        "type": "LONGTEXT",
-        "length": 2147483647,
-        "nullable": "√",
+        "name": "label",
+        "type": "VARCHAR",
+        "length": 50,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -18526,7 +18526,7 @@
         "comments": ""
     },
     {
-        "tableName": "staff_members",
+        "tableName": "lm_library_calendar_events",
         "tableType": "Table",
         "keyClass": "primaryKey",
         "keyTitle": "Primary Key",
@@ -18539,16 +18539,16 @@
         "comments": ""
     },
     {
-        "tableName": "staff_members",
+        "tableName": "lm_library_calendar_events",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "role",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>externalId",
         "type": "VARCHAR",
-        "length": 100,
-        "nullable": "√",
+        "length": 36,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -18708,16 +18708,16 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_account_cache",
+        "tableName": "browse_category",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "wishlistPageLastLoaded",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
+        "name": "defaultSort",
+        "type": "enum('relevance', 'popularity', 'newest_to_oldest', 'oldest_to_newest', 'author', 'title', 'user_rating', 'holds', 'publication_year_desc', 'publication_year_asc')",
+        "length": 21,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "'relevance'",
         "comments": ""
     },
     {
@@ -19475,16 +19475,16 @@
         "comments": ""
     },
     {
-        "tableName": "lm_library_calendar_events",
+        "tableName": "staff_members",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>settingsId",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "role",
+        "type": "VARCHAR",
+        "length": 100,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -19514,16 +19514,16 @@
         "comments": ""
     },
     {
-        "tableName": "browse_category",
+        "tableName": "overdrive_account_cache",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "numTitlesClickedOn",
-        "type": "MEDIUMINT",
-        "length": 7,
-        "nullable": "",
+        "name": "holdPage",
+        "type": "LONGTEXT",
+        "length": 2147483647,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -19995,16 +19995,16 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_account_cache",
+        "tableName": "browse_category",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "bookshelfPageLastLoaded",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
+        "name": "description",
+        "type": "LONGTEXT",
+        "length": 2147483647,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -21362,14 +21362,14 @@
     {
         "tableName": "staff_members",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "description",
-        "type": "LONGTEXT",
-        "length": 2147483647,
-        "nullable": "√",
-        "autoUpdated": "",
-        "defaultValue": "NULL",
+        "keyClass": "primaryKey",
+        "keyTitle": "Primary Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
+        "type": "INT",
+        "length": 10,
+        "nullable": "",
+        "autoUpdated": "√",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -21481,7 +21481,7 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "label",
+        "name": "source",
         "type": "VARCHAR",
         "length": 50,
         "nullable": "",
@@ -21880,16 +21880,16 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_account_cache",
+        "tableName": "browse_category",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "holdPageLastLoaded",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
+        "name": "sharing",
+        "type": "enum('private', 'location', 'library', 'everyone')",
+        "length": 8,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "'everyone'",
         "comments": ""
     },
     {
@@ -22712,16 +22712,16 @@
         "comments": ""
     },
     {
-        "tableName": "browse_category",
+        "tableName": "overdrive_account_cache",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "searchTerm",
-        "type": "VARCHAR",
-        "length": 500,
+        "keyClass": "primaryKey",
+        "keyTitle": "Primary Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
+        "type": "INT",
+        "length": 10,
         "nullable": "",
-        "autoUpdated": "",
-        "defaultValue": "''",
+        "autoUpdated": "√",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -24519,17 +24519,17 @@
         "comments": ""
     },
     {
-        "tableName": "location_hours",
+        "tableName": "bad_words",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>locationId",
-        "type": "INT",
-        "length": 10,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "word",
+        "type": "VARCHAR",
+        "length": 50,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>The location id<\/p>"
+        "comments": "<p>The bad word that will be replaced<\/p>"
     },
     {
         "tableName": "search_stats_new",
@@ -24545,13 +24545,13 @@
         "comments": "<p>The number of times this search has been done.<\/p>"
     },
     {
-        "tableName": "overdrive_account_cache",
+        "tableName": "browse_category",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "wishlistPage",
-        "type": "LONGTEXT",
-        "length": 2147483647,
+        "name": "defaultFilter",
+        "type": "MEDIUMTEXT",
+        "length": 16777215,
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL",
@@ -25247,16 +25247,16 @@
         "comments": ""
     },
     {
-        "tableName": "browse_category",
+        "tableName": "overdrive_account_cache",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "startDate",
-        "type": "INT",
-        "length": 10,
+        "name": "wishlistPage",
+        "type": "LONGTEXT",
+        "length": 2147483647,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -26443,16 +26443,16 @@
         "comments": ""
     },
     {
-        "tableName": "staff_members",
+        "tableName": "lm_library_calendar_events",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "name",
-        "type": "VARCHAR",
-        "length": 100,
-        "nullable": "√",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>settingsId",
+        "type": "INT",
+        "length": 10,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -27756,16 +27756,16 @@
         "comments": ""
     },
     {
-        "tableName": "lm_library_calendar_events",
+        "tableName": "staff_members",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "title",
+        "name": "phone",
         "type": "VARCHAR",
-        "length": 255,
-        "nullable": "",
+        "length": 13,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -28029,16 +28029,16 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_account_cache",
+        "tableName": "browse_category",
         "tableType": "Table",
-        "keyClass": "foreignKey",
-        "keyTitle": "Foreign Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>userId",
-        "type": "INT",
-        "length": 10,
-        "nullable": "√",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>textId",
+        "type": "VARCHAR",
+        "length": 60,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "'-1'",
         "comments": ""
     },
     {
@@ -28237,13 +28237,13 @@
         "comments": ""
     },
     {
-        "tableName": "lm_library_calendar_events",
+        "tableName": "staff_members",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "rawResponse",
-        "type": "LONGTEXT",
-        "length": 2147483647,
+        "name": "photo",
+        "type": "VARCHAR",
+        "length": 255,
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL",
@@ -29528,13 +29528,13 @@
         "tableType": "Table",
         "keyClass": "indexedColumn",
         "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>open",
-        "type": "VARCHAR",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>locationId",
+        "type": "INT",
         "length": 10,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
-        "comments": "<p>Open hour (24hr format) HH:MM<\/p>"
+        "comments": "<p>The location id<\/p>"
     },
     {
         "tableName": "hoopla_export",
@@ -29914,16 +29914,16 @@
         "comments": ""
     },
     {
-        "tableName": "browse_category",
+        "tableName": "overdrive_account_cache",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "sourceListId",
-        "type": "MEDIUMINT",
-        "length": 7,
-        "nullable": "√",
+        "name": "holdPageLastLoaded",
+        "type": "INT",
+        "length": 10,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -30694,17 +30694,17 @@
         "comments": ""
     },
     {
-        "tableName": "bad_words",
+        "tableName": "location_hours",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "replacement",
+        "name": "notes",
         "type": "VARCHAR",
-        "length": 50,
-        "nullable": "",
+        "length": 255,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
-        "comments": "<p>A replacement value for the word.<\/p>"
+        "defaultValue": "NULL",
+        "comments": ""
     },
     {
         "tableName": "web_builder_portal_cell",
@@ -32167,12 +32167,12 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "defaultSort",
-        "type": "enum('relevance', 'popularity', 'newest_to_oldest', 'oldest_to_newest', 'author', 'title', 'user_rating', 'holds', 'publication_year_desc', 'publication_year_asc')",
-        "length": 21,
+        "name": "endDate",
+        "type": "INT",
+        "length": 10,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "'relevance'",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -32462,14 +32462,14 @@
         "comments": ""
     },
     {
-        "tableName": "browse_category",
+        "tableName": "overdrive_account_cache",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "endDate",
+        "name": "wishlistPageLastLoaded",
         "type": "INT",
         "length": 10,
-        "nullable": "√",
+        "nullable": "",
         "autoUpdated": "",
         "defaultValue": "0",
         "comments": ""
@@ -33593,16 +33593,16 @@
         "comments": ""
     },
     {
-        "tableName": "staff_members",
+        "tableName": "lm_library_calendar_events",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "photo",
-        "type": "VARCHAR",
-        "length": 255,
+        "name": "deleted",
+        "type": "TINYINT",
+        "length": 3,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -35855,7 +35855,7 @@
         "comments": ""
     },
     {
-        "tableName": "location_hours",
+        "tableName": "bad_words",
         "tableType": "Table",
         "keyClass": "primaryKey",
         "keyTitle": "Primary Key",
@@ -35865,7 +35865,7 @@
         "nullable": "",
         "autoUpdated": "√",
         "defaultValue": "null",
-        "comments": "<p>The id of hours entry<\/p>"
+        "comments": "<p>A unique Id for bad_word<\/p>"
     },
     {
         "tableName": "indexing_profiles",
@@ -36388,16 +36388,16 @@
         "comments": ""
     },
     {
-        "tableName": "lm_library_calendar_events",
+        "tableName": "staff_members",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "deleted",
-        "type": "TINYINT",
-        "length": 3,
+        "name": "description",
+        "type": "LONGTEXT",
+        "length": 2147483647,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -36518,13 +36518,13 @@
         "comments": ""
     },
     {
-        "tableName": "lm_library_calendar_events",
+        "tableName": "staff_members",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "rawChecksum",
-        "type": "BIGINT",
-        "length": 19,
+        "keyClass": "foreignKey",
+        "keyTitle": "Foreign Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>libraryId",
+        "type": "INT",
+        "length": 10,
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL",
@@ -36856,16 +36856,16 @@
         "comments": ""
     },
     {
-        "tableName": "browse_category",
+        "tableName": "overdrive_account_cache",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "source",
-        "type": "VARCHAR",
-        "length": 50,
-        "nullable": "",
+        "name": "bookshelfPage",
+        "type": "LONGTEXT",
+        "length": 2147483647,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
