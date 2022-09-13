@@ -964,7 +964,7 @@
             <column ascending="true" name="processName"/>
          </index>
       </table>
-      <table catalog="aspen" name="db_update" numRows="1052" remarks="" type="TABLE">
+      <table catalog="aspen" name="db_update" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="update_key" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="current_timestamp()" digits="0" id="1" name="date_run" nullable="false" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="update_key" sequenceNumberInPK="1"/>
