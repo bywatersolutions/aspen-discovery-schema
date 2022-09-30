@@ -5615,6 +5615,7 @@
          <column autoUpdated="false" defaultValue="'#e5e5e5'" digits="0" id="211" name="modalDialogHeaderFooterBorderColor" nullable="true" remarks="" size="7" type="CHAR" typeCode="1"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="212" name="modalDialogHeaderFooterBorderColorDefault" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="213" name="footerLogoAlt" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="'floating'" digits="0" id="214" name="coverStyle" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="themes_s_pk" unique="true">
             <column ascending="true" name="id"/>
