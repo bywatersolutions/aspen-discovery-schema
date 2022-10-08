@@ -1147,14 +1147,14 @@
     {
         "tableName": "system_messages",
         "tableType": "Table",
-        "keyClass": "primaryKey",
-        "keyTitle": "Primary Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
-        "autoUpdated": "√",
-        "defaultValue": "null",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "dismissable",
+        "type": "TINYINT",
+        "length": 3,
+        "nullable": "√",
+        "autoUpdated": "",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -2445,16 +2445,16 @@
         "comments": ""
     },
     {
-        "tableName": "system_messages",
+        "tableName": "browse_category_group",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "showOn",
+        "keyClass": "primaryKey",
+        "keyTitle": "Primary Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
         "type": "INT",
         "length": 10,
-        "nullable": "√",
-        "autoUpdated": "",
-        "defaultValue": "0",
+        "nullable": "",
+        "autoUpdated": "√",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -11458,12 +11458,12 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "css",
-        "type": "MEDIUMTEXT",
-        "length": 16777215,
+        "name": "endDate",
+        "type": "INT",
+        "length": 10,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -16251,16 +16251,16 @@
         "comments": ""
     },
     {
-        "tableName": "browse_category_group",
+        "tableName": "system_messages",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "browseCategoryRatingsMode",
-        "type": "TINYINT",
-        "length": 3,
+        "name": "css",
+        "type": "MEDIUMTEXT",
+        "length": 16777215,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "1",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -16307,12 +16307,12 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "dismissable",
-        "type": "TINYINT",
-        "length": 3,
+        "name": "messageStyle",
+        "type": "VARCHAR",
+        "length": 10,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "''",
         "comments": ""
     },
     {
@@ -20961,12 +20961,12 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "message",
-        "type": "MEDIUMTEXT",
-        "length": 16777215,
+        "name": "startDate",
+        "type": "INT",
+        "length": 10,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -23505,16 +23505,16 @@
         "comments": ""
     },
     {
-        "tableName": "system_messages",
+        "tableName": "browse_category_group",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "startDate",
-        "type": "INT",
-        "length": 10,
-        "nullable": "√",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>name",
+        "type": "VARCHAR",
+        "length": 50,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -24727,13 +24727,13 @@
         "comments": ""
     },
     {
-        "tableName": "browse_category_group",
+        "tableName": "system_messages",
         "tableType": "Table",
         "keyClass": "indexedColumn",
         "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>name",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>title",
         "type": "VARCHAR",
-        "length": 50,
+        "length": 255,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
@@ -25130,16 +25130,16 @@
         "comments": ""
     },
     {
-        "tableName": "system_messages",
+        "tableName": "browse_category_group",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "messageStyle",
-        "type": "VARCHAR",
-        "length": 10,
+        "name": "browseCategoryRatingsMode",
+        "type": "TINYINT",
+        "length": 3,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "''",
+        "defaultValue": "1",
         "comments": ""
     },
     {
@@ -29552,14 +29552,14 @@
     {
         "tableName": "system_messages",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>title",
-        "type": "VARCHAR",
-        "length": 255,
-        "nullable": "",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "showOn",
+        "type": "INT",
+        "length": 10,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -31383,13 +31383,13 @@
         "comments": ""
     },
     {
-        "tableName": "system_messages",
+        "tableName": "browse_category_group",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "endDate",
-        "type": "INT",
-        "length": 10,
+        "name": "defaultBrowseMode",
+        "type": "TINYINT",
+        "length": 3,
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "0",
@@ -33047,7 +33047,7 @@
         "comments": ""
     },
     {
-        "tableName": "browse_category_group",
+        "tableName": "system_messages",
         "tableType": "Table",
         "keyClass": "primaryKey",
         "keyTitle": "Primary Key",
@@ -36947,16 +36947,16 @@
         "comments": "<p>Whether or not the user wants to bypass the automatic logout code on public workstations.<\/p>"
     },
     {
-        "tableName": "browse_category_group",
+        "tableName": "system_messages",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "defaultBrowseMode",
-        "type": "TINYINT",
-        "length": 3,
+        "name": "message",
+        "type": "MEDIUMTEXT",
+        "length": 16777215,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "NULL",
         "comments": ""
     }
 ];
