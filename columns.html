@@ -159,14 +159,14 @@
     {
         "tableName": "rbdigital_magazine_issue_availability",
         "tableType": "Table",
-        "keyClass": "primaryKey",
-        "keyTitle": "Primary Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
-        "autoUpdated": "√",
-        "defaultValue": "null",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "isOwned",
+        "type": "TINYINT",
+        "length": 3,
+        "nullable": "√",
+        "autoUpdated": "",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -4811,16 +4811,16 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_record_usage",
+        "tableName": "syndetics_settings",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>overdriveId",
-        "type": "VARCHAR",
-        "length": 36,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "hasExcerpt",
+        "type": "TINYINT",
+        "length": 3,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "1",
         "comments": ""
     },
     {
@@ -5942,13 +5942,13 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_record_usage",
+        "tableName": "syndetics_settings",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>instance",
-        "type": "VARCHAR",
-        "length": 100,
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "unboundAccountNumber",
+        "type": "INT",
+        "length": 10,
         "nullable": "√",
         "autoUpdated": "",
         "defaultValue": "NULL",
@@ -10284,7 +10284,7 @@
         "comments": ""
     },
     {
-        "tableName": "nongrouped_records",
+        "tableName": "rbdigital_magazine_issue_availability",
         "tableType": "Table",
         "keyClass": "primaryKey",
         "keyTitle": "Primary Key",
@@ -10583,16 +10583,16 @@
         "comments": ""
     },
     {
-        "tableName": "rbdigital_magazine_issue_availability",
+        "tableName": "nongrouped_records",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "isOwned",
-        "type": "TINYINT",
-        "length": 3,
-        "nullable": "√",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>recordId",
+        "type": "VARCHAR",
+        "length": 36,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -11753,16 +11753,16 @@
         "comments": ""
     },
     {
-        "tableName": "syndetics_settings",
+        "tableName": "overdrive_record_usage",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "hasExcerpt",
-        "type": "TINYINT",
-        "length": 3,
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>instance",
+        "type": "VARCHAR",
+        "length": 100,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "1",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -13911,16 +13911,16 @@
         "comments": "<p>A link to one person in the marriage<\/p>"
     },
     {
-        "tableName": "overdrive_record_usage",
+        "tableName": "syndetics_settings",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "timesHeld",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
+        "name": "hasAuthorNotes",
+        "type": "TINYINT",
+        "length": 3,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -14236,15 +14236,15 @@
         "comments": ""
     },
     {
-        "tableName": "rbdigital_magazine_issue_availability",
+        "tableName": "nongrouped_records",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>settingId",
+        "keyClass": "primaryKey",
+        "keyTitle": "Primary Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
         "type": "INT",
         "length": 10,
         "nullable": "",
-        "autoUpdated": "",
+        "autoUpdated": "√",
         "defaultValue": "null",
         "comments": ""
     },
@@ -14691,16 +14691,16 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_record_usage",
+        "tableName": "syndetics_settings",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>year",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "hasVideoClip",
+        "type": "TINYINT",
+        "length": 3,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -15016,16 +15016,16 @@
         "comments": ""
     },
     {
-        "tableName": "syndetics_settings",
+        "tableName": "overdrive_record_usage",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "hasAvProfile",
-        "type": "TINYINT",
-        "length": 3,
-        "nullable": "√",
+        "name": "timesHeld",
+        "type": "INT",
+        "length": 10,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -16121,13 +16121,13 @@
         "comments": ""
     },
     {
-        "tableName": "nongrouped_records",
+        "tableName": "rbdigital_magazine_issue_availability",
         "tableType": "Table",
         "keyClass": "indexedColumn",
         "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>recordId",
-        "type": "VARCHAR",
-        "length": 36,
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>settingId",
+        "type": "INT",
+        "length": 10,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
@@ -16381,16 +16381,16 @@
         "comments": ""
     },
     {
-        "tableName": "syndetics_settings",
+        "tableName": "overdrive_record_usage",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "hasSummary",
-        "type": "TINYINT",
-        "length": 3,
-        "nullable": "√",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>year",
+        "type": "INT",
+        "length": 10,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "1",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -16825,14 +16825,14 @@
     {
         "tableName": "rbdigital_magazine_issue_availability",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>issueId",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "stateId",
         "type": "INT",
         "length": 10,
-        "nullable": "",
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -18487,7 +18487,7 @@
         "comments": ""
     },
     {
-        "tableName": "syndetics_settings",
+        "tableName": "overdrive_record_usage",
         "tableType": "Table",
         "keyClass": "primaryKey",
         "keyTitle": "Primary Key",
@@ -18660,12 +18660,12 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "unboundAccountNumber",
-        "type": "INT",
-        "length": 10,
+        "name": "hasAvProfile",
+        "type": "TINYINT",
+        "length": 3,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -19284,12 +19284,12 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "hasFictionProfile",
-        "type": "TINYINT",
-        "length": 3,
-        "nullable": "√",
+        "name": "syndeticsKey",
+        "type": "VARCHAR",
+        "length": 50,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -19804,12 +19804,12 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "hasAuthorNotes",
+        "name": "hasSummary",
         "type": "TINYINT",
         "length": 3,
         "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "1",
         "comments": ""
     },
     {
@@ -20554,16 +20554,16 @@
         "comments": ""
     },
     {
-        "tableName": "syndetics_settings",
+        "tableName": "overdrive_record_usage",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "syndeticsKey",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>overdriveId",
         "type": "VARCHAR",
-        "length": 50,
-        "nullable": "",
+        "length": 36,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -24909,16 +24909,16 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_record_usage",
+        "tableName": "syndetics_settings",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "timesCheckedOut",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
+        "name": "syndeticsUnbound",
+        "type": "TINYINT",
+        "length": 3,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -25834,14 +25834,14 @@
     {
         "tableName": "syndetics_settings",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "hasVideoClip",
-        "type": "TINYINT",
-        "length": 3,
-        "nullable": "√",
-        "autoUpdated": "",
-        "defaultValue": "0",
+        "keyClass": "primaryKey",
+        "keyTitle": "Primary Key",
+        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
+        "type": "INT",
+        "length": 10,
+        "nullable": "",
+        "autoUpdated": "√",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -27964,16 +27964,16 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_record_usage",
+        "tableName": "syndetics_settings",
         "tableType": "Table",
-        "keyClass": "indexedColumn",
-        "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>month",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "hasFictionProfile",
+        "type": "TINYINT",
+        "length": 3,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "0",
         "comments": ""
     },
     {
@@ -28263,16 +28263,16 @@
         "comments": ""
     },
     {
-        "tableName": "syndetics_settings",
+        "tableName": "overdrive_record_usage",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "hasToc",
-        "type": "TINYINT",
-        "length": 3,
-        "nullable": "√",
+        "name": "timesCheckedOut",
+        "type": "INT",
+        "length": 10,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "1",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -29359,7 +29359,7 @@
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "syndeticsUnbound",
+        "name": "hasAvSummary",
         "type": "TINYINT",
         "length": 3,
         "nullable": "√",
@@ -29602,16 +29602,16 @@
         "comments": ""
     },
     {
-        "tableName": "overdrive_record_usage",
+        "tableName": "syndetics_settings",
         "tableType": "Table",
-        "keyClass": "primaryKey",
-        "keyTitle": "Primary Key",
-        "name": "<i class='icon ion-key iconkey' style='padding-left: 5px;'><\/i>id",
-        "type": "INT",
-        "length": 10,
-        "nullable": "",
-        "autoUpdated": "√",
-        "defaultValue": "null",
+        "keyClass": "",
+        "keyTitle": "",
+        "name": "hasToc",
+        "type": "TINYINT",
+        "length": 3,
+        "nullable": "√",
+        "autoUpdated": "",
+        "defaultValue": "1",
         "comments": ""
     },
     {
@@ -29693,16 +29693,16 @@
         "comments": ""
     },
     {
-        "tableName": "nongrouped_records",
+        "tableName": "rbdigital_magazine_issue_availability",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "notes",
-        "type": "VARCHAR",
-        "length": 255,
-        "nullable": "",
+        "name": "isAvailable",
+        "type": "TINYINT",
+        "length": 3,
+        "nullable": "√",
         "autoUpdated": "",
-        "defaultValue": "null",
+        "defaultValue": "NULL",
         "comments": ""
     },
     {
@@ -33580,13 +33580,13 @@
         "comments": ""
     },
     {
-        "tableName": "nongrouped_records",
+        "tableName": "rbdigital_magazine_issue_availability",
         "tableType": "Table",
         "keyClass": "indexedColumn",
         "keyTitle": "Indexed",
-        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>source",
-        "type": "VARCHAR",
-        "length": 50,
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>issueId",
+        "type": "INT",
+        "length": 10,
         "nullable": "",
         "autoUpdated": "",
         "defaultValue": "null",
@@ -35179,16 +35179,16 @@
         "comments": "<p>The timestamp when the run started<\/p>"
     },
     {
-        "tableName": "rbdigital_magazine_issue_availability",
+        "tableName": "nongrouped_records",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "isAvailable",
-        "type": "TINYINT",
-        "length": 3,
-        "nullable": "√",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>source",
+        "type": "VARCHAR",
+        "length": 50,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -35400,16 +35400,16 @@
         "comments": ""
     },
     {
-        "tableName": "rbdigital_magazine_issue_availability",
+        "tableName": "nongrouped_records",
         "tableType": "Table",
         "keyClass": "",
         "keyTitle": "",
-        "name": "stateId",
-        "type": "INT",
-        "length": 10,
-        "nullable": "√",
+        "name": "notes",
+        "type": "VARCHAR",
+        "length": 255,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "NULL",
+        "defaultValue": "null",
         "comments": ""
     },
     {
@@ -36687,16 +36687,16 @@
         "comments": ""
     },
     {
-        "tableName": "syndetics_settings",
+        "tableName": "overdrive_record_usage",
         "tableType": "Table",
-        "keyClass": "",
-        "keyTitle": "",
-        "name": "hasAvSummary",
-        "type": "TINYINT",
-        "length": 3,
-        "nullable": "√",
+        "keyClass": "indexedColumn",
+        "keyTitle": "Indexed",
+        "name": "<i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'><\/i>month",
+        "type": "INT",
+        "length": 10,
+        "nullable": "",
         "autoUpdated": "",
-        "defaultValue": "0",
+        "defaultValue": "null",
         "comments": ""
     },
     {
