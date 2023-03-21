@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>collection_spotlights - aspen Database</title>
+        <title>collection_spotlights - aspen.aspen</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
@@ -46,7 +46,7 @@
                 <nav class="navbar navbar-static-top">
                     <div class="container">
                         <div class="navbar-header">
-                            <a href="../index.html" class="navbar-brand"><b>aspen</b> Database</a>
+                            <a href="../index.html" class="navbar-brand"><b>aspen</b></a><span class="navbar-brand" style="padding-left: 0">.aspen</span>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
                         </div>
 
@@ -100,7 +100,13 @@
                             </div>
                         </div>
                         <div class="box-body">
-                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
                                 <thead align='left'>
                                 <tr>
                                     <th>Column</th>
@@ -283,7 +289,8 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
                                                 <td title="collection_spotlights.libraryId&#39;s name implies that it&#39;s a child of library.libraryId, but it doesn&#39;t reference that column."><a href='library.html'>library</a><span class='relatedKey'>.libraryId</span></td>
-                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -456,7 +463,13 @@
                             </div>
                         </div>
                         <div class="box-body">
-                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
                                 <thead>
                                 <tr>
                                     <th>Constraint Name</th>
@@ -502,53 +515,53 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="5,5,412,632">
+<area shape="rect" id="node1" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="5,5,404,632">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/collection_spotlights.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="523,5,929,632">
+<area shape="rect" id="node1" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="523,5,921,632">
 <area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="5,272,479,419">
 </map>
                                         <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/collection_spotlights.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="browse_category.html" target="_top" title="browse_category" alt="" coords="619,5,833,93">
+<area shape="rect" id="node1" href="browse_category.html" target="_top" title="browse_category" alt="" coords="615,5,829,93">
 <area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="5,2227,479,2373">
-<area shape="rect" id="node3" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="523,111,929,737">
-<area shape="rect" id="node4" href="greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="614,755,838,843">
-<area shape="rect" id="node5" href="holiday.html" target="_top" title="holiday" alt="" coords="655,860,797,948">
-<area shape="rect" id="node6" href="hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="624,965,828,1053">
-<area shape="rect" id="node7" href="host_information.html" target="_top" title="host_information" alt="" coords="617,1071,835,1159">
-<area shape="rect" id="node8" href="javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="584,1176,868,1264">
-<area shape="rect" id="node9" href="library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="579,1281,873,1369">
-<area shape="rect" id="node10" href="library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="557,1387,895,1475">
-<area shape="rect" id="node11" href="library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="599,1492,853,1580">
-<area shape="rect" id="node12" href="library_links.html" target="_top" title="library_links" alt="" coords="636,1597,816,1685">
-<area shape="rect" id="node13" href="library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="559,1703,893,1791">
-<area shape="rect" id="node14" href="library_records_owned.html" target="_top" title="library_records_owned" alt="" coords="597,1808,855,1896">
-<area shape="rect" id="node15" href="library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="583,1913,869,2001">
-<area shape="rect" id="node16" href="library_search_source.html" target="_top" title="library_search_source" alt="" coords="601,2019,851,2107">
-<area shape="rect" id="node17" href="library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="594,2124,858,2212">
-<area shape="rect" id="node18" href="library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="563,2229,889,2317">
-<area shape="rect" id="node19" href="library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="555,2335,897,2423">
-<area shape="rect" id="node20" href="library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="559,2440,893,2528">
-<area shape="rect" id="node21" href="library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="571,2545,881,2633">
-<area shape="rect" id="node22" href="library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="588,2651,864,2739">
-<area shape="rect" id="node23" href="location.html" target="_top" title="location" alt="" coords="652,2756,800,2844">
-<area shape="rect" id="node24" href="materials_request.html" target="_top" title="materials_request" alt="" coords="614,2861,838,2949">
-<area shape="rect" id="node25" href="materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="549,2967,903,3055">
-<area shape="rect" id="node26" href="materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="569,3072,883,3160">
-<area shape="rect" id="node27" href="materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="581,3177,871,3265">
-<area shape="rect" id="node28" href="materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="587,3283,865,3371">
-<area shape="rect" id="node29" href="overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="551,3388,901,3476">
-<area shape="rect" id="node30" href="placard_library.html" target="_top" title="placard_library" alt="" coords="625,3493,827,3581">
-<area shape="rect" id="node31" href="staff_members.html" target="_top" title="staff_members" alt="" coords="627,3599,825,3687">
-<area shape="rect" id="node32" href="system_message_library.html" target="_top" title="system_message_library" alt="" coords="592,3704,860,3792">
-<area shape="rect" id="node33" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="538,3809,914,3897">
-<area shape="rect" id="node34" href="web_builder_menu.html" target="_top" title="web_builder_menu" alt="" coords="611,3915,841,4003">
+<area shape="rect" id="node3" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="523,111,921,737">
+<area shape="rect" id="node4" href="greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="609,755,835,843">
+<area shape="rect" id="node5" href="holiday.html" target="_top" title="holiday" alt="" coords="653,860,791,948">
+<area shape="rect" id="node6" href="hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="620,965,824,1053">
+<area shape="rect" id="node7" href="host_information.html" target="_top" title="host_information" alt="" coords="613,1071,831,1159">
+<area shape="rect" id="node8" href="javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="580,1176,864,1264">
+<area shape="rect" id="node9" href="library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="575,1281,869,1369">
+<area shape="rect" id="node10" href="library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="550,1387,894,1475">
+<area shape="rect" id="node11" href="library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="595,1492,849,1580">
+<area shape="rect" id="node12" href="library_links.html" target="_top" title="library_links" alt="" coords="633,1597,811,1685">
+<area shape="rect" id="node13" href="library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="553,1703,891,1791">
+<area shape="rect" id="node14" href="library_records_owned.html" target="_top" title="library_records_owned" alt="" coords="592,1808,852,1896">
+<area shape="rect" id="node15" href="library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="578,1913,866,2001">
+<area shape="rect" id="node16" href="library_search_source.html" target="_top" title="library_search_source" alt="" coords="596,2019,848,2107">
+<area shape="rect" id="node17" href="library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="589,2124,855,2212">
+<area shape="rect" id="node18" href="library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="558,2229,886,2317">
+<area shape="rect" id="node19" href="library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="548,2335,896,2423">
+<area shape="rect" id="node20" href="library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="554,2440,890,2528">
+<area shape="rect" id="node21" href="library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="565,2545,879,2633">
+<area shape="rect" id="node22" href="library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="583,2651,861,2739">
+<area shape="rect" id="node23" href="location.html" target="_top" title="location" alt="" coords="650,2756,794,2844">
+<area shape="rect" id="node24" href="materials_request.html" target="_top" title="materials_request" alt="" coords="610,2861,834,2949">
+<area shape="rect" id="node25" href="materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="541,2967,903,3055">
+<area shape="rect" id="node26" href="materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="562,3072,882,3160">
+<area shape="rect" id="node27" href="materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="575,3177,869,3265">
+<area shape="rect" id="node28" href="materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="582,3283,862,3371">
+<area shape="rect" id="node29" href="overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="546,3388,898,3476">
+<area shape="rect" id="node30" href="placard_library.html" target="_top" title="placard_library" alt="" coords="623,3493,821,3581">
+<area shape="rect" id="node31" href="staff_members.html" target="_top" title="staff_members" alt="" coords="623,3599,821,3687">
+<area shape="rect" id="node32" href="system_message_library.html" target="_top" title="system_message_library" alt="" coords="586,3704,858,3792">
+<area shape="rect" id="node33" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="529,3809,915,3897">
+<area shape="rect" id="node34" href="web_builder_menu.html" target="_top" title="web_builder_menu" alt="" coords="607,3915,837,4003">
 </map>
                                         <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/collection_spotlights.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
@@ -570,7 +583,7 @@
                         <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
                         <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
                     </div>
-                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.0</a></strong>
                 </div>
                 <!-- /.container -->
             </footer>

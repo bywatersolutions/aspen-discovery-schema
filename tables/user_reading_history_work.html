@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>user_reading_history_work - aspen Database</title>
+        <title>user_reading_history_work - aspen.aspen</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
@@ -46,7 +46,7 @@
                 <nav class="navbar navbar-static-top">
                     <div class="container">
                         <div class="navbar-header">
-                            <a href="../index.html" class="navbar-brand"><b>aspen</b> Database</a>
+                            <a href="../index.html" class="navbar-brand"><b>aspen</b></a><span class="navbar-brand" style="padding-left: 0">.aspen</span>
                             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse"><i class="fa fa-bars"></i></button>
                         </div>
 
@@ -100,7 +100,13 @@
                             </div>
                         </div>
                         <div class="box-body">
-                            <table id="standard_table" class="table table-bordered table-striped dataTable" role="grid">
+                            <table
+                                    id="standard_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
                                 <thead align='left'>
                                 <tr>
                                     <th>Column</th>
@@ -147,7 +153,8 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                             <tr>
                                                 <td title="user_reading_history_work.userId&#39;s name implies that it&#39;s a child of user.id, but it doesn&#39;t reference that column."><a href='user.html'>user</a><span class='relatedKey'>.id</span></td>
-                                                <td class="constraint detail">Implied Constraint<span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -320,7 +327,13 @@
                             </div>
                         </div>
                         <div class="box-body">
-                            <table id="indexes_table" class="table table-bordered table-striped dataTable" role="grid">
+                            <table
+                                    id="indexes_table"
+                                    class="table table-bordered table-striped dataTable"
+                                    role="grid"
+                                    data-paging="true"
+                                    data-page-length="10"
+                                    data-length-change="false">
                                 <thead>
                                 <tr>
                                     <th>Constraint Name</th>
@@ -408,48 +421,48 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="5,5,371,397">
+<area shape="rect" id="node1" href="user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="5,5,367,397">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/user_reading_history_work.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="344,5,709,397">
+<area shape="rect" id="node1" href="user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="344,5,705,397">
 <area shape="rect" id="node2" href="user.html" target="_top" title="user" alt="" coords="5,37,300,213">
 </map>
                                         <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/user_reading_history_work.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="browse_category.html" target="_top" title="browse_category" alt="" coords="425,5,639,93">
+<area shape="rect" id="node1" href="browse_category.html" target="_top" title="browse_category" alt="" coords="430,5,643,93">
 <area shape="rect" id="node2" href="user.html" target="_top" title="user" alt="" coords="5,1425,300,1601">
-<area shape="rect" id="node3" href="ebsco_research_starter_dismissals.html" target="_top" title="ebsco_research_starter_dismissals" alt="" coords="361,111,703,199">
-<area shape="rect" id="node4" href="hold_request_confirmation.html" target="_top" title="hold_request_confirmation" alt="" coords="387,216,677,304">
-<area shape="rect" id="node5" href="overdrive_account_cache.html" target="_top" title="overdrive_account_cache" alt="" coords="393,321,671,409">
-<area shape="rect" id="node6" href="placard_dismissal.html" target="_top" title="placard_dismissal" alt="" coords="422,427,642,515">
-<area shape="rect" id="node7" href="redwood_user_contribution.html" target="_top" title="redwood_user_contribution" alt="" coords="385,532,679,620">
-<area shape="rect" id="node8" href="system_message_dismissal.html" target="_top" title="system_message_dismissal" alt="" coords="389,637,675,725">
-<area shape="rect" id="node9" href="user_account_summary.html" target="_top" title="user_account_summary" alt="" coords="400,743,664,831">
-<area shape="rect" id="node10" href="user_axis360_usage.html" target="_top" title="user_axis360_usage" alt="" coords="417,848,647,936">
-<area shape="rect" id="node11" href="user_checkout.html" target="_top" title="user_checkout" alt="" coords="435,953,629,1041">
-<area shape="rect" id="node12" href="user_cloud_library_usage.html" target="_top" title="user_cloud_library_usage" alt="" coords="395,1059,669,1147">
-<area shape="rect" id="node13" href="user_ebsco_eds_usage.html" target="_top" title="user_ebsco_eds_usage" alt="" coords="407,1164,657,1252">
-<area shape="rect" id="node14" href="user_events_usage.html" target="_top" title="user_events_usage" alt="" coords="419,1269,645,1357">
-<area shape="rect" id="node15" href="user_hold.html" target="_top" title="user_hold" alt="" coords="453,1375,611,1463">
-<area shape="rect" id="node16" href="user_hoopla_usage.html" target="_top" title="user_hoopla_usage" alt="" coords="419,1480,645,1568">
-<area shape="rect" id="node17" href="user_ils_usage.html" target="_top" title="user_ils_usage" alt="" coords="437,1585,627,1673">
-<area shape="rect" id="node18" href="user_messages.html" target="_top" title="user_messages" alt="" coords="434,1691,630,1779">
-<area shape="rect" id="node19" href="user_not_interested.html" target="_top" title="user_not_interested" alt="" coords="413,1796,651,1884">
-<area shape="rect" id="node20" href="user_open_archives_usage.html" target="_top" title="user_open_archives_usage" alt="" coords="391,1901,673,1989">
-<area shape="rect" id="node21" href="user_overdrive_usage.html" target="_top" title="user_overdrive_usage" alt="" coords="408,2007,656,2095">
-<area shape="rect" id="node22" href="user_payments.html" target="_top" title="user_payments" alt="" coords="431,2112,633,2200">
-<area shape="rect" id="node23" href="user_rbdigital_usage.html" target="_top" title="user_rbdigital_usage" alt="" coords="412,2217,652,2305">
-<area shape="rect" id="node24" href="user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="349,2323,715,2715">
-<area shape="rect" id="node25" href="user_sideload_usage.html" target="_top" title="user_sideload_usage" alt="" coords="413,2732,651,2820">
-<area shape="rect" id="node26" href="user_staff_settings.html" target="_top" title="user_staff_settings" alt="" coords="419,2837,645,2925">
-<area shape="rect" id="node27" href="user_website_usage.html" target="_top" title="user_website_usage" alt="" coords="415,2943,649,3031">
-<area shape="rect" id="node28" href="user_work_review.html" target="_top" title="user_work_review" alt="" coords="421,3048,643,3136">
-<area shape="rect" id="node29" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="344,3153,720,3241">
+<area shape="rect" id="node3" href="ebsco_research_starter_dismissals.html" target="_top" title="ebsco_research_starter_dismissals" alt="" coords="361,111,713,199">
+<area shape="rect" id="node4" href="hold_request_confirmation.html" target="_top" title="hold_request_confirmation" alt="" coords="389,216,684,304">
+<area shape="rect" id="node5" href="overdrive_account_cache.html" target="_top" title="overdrive_account_cache" alt="" coords="397,321,676,409">
+<area shape="rect" id="node6" href="placard_dismissal.html" target="_top" title="placard_dismissal" alt="" coords="427,427,647,515">
+<area shape="rect" id="node7" href="redwood_user_contribution.html" target="_top" title="redwood_user_contribution" alt="" coords="387,532,686,620">
+<area shape="rect" id="node8" href="system_message_dismissal.html" target="_top" title="system_message_dismissal" alt="" coords="390,637,683,725">
+<area shape="rect" id="node9" href="user_account_summary.html" target="_top" title="user_account_summary" alt="" coords="403,743,671,831">
+<area shape="rect" id="node10" href="user_axis360_usage.html" target="_top" title="user_axis360_usage" alt="" coords="420,848,653,936">
+<area shape="rect" id="node11" href="user_checkout.html" target="_top" title="user_checkout" alt="" coords="439,953,634,1041">
+<area shape="rect" id="node12" href="user_cloud_library_usage.html" target="_top" title="user_cloud_library_usage" alt="" coords="398,1059,675,1147">
+<area shape="rect" id="node13" href="user_ebsco_eds_usage.html" target="_top" title="user_ebsco_eds_usage" alt="" coords="409,1164,664,1252">
+<area shape="rect" id="node14" href="user_events_usage.html" target="_top" title="user_events_usage" alt="" coords="423,1269,651,1357">
+<area shape="rect" id="node15" href="user_hold.html" target="_top" title="user_hold" alt="" coords="459,1375,615,1463">
+<area shape="rect" id="node16" href="user_hoopla_usage.html" target="_top" title="user_hoopla_usage" alt="" coords="422,1480,651,1568">
+<area shape="rect" id="node17" href="user_ils_usage.html" target="_top" title="user_ils_usage" alt="" coords="441,1585,633,1673">
+<area shape="rect" id="node18" href="user_messages.html" target="_top" title="user_messages" alt="" coords="437,1691,636,1779">
+<area shape="rect" id="node19" href="user_not_interested.html" target="_top" title="user_not_interested" alt="" coords="417,1796,656,1884">
+<area shape="rect" id="node20" href="user_open_archives_usage.html" target="_top" title="user_open_archives_usage" alt="" coords="393,1901,681,1989">
+<area shape="rect" id="node21" href="user_overdrive_usage.html" target="_top" title="user_overdrive_usage" alt="" coords="411,2007,662,2095">
+<area shape="rect" id="node22" href="user_payments.html" target="_top" title="user_payments" alt="" coords="437,2112,637,2200">
+<area shape="rect" id="node23" href="user_rbdigital_usage.html" target="_top" title="user_rbdigital_usage" alt="" coords="415,2217,658,2305">
+<area shape="rect" id="node24" href="user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="356,2323,717,2715">
+<area shape="rect" id="node25" href="user_sideload_usage.html" target="_top" title="user_sideload_usage" alt="" coords="416,2732,657,2820">
+<area shape="rect" id="node26" href="user_staff_settings.html" target="_top" title="user_staff_settings" alt="" coords="423,2837,651,2925">
+<area shape="rect" id="node27" href="user_website_usage.html" target="_top" title="user_website_usage" alt="" coords="418,2943,655,3031">
+<area shape="rect" id="node28" href="user_work_review.html" target="_top" title="user_work_review" alt="" coords="425,3048,648,3136">
+<area shape="rect" id="node29" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="344,3153,729,3241">
 </map>
                                         <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/user_reading_history_work.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
@@ -471,7 +484,7 @@
                         <a href="https://github.com/schemaspy/schemaspy" title="GitHub for SchemaSpy"><i class="fa fa-github-square fa-2x"></i></a>
                         <a href="http://stackoverflow.com/questions/tagged/schemaspy" title="StackOverflow for SchemaSpy"><i class="fa fa-stack-overflow fa-2x"></i></a>
                     </div>
-                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.1.0</a></strong>
+                    <strong>Generated by <a href="http://schemaspy.org/" class="logo-text"><i class="fa fa-database"></i> SchemaSpy 6.2.0</a></strong>
                 </div>
                 <!-- /.container -->
             </footer>
