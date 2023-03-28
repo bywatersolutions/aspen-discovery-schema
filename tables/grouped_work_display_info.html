@@ -128,7 +128,7 @@
                                 <tr>
                                     <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="permanent_id">permanent_id</span></td>
                                     <td>CHAR</td>
-                                    <td>36</td>
+                                    <td>40</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -195,8 +195,8 @@
                                 </tr>
                                 <tr>
                                     <td><span id="seriesDisplayOrder">seriesDisplayOrder</span></td>
-                                    <td>INT</td>
-                                    <td>10</td>
+                                    <td>DECIMAL</td>
+                                    <td>6,2</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>NULL</td>
@@ -289,6 +289,12 @@
                                 <tr>
                                     <td title='Indexed'>permanent_id_2</td>
                                     <td>Performance</td>
+                                    <td><span title='Ascending'>Asc</span></td>
+                                    <td>permanent_id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> permanent_id_3</td>
+                                    <td>Must be unique</td>
                                     <td><span title='Ascending'>Asc</span></td>
                                     <td>permanent_id</td>
                                 </tr>

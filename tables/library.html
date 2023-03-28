@@ -73,7 +73,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>library</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <h1>library</h1><p><span id="recordNumber">1</span> rows</p><br />
                 </section>
                 <!-- Main content -->
                 <section class="content">
@@ -117,6 +117,16 @@
                                     <td>null</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="aspen_lida_notifications_library.libraryId&#39;s name implies that it&#39;s a child of library.libraryId, but it doesn&#39;t reference that column."><a href='aspen_lida_notifications_library.html'>aspen_lida_notifications_library</a><span class='relatedKey'>.libraryId</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="aspen_lida_quick_searches.libraryId&#39;s name implies that it&#39;s a child of library.libraryId, but it doesn&#39;t reference that column."><a href='aspen_lida_quick_searches.html'>aspen_lida_quick_searches</a><span class='relatedKey'>.libraryId</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
                                             <tr>
                                                 <td title="browse_category.libraryId&#39;s name implies that it&#39;s a child of library.libraryId, but it doesn&#39;t reference that column."><a href='browse_category.html'>browse_category</a><span class='relatedKey'>.libraryId</span></td>
                                                 <td class="constraint detail">Implied Constraint</td>
@@ -178,11 +188,6 @@
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
-                                                <td title="library_records_owned.libraryId&#39;s name implies that it&#39;s a child of library.libraryId, but it doesn&#39;t reference that column."><a href='library_records_owned.html'>library_records_owned</a><span class='relatedKey'>.libraryId</span></td>
-                                                <td class="constraint detail">Implied Constraint</td>
-                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
-                                            </tr>
-                                            <tr>
                                                 <td title="library_records_to_include.libraryId&#39;s name implies that it&#39;s a child of library.libraryId, but it doesn&#39;t reference that column."><a href='library_records_to_include.html'>library_records_to_include</a><span class='relatedKey'>.libraryId</span></td>
                                                 <td class="constraint detail">Implied Constraint</td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
@@ -194,6 +199,11 @@
                                             </tr>
                                             <tr>
                                                 <td title="library_sideload_scopes.libraryId&#39;s name implies that it&#39;s a child of library.libraryId, but it doesn&#39;t reference that column."><a href='library_sideload_scopes.html'>library_sideload_scopes</a><span class='relatedKey'>.libraryId</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="library_themes.libraryId&#39;s name implies that it&#39;s a child of library.libraryId, but it doesn&#39;t reference that column."><a href='library_themes.html'>library_themes</a><span class='relatedKey'>.libraryId</span></td>
                                                 <td class="constraint detail">Implied Constraint</td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
@@ -249,6 +259,11 @@
                                             </tr>
                                             <tr>
                                                 <td title="materials_request_status.libraryId&#39;s name implies that it&#39;s a child of library.libraryId, but it doesn&#39;t reference that column."><a href='materials_request_status.html'>materials_request_status</a><span class='relatedKey'>.libraryId</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
+                                                <td title="materials_request_usage.libraryId&#39;s name implies that it&#39;s a child of library.libraryId, but it doesn&#39;t reference that column."><a href='materials_request_usage.html'>materials_request_usage</a><span class='relatedKey'>.libraryId</span></td>
                                                 <td class="constraint detail">Implied Constraint</td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
@@ -310,7 +325,7 @@
                                 <tr>
                                     <td><span id="displayName">displayName</span></td>
                                     <td>VARCHAR</td>
-                                    <td>50</td>
+                                    <td>80</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>null</td>
@@ -322,7 +337,7 @@
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
                                     </td>
-                                    <td><p>The name of the library which should be shown in titles.</p></td>
+                                    <td></td>
                                 </tr>
                                 <tr>
                                     <td><span id="showLibraryFacet">showLibraryFacet</span></td>
@@ -433,40 +448,6 @@
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="hideCommentsWithBadWords">hideCommentsWithBadWords</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="showStandardReviews">showStandardReviews</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -718,7 +699,7 @@
                                 <tr>
                                     <td><span id="validPickupSystems">validPickupSystems</span></td>
                                     <td>VARCHAR</td>
-                                    <td>255</td>
+                                    <td>500</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>&#39;&#39;</td>
@@ -772,7 +753,7 @@
                                     <td>3</td>
                                     <td title=''></td>
                                     <td title=''></td>
-                                    <td>0</td>
+                                    <td>1</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -858,23 +839,6 @@
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>&#39;&#39;</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="showRatings">showRatings</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title=''></td>
-                                    <td title=''></td>
-                                    <td>1</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -976,7 +940,7 @@
                                     <td>3</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td>1</td>
+                                    <td>0</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -1073,40 +1037,6 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="show856LinksAsTab">show856LinksAsTab</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="applyNumberOfHoldingsBoost">applyNumberOfHoldingsBoost</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="worldCatUrl">worldCatUrl</span></td>
                                     <td>VARCHAR</td>
                                     <td>100</td>
@@ -1130,23 +1060,6 @@
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>&#39;&#39;</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="preferSyndeticsSummary">preferSyndeticsSummary</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -1198,23 +1111,6 @@
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="showCheckInGrid">showCheckInGrid</span></td>
-                                    <td>INT</td>
-                                    <td>10</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -1329,23 +1225,6 @@
                                 </tr>
                                 <tr>
                                     <td><span id="restrictSearchByLibrary">restrictSearchByLibrary</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="includeOutOfSystemExternalLinks">includeOutOfSystemExternalLinks</span></td>
                                     <td>TINYINT</td>
                                     <td>3</td>
                                     <td title='nullable'>√</td>
@@ -1753,57 +1632,6 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="showGoodReadsReviews">showGoodReadsReviews</span></td>
-                                    <td>INT</td>
-                                    <td>10</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="showStaffView">showStaffView</span></td>
-                                    <td>INT</td>
-                                    <td>10</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="showSearchTools">showSearchTools</span></td>
-                                    <td>INT</td>
-                                    <td>10</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="barcodePrefix">barcodePrefix</span></td>
                                     <td>VARCHAR</td>
                                     <td>15</td>
@@ -1906,57 +1734,6 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="availabilityToggleLabelSuperScope">availabilityToggleLabelSuperScope</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>50</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>&#39;Entire Collection&#39;</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="availabilityToggleLabelLocal">availabilityToggleLabelLocal</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>50</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>&#39;{display name}&#39;</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="availabilityToggleLabelAvailable">availabilityToggleLabelAvailable</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>50</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>&#39;Available Now&#39;</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="loginFormUsernameLabel">loginFormUsernameLabel</span></td>
                                     <td>VARCHAR</td>
                                     <td>100</td>
@@ -1991,63 +1768,12 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="showDetailedHoldNoticeInformation">showDetailedHoldNoticeInformation</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="treatPrintNoticesAsPhoneNotices">treatPrintNoticesAsPhoneNotices</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="additionalLocationsToShowAvailabilityFor">additionalLocationsToShowAvailabilityFor</span></td>
                                     <td>VARCHAR</td>
                                     <td>255</td>
                                     <td title=''></td>
                                     <td title=''></td>
                                     <td>&#39;&#39;</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="showInMainDetails">showInMainDetails</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>255</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>NULL</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -2246,80 +1972,12 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="overDriveScopeId">overDriveScopeId</span></td>
-                                    <td>INT</td>
-                                    <td>10</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>-1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="publicListsToInclude">publicListsToInclude</span></td>
                                     <td>TINYINT</td>
                                     <td>3</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>4</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="showLCSubjects">showLCSubjects</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="showBisacSubjects">showBisacSubjects</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="showFastAddSubjects">showFastAddSubjects</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -2399,75 +2057,7 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="includeAllRecordsInShelvingFacets">includeAllRecordsInShelvingFacets</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="includeAllRecordsInDateAddedFacets">includeAllRecordsInDateAddedFacets</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="preventExpiredCardLogin">preventExpiredCardLogin</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="showInSearchResultsMainDetails">showInSearchResultsMainDetails</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>255</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>&#39;a:4:{i:0;s:10:&quot;showSeries&quot;;i:1;s:13:&quot;showPublisher&quot;;i:2;s:19:&quot;showPublicationDate&quot;;i:3;s:13:&quot;showLanguages&quot;;}&#39;</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="alwaysShowSearchResultsMainDetails">alwaysShowSearchResultsMainDetails</span></td>
                                     <td>TINYINT</td>
                                     <td>3</td>
                                     <td title='nullable'>√</td>
@@ -2535,40 +2125,6 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="availabilityToggleLabelAvailableOnline">availabilityToggleLabelAvailableOnline</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>50</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>&#39;&#39;</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="includeOnlineMaterialsInAvailableToggle">includeOnlineMaterialsInAvailableToggle</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="masqueradeAutomaticTimeoutLength">masqueradeAutomaticTimeoutLength</span></td>
                                     <td>TINYINT UNSIGNED</td>
                                     <td>3</td>
@@ -2591,7 +2147,7 @@
                                     <td>3</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td>0</td>
+                                    <td>1</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -2690,7 +2246,7 @@
                                 <tr>
                                     <td><span id="interLibraryLoanUrl">interLibraryLoanUrl</span></td>
                                     <td>VARCHAR</td>
-                                    <td>100</td>
+                                    <td>200</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>NULL</td>
@@ -2977,40 +2533,6 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="axis360ScopeId">axis360ScopeId</span></td>
-                                    <td>INT</td>
-                                    <td>10</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>-1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="showQuickCopy">showQuickCopy</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="finesToPay">finesToPay</span></td>
                                     <td>TINYINT</td>
                                     <td>3</td>
@@ -3028,80 +2550,80 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="payPalSandboxMode">payPalSandboxMode</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="payPalClientId">payPalClientId</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>80</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>NULL</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="payPalClientSecret">payPalClientSecret</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>80</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>NULL</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="msbUrl">msbUrl</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>80</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>NULL</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="finePaymentOrder">finePaymentOrder</span></td>
                                     <td>VARCHAR</td>
                                     <td>80</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>&#39;&#39;</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="layoutSettingId">layoutSettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="overDriveScopeId">overDriveScopeId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="groupedWorkDisplaySettingId">groupedWorkDisplaySettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="browseCategoryGroupId">browseCategoryGroupId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>null</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -3232,23 +2754,6 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="enableWebBuilder">enableWebBuilder</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="useAllCapsWhenSubmittingSelfRegistration">useAllCapsWhenSubmittingSelfRegistration</span></td>
                                     <td>TINYINT</td>
                                     <td>3</td>
@@ -3284,23 +2789,6 @@
                                 </tr>
                                 <tr>
                                     <td><span id="selfRegistrationPasswordNotes">selfRegistrationPasswordNotes</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>255</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>&#39;&#39;</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="validSelfRegistrationZipCodes">validSelfRegistrationZipCodes</span></td>
                                     <td>VARCHAR</td>
                                     <td>255</td>
                                     <td title='nullable'>√</td>
@@ -3436,6 +2924,23 @@
                                     <td></td>
                                 </tr>
                                 <tr>
+                                    <td><span id="edsSettingsId">edsSettingsId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
                                     <td><span id="useAllCapsWhenUpdatingProfile">useAllCapsWhenUpdatingProfile</span></td>
                                     <td>TINYINT</td>
                                     <td>3</td>
@@ -3470,23 +2975,6 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="requireNumericPhoneNumbersWhenUpdatingProfile">requireNumericPhoneNumbersWhenUpdatingProfile</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="availableHoldDelay">availableHoldDelay</span></td>
                                     <td>INT</td>
                                     <td>10</td>
@@ -3504,12 +2992,80 @@
                                     <td></td>
                                 </tr>
                                 <tr>
+                                    <td><span id="enableWebBuilder">enableWebBuilder</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="requireNumericPhoneNumbersWhenUpdatingProfile">requireNumericPhoneNumbersWhenUpdatingProfile</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="axis360ScopeId">axis360ScopeId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
                                     <td><span id="allowPatronPhoneNumberUpdates">allowPatronPhoneNumberUpdates</span></td>
                                     <td>TINYINT</td>
                                     <td>3</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="validSelfRegistrationZipCodes">validSelfRegistrationZipCodes</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>&#39;&#39;</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -3561,6 +3117,23 @@
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="msbUrl">msbUrl</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>80</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -3691,23 +3264,6 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="edsSettingsId">edsSettingsId</span></td>
-                                    <td>INT</td>
-                                    <td>10</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>-1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="workstationId">workstationId</span></td>
                                     <td>VARCHAR</td>
                                     <td>10</td>
@@ -3815,7 +3371,7 @@
                                     <td>10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td>-1</td>
+                                    <td>365</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -3929,9 +3485,116 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="groupedWorkDisplaySettingId">groupedWorkDisplaySettingId</span></td>
+                                    <td><span id="contactEmail">contactEmail</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>250</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="displayMaterialsRequestToPublic">displayMaterialsRequestToPublic</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td class='foreignKey' title='Foreign Key'><i class='icon ion-key iconkey' style='padding-left: 5px;'></i><span id="donationSettingId">donationSettingId</span></td>
                                     <td>INT</td>
                                     <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                            <tr>
+                                                <td title="library.donationSettingId&#39;s name implies that it&#39;s a child of donations.id, but it doesn&#39;t reference that column."><a href='donations.html'>donations</a><span class='relatedKey'>.id</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="courseReserveLibrariesToInclude">courseReserveLibrariesToInclude</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>50</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="curbsidePickupSettingId">curbsidePickupSettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="twoFactorAuthSettingId">twoFactorAuthSettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="defaultRememberMe">defaultRememberMe</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>0</td>
@@ -3946,9 +3609,162 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="browseCategoryGroupId">browseCategoryGroupId</span></td>
+                                    <td><span id="showLogMeOutAfterPlacingHolds">showLogMeOutAfterPlacingHolds</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="systemHoldNote">systemHoldNote</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>50</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>&#39;&#39;</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="systemHoldNoteMasquerade">systemHoldNoteMasquerade</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>50</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>&#39;&#39;</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="enableReadingHistory">enableReadingHistory</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="showCitationStyleGuides">showCitationStyleGuides</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="minPinLength">minPinLength</span></td>
                                     <td>INT</td>
                                     <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>4</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="maxPinLength">maxPinLength</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>6</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="onlyDigitsAllowedInPin">onlyDigitsAllowedInPin</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="enableSavedSearches">enableSavedSearches</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="holdPlacedAt">holdPlacedAt</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>0</td>
@@ -3963,12 +3779,998 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="layoutSettingId">layoutSettingId</span></td>
+                                    <td><span id="allowLoginToPatronsOfThisLibraryOnly">allowLoginToPatronsOfThisLibraryOnly</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="messageForPatronsOfOtherLibraries">messageForPatronsOfOtherLibraries</span></td>
+                                    <td>TEXT</td>
+                                    <td>65535</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="allowNameUpdates">allowNameUpdates</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="allowDateOfBirthUpdates">allowDateOfBirthUpdates</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="xpressPaySettingId">xpressPaySettingId</span></td>
                                     <td>INT</td>
                                     <td>10</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="preventLogin">preventLogin</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
                                     <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="preventLoginMessage">preventLoginMessage</span></td>
+                                    <td>TEXT</td>
+                                    <td>65535</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="footerText">footerText</span></td>
+                                    <td>MEDIUMTEXT</td>
+                                    <td>16777215</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ebscohostSettingId">ebscohostSettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ebscohostSearchSettingId">ebscohostSearchSettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="displayHoldsOnCheckout">displayHoldsOnCheckout</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="lidaNotificationSettingId">lidaNotificationSettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="lidaQuickSearchId">lidaQuickSearchId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="selfRegistrationUserProfile">selfRegistrationUserProfile</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>20</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>&#39;SELFREG&#39;</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="aciSpeedpaySettingId">aciSpeedpaySettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoName">ssoName</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoXmlUrl">ssoXmlUrl</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoUniqueAttribute">ssoUniqueAttribute</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoMetadataFilename">ssoMetadataFilename</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoIdAttr">ssoIdAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoUsernameAttr">ssoUsernameAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoFirstnameAttr">ssoFirstnameAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoLastnameAttr">ssoLastnameAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoEmailAttr">ssoEmailAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoDisplayNameAttr">ssoDisplayNameAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoPhoneAttr">ssoPhoneAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoPatronTypeAttr">ssoPatronTypeAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoPatronTypeFallback">ssoPatronTypeFallback</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoAddressAttr">ssoAddressAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoCityAttr">ssoCityAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoLibraryIdAttr">ssoLibraryIdAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoLibraryIdFallback">ssoLibraryIdFallback</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoCategoryIdAttr">ssoCategoryIdAttr</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoCategoryIdFallback">ssoCategoryIdFallback</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="promptForParentInSelfReg">promptForParentInSelfReg</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="promptForSMSNoticesInSelfReg">promptForSMSNoticesInSelfReg</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="selfRegRequirePhone">selfRegRequirePhone</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="selfRegRequireEmail">selfRegRequireEmail</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoSettingId">ssoSettingId</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="showUserCirculationModules">showUserCirculationModules</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="showUserPreferences">showUserPreferences</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="showUserContactInformation">showUserContactInformation</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoEntityId">ssoEntityId</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>255</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="showVolumesWithLocalCopiesFirst">showVolumesWithLocalCopiesFirst</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="enableListDescriptions">enableListDescriptions</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="allowableListNames">allowableListNames</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>500</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>&#39;&#39;</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="invoiceCloudSettingId">invoiceCloudSettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="cityStateField">cityStateField</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="holdRange">holdRange</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>20</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>&#39;SYSTEM&#39;</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="optInToReadingHistoryUpdatesILS">optInToReadingHistoryUpdatesILS</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="optOutOfReadingHistoryUpdatesILS">optOutOfReadingHistoryUpdatesILS</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="setUsePreferredNameInIlsOnUpdate">setUsePreferredNameInIlsOnUpdate</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="accountProfileId">accountProfileId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="lidaGeneralSettingId">lidaGeneralSettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="materialsRequestSendStaffEmailOnNew">materialsRequestSendStaffEmailOnNew</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="materialsRequestSendStaffEmailOnAssign">materialsRequestSendStaffEmailOnAssign</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="materialsRequestNewEmail">materialsRequestNewEmail</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>125</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="novelistSettingId">novelistSettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="deluxeCertifiedPaymentsSettingId">deluxeCertifiedPaymentsSettingId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -4051,88 +4853,100 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="library.html" target="_top" title="library" alt="" coords="5,5,651,6469">
+<area shape="rect" id="node1" href="library.html" target="_top" title="library" alt="" coords="5,5,651,7819">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/library.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="browse_category.html" target="_top" title="browse_category" alt="" coords="787,5,1001,211">
-<area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="5,2859,651,9323">
-<area shape="rect" id="node3" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="773,228,1015,375">
-<area shape="rect" id="node4" href="greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="759,392,1029,539">
-<area shape="rect" id="node5" href="holiday.html" target="_top" title="holiday" alt="" coords="825,556,963,732">
-<area shape="rect" id="node6" href="hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="695,749,1093,896">
-<area shape="rect" id="node7" href="host_information.html" target="_top" title="host_information" alt="" coords="785,913,1003,1060">
-<area shape="rect" id="node8" href="javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="752,1077,1036,1229">
-<area shape="rect" id="node9" href="library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="747,1247,1041,1399">
-<area shape="rect" id="node10" href="library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="722,1416,1066,1563">
-<area shape="rect" id="node11" href="library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="767,1580,1021,1761">
-<area shape="rect" id="node12" href="library_links.html" target="_top" title="library_links" alt="" coords="759,1779,1029,1925">
-<area shape="rect" id="node13" href="library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="725,1943,1063,2095">
-<area shape="rect" id="node14" href="library_records_owned.html" target="_top" title="library_records_owned" alt="" coords="764,2112,1024,2288">
-<area shape="rect" id="node15" href="library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="750,2305,1038,2481">
-<area shape="rect" id="node16" href="library_search_source.html" target="_top" title="library_search_source" alt="" coords="768,2499,1020,2645">
-<area shape="rect" id="node17" href="library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="761,2663,1027,2815">
-<area shape="rect" id="node18" href="library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="730,2832,1058,2984">
-<area shape="rect" id="node19" href="library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="720,3001,1068,3153">
-<area shape="rect" id="node20" href="library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="726,3171,1062,3323">
-<area shape="rect" id="node21" href="library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="737,3340,1051,3492">
-<area shape="rect" id="node22" href="library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="755,3509,1033,3661">
-<area shape="rect" id="node23" href="location.html" target="_top" title="location" alt="" coords="695,3679,1093,3913">
-<area shape="rect" id="node24" href="materials_request.html" target="_top" title="materials_request" alt="" coords="770,3931,1018,4312">
-<area shape="rect" id="node25" href="materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="713,4329,1075,4505">
-<area shape="rect" id="node26" href="materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="734,4523,1054,4669">
-<area shape="rect" id="node27" href="materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="747,4687,1041,4833">
-<area shape="rect" id="node28" href="materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="754,4851,1034,5085">
-<area shape="rect" id="node29" href="overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="718,5103,1070,5308">
-<area shape="rect" id="node30" href="placard_library.html" target="_top" title="placard_library" alt="" coords="795,5325,993,5477">
-<area shape="rect" id="node31" href="staff_members.html" target="_top" title="staff_members" alt="" coords="795,5495,993,5641">
-<area shape="rect" id="node32" href="system_message_library.html" target="_top" title="system_message_library" alt="" coords="758,5659,1030,5811">
-<area shape="rect" id="node33" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="701,5828,1087,6033">
-<area shape="rect" id="node34" href="web_builder_menu.html" target="_top" title="web_builder_menu" alt="" coords="779,6051,1009,6227">
+<area shape="rect" id="node1" href="aspen_lida_notifications_library.html" target="_top" title="aspen_lida_notifications_library" alt="" coords="991,5,1322,152">
+<area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="275,3089,920,10903">
+<area shape="rect" id="node11" href="donations.html" target="_top" title="donations" alt="" coords="5,8665,231,8783">
+<area shape="rect" id="node3" href="aspen_lida_quick_searches.html" target="_top" title="aspen_lida_quick_searches" alt="" coords="1011,169,1302,316">
+<area shape="rect" id="node4" href="browse_category.html" target="_top" title="browse_category" alt="" coords="1039,333,1275,539">
+<area shape="rect" id="node5" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="1035,556,1278,703">
+<area shape="rect" id="node6" href="greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="1022,720,1291,867">
+<area shape="rect" id="node7" href="holiday.html" target="_top" title="holiday" alt="" coords="1087,884,1226,1060">
+<area shape="rect" id="node8" href="hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="1013,1077,1301,1224">
+<area shape="rect" id="node9" href="host_information.html" target="_top" title="host_information" alt="" coords="1048,1241,1265,1388">
+<area shape="rect" id="node10" href="javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="1015,1405,1299,1557">
+<area shape="rect" id="node12" href="library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="1009,1575,1304,1727">
+<area shape="rect" id="node13" href="library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="985,1744,1329,1891">
+<area shape="rect" id="node14" href="library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="1029,1908,1284,2089">
+<area shape="rect" id="node15" href="library_links.html" target="_top" title="library_links" alt="" coords="1021,2107,1292,2253">
+<area shape="rect" id="node16" href="library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="988,2271,1325,2423">
+<area shape="rect" id="node17" href="library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="1013,2440,1301,2616">
+<area shape="rect" id="node18" href="library_search_source.html" target="_top" title="library_search_source" alt="" coords="1031,2633,1283,2780">
+<area shape="rect" id="node19" href="library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="1023,2797,1290,2949">
+<area shape="rect" id="node20" href="library_themes.html" target="_top" title="library_themes" alt="" coords="1057,2967,1256,3143">
+<area shape="rect" id="node21" href="library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="993,3160,1321,3312">
+<area shape="rect" id="node22" href="library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="983,3329,1331,3481">
+<area shape="rect" id="node23" href="library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="989,3499,1325,3651">
+<area shape="rect" id="node24" href="library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="1000,3668,1313,3820">
+<area shape="rect" id="node25" href="library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="1018,3837,1295,3989">
+<area shape="rect" id="node26" href="location.html" target="_top" title="location" alt="" coords="964,4007,1349,4271">
+<area shape="rect" id="node27" href="materials_request.html" target="_top" title="materials_request" alt="" coords="1033,4288,1281,4669">
+<area shape="rect" id="node28" href="materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="976,4687,1337,4863">
+<area shape="rect" id="node29" href="materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="997,4880,1317,5027">
+<area shape="rect" id="node30" href="materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="1009,5044,1304,5191">
+<area shape="rect" id="node31" href="materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="1017,5208,1297,5443">
+<area shape="rect" id="node32" href="materials_request_usage.html" target="_top" title="materials_request_usage" alt="" coords="1018,5460,1295,5607">
+<area shape="rect" id="node33" href="overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="981,5624,1333,5829">
+<area shape="rect" id="node34" href="placard_library.html" target="_top" title="placard_library" alt="" coords="1057,5847,1256,5999">
+<area shape="rect" id="node35" href="staff_members.html" target="_top" title="staff_members" alt="" coords="1057,6016,1256,6163">
+<area shape="rect" id="node36" href="system_message_library.html" target="_top" title="system_message_library" alt="" coords="1021,6180,1293,6332">
+<area shape="rect" id="node37" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="964,6349,1349,6555">
+<area shape="rect" id="node38" href="web_builder_menu.html" target="_top" title="web_builder_menu" alt="" coords="1042,6572,1271,6748">
 </map>
                                         <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/library.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="browse_category.html" target="_top" title="browse_category" alt="" coords="787,9061,1001,9267">
-<area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="5,2959,651,9423">
-<area shape="rect" id="node3" href="user.html" target="_top" title="user" alt="" coords="263,9545,393,9633">
-<area shape="rect" id="node4" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="773,2687,1015,2833">
-<area shape="rect" id="node5" href="greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="759,2851,1029,2997">
-<area shape="rect" id="node6" href="holiday.html" target="_top" title="holiday" alt="" coords="825,3015,963,3191">
-<area shape="rect" id="node7" href="hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="695,3208,1093,3355">
-<area shape="rect" id="node8" href="host_information.html" target="_top" title="host_information" alt="" coords="785,3372,1003,3519">
-<area shape="rect" id="node9" href="javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="752,3536,1036,3688">
-<area shape="rect" id="node10" href="library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="747,5,1041,157">
-<area shape="rect" id="node11" href="scope.html" target="_top" title="scope" alt="" coords="265,37,391,125">
-<area shape="rect" id="node12" href="library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="722,3705,1066,3852">
-<area shape="rect" id="node13" href="library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="767,3869,1021,4051">
-<area shape="rect" id="node14" href="library_links.html" target="_top" title="library_links" alt="" coords="759,4068,1029,4215">
-<area shape="rect" id="node15" href="library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="725,4232,1063,4384">
-<area shape="rect" id="node16" href="library_records_owned.html" target="_top" title="library_records_owned" alt="" coords="764,4401,1024,4577">
-<area shape="rect" id="node17" href="library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="750,4595,1038,4771">
-<area shape="rect" id="node18" href="library_search_source.html" target="_top" title="library_search_source" alt="" coords="768,4788,1020,4935">
-<area shape="rect" id="node19" href="library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="761,6133,1027,6285">
-<area shape="rect" id="node20" href="sideloads.html" target="_top" title="sideloads" alt="" coords="251,9440,405,9528">
-<area shape="rect" id="node21" href="library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="730,4952,1058,5104">
-<area shape="rect" id="node22" href="library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="720,5121,1068,5273">
-<area shape="rect" id="node23" href="library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="726,5291,1062,5443">
-<area shape="rect" id="node24" href="library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="737,5460,1051,5612">
-<area shape="rect" id="node25" href="library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="755,175,1033,327">
-<area shape="rect" id="node26" href="location.html" target="_top" title="location" alt="" coords="695,344,1093,579">
-<area shape="rect" id="node27" href="materials_request.html" target="_top" title="materials_request" alt="" coords="770,596,1018,977">
-<area shape="rect" id="node28" href="materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="713,995,1075,1171">
-<area shape="rect" id="node29" href="materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="734,1188,1054,1335">
-<area shape="rect" id="node30" href="materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="747,1352,1041,1499">
-<area shape="rect" id="node31" href="materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="754,1516,1034,1751">
-<area shape="rect" id="node32" href="overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="718,1768,1070,1973">
-<area shape="rect" id="node33" href="placard_library.html" target="_top" title="placard_library" alt="" coords="795,1991,993,2143">
-<area shape="rect" id="node34" href="staff_members.html" target="_top" title="staff_members" alt="" coords="795,2160,993,2307">
-<area shape="rect" id="node35" href="system_message_library.html" target="_top" title="system_message_library" alt="" coords="758,2324,1030,2476">
-<area shape="rect" id="node36" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="701,7993,1087,8199">
-<area shape="rect" id="node37" href="web_builder_menu.html" target="_top" title="web_builder_menu" alt="" coords="779,2493,1009,2669">
+<area shape="rect" id="node1" href="aspen_lida_notifications_library.html" target="_top" title="aspen_lida_notifications_library" alt="" coords="991,2541,1322,2688">
+<area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="275,3141,920,10955">
+<area shape="rect" id="node8" href="donations.html" target="_top" title="donations" alt="" coords="5,2928,231,3045">
+<area shape="rect" id="node3" href="aspen_lida_quick_searches.html" target="_top" title="aspen_lida_quick_searches" alt="" coords="1011,2705,1302,2852">
+<area shape="rect" id="node4" href="browse_category.html" target="_top" title="browse_category" alt="" coords="1039,6341,1275,6547">
+<area shape="rect" id="node5" href="user.html" target="_top" title="user" alt="" coords="533,10972,662,11060">
+<area shape="rect" id="node6" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="1035,2869,1278,3016">
+<area shape="rect" id="node7" href="donations_dedicate_type.html" target="_top" title="donations_dedicate_type" alt="" coords="459,2720,736,2808">
+<area shape="rect" id="node9" href="donations_earmark.html" target="_top" title="donations_earmark" alt="" coords="480,2825,715,2913">
+<area shape="rect" id="node10" href="donations_form_fields.html" target="_top" title="donations_form_fields" alt="" coords="469,2931,725,3019">
+<area shape="rect" id="node11" href="donations_value.html" target="_top" title="donations_value" alt="" coords="493,3036,702,3124">
+<area shape="rect" id="node12" href="greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="1022,3033,1291,3180">
+<area shape="rect" id="node13" href="holiday.html" target="_top" title="holiday" alt="" coords="1087,3197,1226,3373">
+<area shape="rect" id="node14" href="hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="1013,3391,1301,3537">
+<area shape="rect" id="node15" href="host_information.html" target="_top" title="host_information" alt="" coords="1048,3555,1265,3701">
+<area shape="rect" id="node16" href="javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="1015,3719,1299,3871">
+<area shape="rect" id="node17" href="library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="1009,10119,1304,10271">
+<area shape="rect" id="node18" href="scope.html" target="_top" title="scope" alt="" coords="535,11077,660,11165">
+<area shape="rect" id="node19" href="library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="985,3888,1329,4035">
+<area shape="rect" id="node20" href="library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="1029,4052,1284,4233">
+<area shape="rect" id="node21" href="library_links.html" target="_top" title="library_links" alt="" coords="1021,4251,1292,4397">
+<area shape="rect" id="node22" href="library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="988,4415,1325,4567">
+<area shape="rect" id="node23" href="library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="1013,4584,1301,4760">
+<area shape="rect" id="node24" href="library_search_source.html" target="_top" title="library_search_source" alt="" coords="1031,4777,1283,4924">
+<area shape="rect" id="node25" href="library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="1023,10844,1290,10996">
+<area shape="rect" id="node26" href="sideloads.html" target="_top" title="sideloads" alt="" coords="520,11183,675,11271">
+<area shape="rect" id="node27" href="library_themes.html" target="_top" title="library_themes" alt="" coords="1057,4941,1256,5117">
+<area shape="rect" id="node28" href="library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="993,5135,1321,5287">
+<area shape="rect" id="node29" href="library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="983,5304,1331,5456">
+<area shape="rect" id="node30" href="library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="989,5473,1325,5625">
+<area shape="rect" id="node31" href="library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="1000,5643,1313,5795">
+<area shape="rect" id="node32" href="library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="1018,5812,1295,5964">
+<area shape="rect" id="node33" href="location.html" target="_top" title="location" alt="" coords="964,5,1349,269">
+<area shape="rect" id="node34" href="materials_request.html" target="_top" title="materials_request" alt="" coords="1033,287,1281,668">
+<area shape="rect" id="node35" href="materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="976,685,1337,861">
+<area shape="rect" id="node36" href="materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="997,879,1317,1025">
+<area shape="rect" id="node37" href="materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="1009,1043,1304,1189">
+<area shape="rect" id="node38" href="materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="1017,1207,1297,1441">
+<area shape="rect" id="node39" href="materials_request_usage.html" target="_top" title="materials_request_usage" alt="" coords="1018,1459,1295,1605">
+<area shape="rect" id="node40" href="overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="981,1623,1333,1828">
+<area shape="rect" id="node41" href="placard_library.html" target="_top" title="placard_library" alt="" coords="1057,1845,1256,1997">
+<area shape="rect" id="node42" href="staff_members.html" target="_top" title="staff_members" alt="" coords="1057,2015,1256,2161">
+<area shape="rect" id="node43" href="system_message_library.html" target="_top" title="system_message_library" alt="" coords="1021,2179,1293,2331">
+<area shape="rect" id="node44" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="964,8785,1349,8991">
+<area shape="rect" id="node45" href="web_builder_menu.html" target="_top" title="web_builder_menu" alt="" coords="1042,2348,1271,2524">
 </map>
                                         <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/library.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>

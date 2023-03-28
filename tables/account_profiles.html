@@ -73,7 +73,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>account_profiles</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <h1>account_profiles</h1><p><span id="recordNumber">1</span> rows</p><br />
                 </section>
                 <!-- Main content -->
                 <section class="content">
@@ -178,11 +178,11 @@
                                 </tr>
                                 <tr>
                                     <td><span id="authenticationMethod">authenticationMethod</span></td>
-                                    <td>enum(&#39;ils&#39;, &#39;sip2&#39;, &#39;db&#39;, &#39;ldap&#39;)</td>
+                                    <td>enum(&#39;ils&#39;, &#39;sip2&#39;, &#39;db&#39;, &#39;ldap&#39;, &#39;sso&#39;)</td>
                                     <td>4</td>
+                                    <td title='nullable'>√</td>
                                     <td title=''></td>
-                                    <td title=''></td>
-                                    <td>&#39;ils&#39;</td>
+                                    <td>NULL</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -281,7 +281,7 @@
                                 <tr>
                                     <td><span id="databaseName">databaseName</span></td>
                                     <td>VARCHAR</td>
-                                    <td>50</td>
+                                    <td>75</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>NULL</td>
@@ -451,7 +451,7 @@
                                 <tr>
                                     <td><span id="oAuthClientSecret">oAuthClientSecret</span></td>
                                     <td>VARCHAR</td>
-                                    <td>36</td>
+                                    <td>50</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>NULL</td>
@@ -567,6 +567,57 @@
                                     </td>
                                     <td></td>
                                 </tr>
+                                <tr>
+                                    <td><span id="libraryForRecordingPayments">libraryForRecordingPayments</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="ssoSettingId">ssoSettingId</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="iiiLoginConfiguration">iiiLoginConfiguration</span></td>
+                                    <td>enum(&#39;&#39;, &#39;barcode_pin&#39;, &#39;name_barcode&#39;, &#39;name_barcode_pin&#39;)</td>
+                                    <td>16</td>
+                                    <td title=''></td>
+                                    <td title=''></td>
+                                    <td>&#39;&#39;</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -637,7 +688,7 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="account_profiles.html" target="_top" title="account_profiles" alt="" coords="5,5,335,867">
+<area shape="rect" id="node1" href="account_profiles.html" target="_top" title="account_profiles" alt="" coords="5,5,391,955">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/account_profiles.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
