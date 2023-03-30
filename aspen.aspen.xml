@@ -1527,7 +1527,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="db_update" numRows="1475" remarks="" type="TABLE">
+      <table catalog="aspen" name="db_update" numRows="1479" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="update_key" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="current_timestamp()" digits="0" id="1" name="date_run" nullable="false" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="update_key" sequenceNumberInPK="1"/>
@@ -2977,11 +2977,11 @@
             <column ascending="true" name="title"/>
          </index>
       </table>
-      <table catalog="aspen" name="indexed_callnumber" numRows="0" remarks="" type="TABLE">
+      <table catalog="aspen" name="indexed_call_number" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="callNumber" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="indexed_callnumber_s_pk" unique="true">
+         <index name="indexed_call_number_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
          <index name="callNumber" unique="true">
@@ -2991,11 +2991,11 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="indexed_econtentsource" numRows="0" remarks="" type="TABLE">
+      <table catalog="aspen" name="indexed_econtent_source" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="eContentSource" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="indexed_econtentsource_s_pk" unique="true">
+         <index name="indexed_econtent_source_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
          <index name="eContentSource" unique="true">
@@ -3047,11 +3047,11 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="indexed_groupedstatus" numRows="0" remarks="" type="TABLE">
+      <table catalog="aspen" name="indexed_grouped_status" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="groupedStatus" nullable="true" remarks="" size="75" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="indexed_groupedstatus_s_pk" unique="true">
+         <index name="indexed_grouped_status_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
          <index name="groupedStatus" unique="true">
@@ -3061,11 +3061,11 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="indexed_itemtype" numRows="0" remarks="" type="TABLE">
+      <table catalog="aspen" name="indexed_item_type" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="itemType" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="indexed_itemtype_s_pk" unique="true">
+         <index name="indexed_item_type_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
          <index name="itemType" unique="true">
@@ -3089,11 +3089,11 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="indexed_locationcode" numRows="0" remarks="" type="TABLE">
+      <table catalog="aspen" name="indexed_location_code" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="locationCode" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="indexed_locationcode_s_pk" unique="true">
+         <index name="indexed_location_code_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
          <index name="locationCode" unique="true">
@@ -3103,11 +3103,11 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="indexed_physicaldescription" numRows="0" remarks="" type="TABLE">
+      <table catalog="aspen" name="indexed_physical_description" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="physicalDescription" nullable="true" remarks="" size="1000" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="indexed_physicaldescription_s_pk" unique="true">
+         <index name="indexed_physical_description_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
          <index name="physicalDescription" unique="false">
@@ -3117,11 +3117,11 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="indexed_publicationdate" numRows="0" remarks="" type="TABLE">
+      <table catalog="aspen" name="indexed_publication_date" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="publicationDate" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="indexed_publicationdate_s_pk" unique="true">
+         <index name="indexed_publication_date_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
          <index name="PRIMARY" unique="true">
@@ -3164,11 +3164,11 @@
             <column ascending="true" name="subSource"/>
          </index>
       </table>
-      <table catalog="aspen" name="indexed_shelflocation" numRows="0" remarks="" type="TABLE">
+      <table catalog="aspen" name="indexed_shelf_location" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="shelfLocation" nullable="true" remarks="" size="600" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="indexed_shelflocation_s_pk" unique="true">
+         <index name="indexed_shelf_location_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
          <index name="PRIMARY" unique="true">
@@ -3192,11 +3192,11 @@
             <column ascending="true" name="status"/>
          </index>
       </table>
-      <table catalog="aspen" name="indexed_sublocationcode" numRows="0" remarks="" type="TABLE">
+      <table catalog="aspen" name="indexed_sub_location_code" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="subLocationCode" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
-         <index name="indexed_sublocationcode_s_pk" unique="true">
+         <index name="indexed_sub_location_code_s_pk" unique="true">
             <column ascending="true" name="id"/>
          </index>
          <index name="PRIMARY" unique="true">
@@ -6744,7 +6744,7 @@
             <column ascending="true" name="title"/>
          </index>
       </table>
-      <table catalog="aspen" name="system_variables" numRows="0" remarks="" type="TABLE">
+      <table catalog="aspen" name="system_variables" numRows="1" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="errorEmail" nullable="true" remarks="" size="128" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="ticketEmail" nullable="true" remarks="" size="128" type="VARCHAR" typeCode="12"/>
@@ -6769,6 +6769,7 @@
          <column autoUpdated="false" defaultValue="1" digits="0" id="21" name="processEmptyGroupedWorks" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="'aspen-lida'" digits="0" id="22" name="appScheme" nullable="true" remarks="" size="72" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="23" name="googleBucket" nullable="true" remarks="" size="128" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="24" name="trackIpAddresses" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="system_variables_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -8020,6 +8021,8 @@
          <column autoUpdated="false" defaultValue="''" digits="0" id="13" name="transactionId" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="14" name="aciToken" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="15" name="requestingUrl" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="16" name="deluxeRemittanceId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="17" name="deluxeSecurityId" nullable="true" remarks="" size="32" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="user_payments_s_pk" unique="true">
             <column ascending="true" name="id"/>
