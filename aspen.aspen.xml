@@ -1527,7 +1527,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="db_update" numRows="1479" remarks="" type="TABLE">
+      <table catalog="aspen" name="db_update" numRows="1490" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="update_key" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="current_timestamp()" digits="0" id="1" name="date_run" nullable="false" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="update_key" sequenceNumberInPK="1"/>
@@ -3306,6 +3306,9 @@
          <column autoUpdated="false" defaultValue="1" digits="0" id="96" name="evergreenOrgUnitSchema" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="97" name="index856Links" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="98" name="includePersonalAndCorporateNamesInTopics" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="'o|1'" digits="0" id="99" name="orderRecordsStatusesToInclude" nullable="true" remarks="" size="25" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="100" name="hideOrderRecordsForBibsWithPhysicalItems" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="101" name="orderRecordsToSuppressByDate" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="indexing_profiles_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -3925,7 +3928,7 @@
          <column autoUpdated="false" defaultValue="1" digits="0" id="5" name="includeHoldableOnly" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="includeItemsOnOrder" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="7" name="includeEContent" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="weight" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="8" name="weight" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="9" name="iType" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="10" name="audience" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="11" name="format" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
@@ -4384,7 +4387,7 @@
          <column autoUpdated="false" defaultValue="1" digits="0" id="5" name="includeHoldableOnly" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="includeItemsOnOrder" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="7" name="includeEContent" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-7"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="weight" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="8" name="weight" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="9" name="iType" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="10" name="audience" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="11" name="format" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
@@ -5449,7 +5452,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="permissions" numRows="174" remarks="" type="TABLE">
+      <table catalog="aspen" name="permissions" numRows="176" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="75" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="sectionName" nullable="false" remarks="" size="75" type="VARCHAR" typeCode="12"/>
@@ -6018,7 +6021,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="role_permissions" numRows="251" remarks="" type="TABLE">
+      <table catalog="aspen" name="role_permissions" numRows="252" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="roleId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="aspen" column="roleId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="roles"/>
@@ -6770,6 +6773,7 @@
          <column autoUpdated="false" defaultValue="'aspen-lida'" digits="0" id="22" name="appScheme" nullable="true" remarks="" size="72" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="23" name="googleBucket" nullable="true" remarks="" size="128" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="24" name="trackIpAddresses" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="25" name="communityContentUrl" nullable="true" remarks="" size="128" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="system_variables_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -7002,6 +7006,7 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="220" name="headerBackgroundImageSize" nullable="true" remarks="" size="75" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="221" name="headerBackgroundImageRepeat" nullable="true" remarks="" size="75" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="222" name="displayName" nullable="false" remarks="" size="60" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="223" name="isHighContrast" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="themes_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -7231,6 +7236,7 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="translation" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="4" name="translated" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="5" name="needsReview" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="lastCheckInCommunity" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="translations_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -7350,6 +7356,7 @@
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_cloud_library_usage"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_ebsco_eds_usage"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_ebscohost_usage"/>
+            <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_events_entry"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_events_usage"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_hold"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user_hoopla_usage"/>
@@ -7642,6 +7649,28 @@
             <column ascending="true" name="month"/>
             <column ascending="true" name="instance"/>
             <column ascending="true" name="userId"/>
+         </index>
+      </table>
+      <table catalog="aspen" name="user_events_entry" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="userId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
+            <parent catalog="aspen" column="id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="sourceId" nullable="false" remarks="" size="36" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="title" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="eventDate" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="5" name="regRequired" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="location" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="dateAdded" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="user_events_entry_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="sourceId" unique="true">
+            <column ascending="true" name="sourceId"/>
          </index>
       </table>
       <table catalog="aspen" name="user_events_usage" numRows="0" remarks="" type="TABLE">
@@ -8021,7 +8050,7 @@
          <column autoUpdated="false" defaultValue="''" digits="0" id="13" name="transactionId" nullable="true" remarks="" size="20" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="14" name="aciToken" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="15" name="requestingUrl" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="16" name="deluxeRemittanceId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="16" name="deluxeRemittanceId" nullable="true" remarks="" size="24" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="17" name="deluxeSecurityId" nullable="true" remarks="" size="32" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="user_payments_s_pk" unique="true">
@@ -8458,7 +8487,7 @@
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="formId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="2" name="weight" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="label" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="3" name="label" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="4" name="description" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="5" name="fieldType" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="6" name="enumValues" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>

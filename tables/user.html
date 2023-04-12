@@ -208,6 +208,11 @@
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
                                             </tr>
                                             <tr>
+                                                <td title="user_events_entry.userId&#39;s name implies that it&#39;s a child of user.id, but it doesn&#39;t reference that column."><a href='user_events_entry.html'>user_events_entry</a><span class='relatedKey'>.userId</span></td>
+                                                <td class="constraint detail">Implied Constraint</td>
+                                                <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
+                                            </tr>
+                                            <tr>
                                                 <td title="user_events_usage.userId&#39;s name implies that it&#39;s a child of user.id, but it doesn&#39;t reference that column."><a href='user_events_usage.html'>user_events_usage</a><span class='relatedKey'>.userId</span></td>
                                                 <td class="constraint detail">Implied Constraint</td>
                                                 <td class="constraint detail"><span title='Restrict delete:&#10;Parent cannot be deleted if children exist'>R</span></td>
@@ -1358,7 +1363,7 @@
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
 <area shape="rect" id="node1" href="browse_category.html" target="_top" title="browse_category" alt="" coords="644,5,880,211">
-<area shape="rect" id="node2" href="user.html" target="_top" title="user" alt="" coords="5,3544,525,5315">
+<area shape="rect" id="node2" href="user.html" target="_top" title="user" alt="" coords="5,3641,525,5412">
 <area shape="rect" id="node3" href="browse_category_dismissal.html" target="_top" title="browse_category_dismissal" alt="" coords="615,228,909,380">
 <area shape="rect" id="node4" href="development_task_developer_link.html" target="_top" title="development_task_developer_link" alt="" coords="587,397,937,549">
 <area shape="rect" id="node5" href="development_task_qa_link.html" target="_top" title="development_task_qa_link" alt="" coords="617,567,907,719">
@@ -1376,33 +1381,34 @@
 <area shape="rect" id="node17" href="user_cloud_library_usage.html" target="_top" title="user_cloud_library_usage" alt="" coords="623,2761,901,2996">
 <area shape="rect" id="node18" href="user_ebsco_eds_usage.html" target="_top" title="user_ebsco_eds_usage" alt="" coords="635,3013,889,3248">
 <area shape="rect" id="node19" href="user_ebscohost_usage.html" target="_top" title="user_ebscohost_usage" alt="" coords="635,3265,889,3500">
-<area shape="rect" id="node20" href="user_events_usage.html" target="_top" title="user_events_usage" alt="" coords="648,3517,876,3781">
-<area shape="rect" id="node21" href="user_hold.html" target="_top" title="user_hold" alt="" coords="627,3799,897,4033">
-<area shape="rect" id="node22" href="user_hoopla_usage.html" target="_top" title="user_hoopla_usage" alt="" coords="647,4051,877,4285">
-<area shape="rect" id="node23" href="user_ils_usage.html" target="_top" title="user_ils_usage" alt="" coords="604,4303,920,4567">
-<area shape="rect" id="node24" href="user_messages.html" target="_top" title="user_messages" alt="" coords="663,4584,861,4760">
-<area shape="rect" id="node25" href="user_not_interested.html" target="_top" title="user_not_interested" alt="" coords="624,4777,900,4953">
-<area shape="rect" id="node26" href="user_notification_tokens.html" target="_top" title="user_notification_tokens" alt="" coords="624,4971,900,5117">
-<area shape="rect" id="node27" href="user_notifications.html" target="_top" title="user_notifications" alt="" coords="651,5135,873,5281">
-<area shape="rect" id="node28" href="user_open_archives_usage.html" target="_top" title="user_open_archives_usage" alt="" coords="618,5299,906,5563">
-<area shape="rect" id="node29" href="user_overdrive_usage.html" target="_top" title="user_overdrive_usage" alt="" coords="637,5580,887,5815">
-<area shape="rect" id="node30" href="user_payments.html" target="_top" title="user_payments" alt="" coords="657,5832,867,6067">
-<area shape="rect" id="node31" href="user_rbdigital_usage.html" target="_top" title="user_rbdigital_usage" alt="" coords="641,6084,883,6319">
-<area shape="rect" id="node32" href="user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="616,6336,908,6659">
-<area shape="rect" id="node33" href="user_roles.html" target="_top" title="user_roles" alt="" coords="682,6676,842,6828">
-<area shape="rect" id="node34" href="user_sideload_usage.html" target="_top" title="user_sideload_usage" alt="" coords="641,6845,883,7109">
-<area shape="rect" id="node35" href="user_vdx_request.html" target="_top" title="user_vdx_request" alt="" coords="651,7127,873,7273">
-<area shape="rect" id="node36" href="user_website_usage.html" target="_top" title="user_website_usage" alt="" coords="643,7291,881,7555">
-<area shape="rect" id="node37" href="user_work_review.html" target="_top" title="user_work_review" alt="" coords="624,7572,900,7748">
-<area shape="rect" id="node38" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="569,7765,955,7971">
+<area shape="rect" id="node20" href="user_events_entry.html" target="_top" title="user_events_entry" alt="" coords="650,3517,874,3693">
+<area shape="rect" id="node21" href="user_events_usage.html" target="_top" title="user_events_usage" alt="" coords="648,3711,876,3975">
+<area shape="rect" id="node22" href="user_hold.html" target="_top" title="user_hold" alt="" coords="627,3992,897,4227">
+<area shape="rect" id="node23" href="user_hoopla_usage.html" target="_top" title="user_hoopla_usage" alt="" coords="647,4244,877,4479">
+<area shape="rect" id="node24" href="user_ils_usage.html" target="_top" title="user_ils_usage" alt="" coords="604,4496,920,4760">
+<area shape="rect" id="node25" href="user_messages.html" target="_top" title="user_messages" alt="" coords="663,4777,861,4953">
+<area shape="rect" id="node26" href="user_not_interested.html" target="_top" title="user_not_interested" alt="" coords="624,4971,900,5147">
+<area shape="rect" id="node27" href="user_notification_tokens.html" target="_top" title="user_notification_tokens" alt="" coords="624,5164,900,5311">
+<area shape="rect" id="node28" href="user_notifications.html" target="_top" title="user_notifications" alt="" coords="651,5328,873,5475">
+<area shape="rect" id="node29" href="user_open_archives_usage.html" target="_top" title="user_open_archives_usage" alt="" coords="618,5492,906,5756">
+<area shape="rect" id="node30" href="user_overdrive_usage.html" target="_top" title="user_overdrive_usage" alt="" coords="637,5773,887,6008">
+<area shape="rect" id="node31" href="user_payments.html" target="_top" title="user_payments" alt="" coords="657,6025,867,6260">
+<area shape="rect" id="node32" href="user_rbdigital_usage.html" target="_top" title="user_rbdigital_usage" alt="" coords="641,6277,883,6512">
+<area shape="rect" id="node33" href="user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="616,6529,908,6852">
+<area shape="rect" id="node34" href="user_roles.html" target="_top" title="user_roles" alt="" coords="682,6869,842,7021">
+<area shape="rect" id="node35" href="user_sideload_usage.html" target="_top" title="user_sideload_usage" alt="" coords="641,7039,883,7303">
+<area shape="rect" id="node36" href="user_vdx_request.html" target="_top" title="user_vdx_request" alt="" coords="651,7320,873,7467">
+<area shape="rect" id="node37" href="user_website_usage.html" target="_top" title="user_website_usage" alt="" coords="643,7484,881,7748">
+<area shape="rect" id="node38" href="user_work_review.html" target="_top" title="user_work_review" alt="" coords="624,7765,900,7941">
+<area shape="rect" id="node39" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="569,7959,955,8164">
 </map>
                                         <a name='diagram'><img id="oneimpliedDegreeImg" src="../diagrams/tables/user.implied1degrees.png" usemap="#oneDegreeRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
-<area shape="rect" id="node1" href="browse_category.html" target="_top" title="browse_category" alt="" coords="644,228,880,433">
+<area shape="rect" id="node1" href="browse_category.html" target="_top" title="browse_category" alt="" coords="644,5,880,211">
 <area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="198,193,333,281">
-<area shape="rect" id="node3" href="user.html" target="_top" title="user" alt="" coords="5,3973,525,5744">
+<area shape="rect" id="node3" href="user.html" target="_top" title="user" alt="" coords="5,4043,525,5813">
 <area shape="rect" id="node4" href="browse_category_dismissal.html" target="_top" title="browse_category_dismissal" alt="" coords="615,2748,909,2900">
 <area shape="rect" id="node5" href="development_task_developer_link.html" target="_top" title="development_task_developer_link" alt="" coords="587,2917,937,3069">
 <area shape="rect" id="node6" href="development_task_qa_link.html" target="_top" title="development_task_qa_link" alt="" coords="617,3087,907,3239">
@@ -1420,26 +1426,27 @@
 <area shape="rect" id="node18" href="user_cloud_library_usage.html" target="_top" title="user_cloud_library_usage" alt="" coords="623,5281,901,5516">
 <area shape="rect" id="node19" href="user_ebsco_eds_usage.html" target="_top" title="user_ebsco_eds_usage" alt="" coords="635,5533,889,5768">
 <area shape="rect" id="node20" href="user_ebscohost_usage.html" target="_top" title="user_ebscohost_usage" alt="" coords="635,5785,889,6020">
-<area shape="rect" id="node21" href="user_events_usage.html" target="_top" title="user_events_usage" alt="" coords="648,6037,876,6301">
-<area shape="rect" id="node22" href="user_hold.html" target="_top" title="user_hold" alt="" coords="627,6319,897,6553">
-<area shape="rect" id="node23" href="user_hoopla_usage.html" target="_top" title="user_hoopla_usage" alt="" coords="647,6571,877,6805">
-<area shape="rect" id="node24" href="user_ils_usage.html" target="_top" title="user_ils_usage" alt="" coords="604,6823,920,7087">
-<area shape="rect" id="node25" href="user_messages.html" target="_top" title="user_messages" alt="" coords="663,7104,861,7280">
-<area shape="rect" id="node26" href="user_not_interested.html" target="_top" title="user_not_interested" alt="" coords="624,7297,900,7473">
-<area shape="rect" id="node27" href="user_notification_tokens.html" target="_top" title="user_notification_tokens" alt="" coords="624,7491,900,7637">
-<area shape="rect" id="node28" href="user_notifications.html" target="_top" title="user_notifications" alt="" coords="651,7655,873,7801">
-<area shape="rect" id="node29" href="user_open_archives_usage.html" target="_top" title="user_open_archives_usage" alt="" coords="618,451,906,715">
-<area shape="rect" id="node30" href="user_overdrive_usage.html" target="_top" title="user_overdrive_usage" alt="" coords="637,732,887,967">
-<area shape="rect" id="node31" href="user_payments.html" target="_top" title="user_payments" alt="" coords="657,984,867,1219">
-<area shape="rect" id="node32" href="user_rbdigital_usage.html" target="_top" title="user_rbdigital_usage" alt="" coords="641,1236,883,1471">
-<area shape="rect" id="node33" href="user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="616,1488,908,1811">
-<area shape="rect" id="node34" href="user_roles.html" target="_top" title="user_roles" alt="" coords="682,7819,842,7971">
-<area shape="rect" id="node35" href="roles.html" target="_top" title="roles" alt="" coords="201,7851,330,7939">
-<area shape="rect" id="node36" href="user_sideload_usage.html" target="_top" title="user_sideload_usage" alt="" coords="641,1828,883,2092">
-<area shape="rect" id="node37" href="user_vdx_request.html" target="_top" title="user_vdx_request" alt="" coords="651,2109,873,2256">
-<area shape="rect" id="node38" href="user_website_usage.html" target="_top" title="user_website_usage" alt="" coords="643,2273,881,2537">
-<area shape="rect" id="node39" href="user_work_review.html" target="_top" title="user_work_review" alt="" coords="624,2555,900,2731">
-<area shape="rect" id="node40" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="569,5,955,211">
+<area shape="rect" id="node21" href="user_events_entry.html" target="_top" title="user_events_entry" alt="" coords="650,6037,874,6213">
+<area shape="rect" id="node22" href="user_events_usage.html" target="_top" title="user_events_usage" alt="" coords="648,6231,876,6495">
+<area shape="rect" id="node23" href="user_hold.html" target="_top" title="user_hold" alt="" coords="627,6512,897,6747">
+<area shape="rect" id="node24" href="user_hoopla_usage.html" target="_top" title="user_hoopla_usage" alt="" coords="647,6764,877,6999">
+<area shape="rect" id="node25" href="user_ils_usage.html" target="_top" title="user_ils_usage" alt="" coords="604,7016,920,7280">
+<area shape="rect" id="node26" href="user_messages.html" target="_top" title="user_messages" alt="" coords="663,7297,861,7473">
+<area shape="rect" id="node27" href="user_not_interested.html" target="_top" title="user_not_interested" alt="" coords="624,7491,900,7667">
+<area shape="rect" id="node28" href="user_notification_tokens.html" target="_top" title="user_notification_tokens" alt="" coords="624,7684,900,7831">
+<area shape="rect" id="node29" href="user_notifications.html" target="_top" title="user_notifications" alt="" coords="651,7848,873,7995">
+<area shape="rect" id="node30" href="user_open_archives_usage.html" target="_top" title="user_open_archives_usage" alt="" coords="618,451,906,715">
+<area shape="rect" id="node31" href="user_overdrive_usage.html" target="_top" title="user_overdrive_usage" alt="" coords="637,732,887,967">
+<area shape="rect" id="node32" href="user_payments.html" target="_top" title="user_payments" alt="" coords="657,984,867,1219">
+<area shape="rect" id="node33" href="user_rbdigital_usage.html" target="_top" title="user_rbdigital_usage" alt="" coords="641,1236,883,1471">
+<area shape="rect" id="node34" href="user_reading_history_work.html" target="_top" title="user_reading_history_work" alt="" coords="616,1488,908,1811">
+<area shape="rect" id="node35" href="user_roles.html" target="_top" title="user_roles" alt="" coords="682,8012,842,8164">
+<area shape="rect" id="node36" href="roles.html" target="_top" title="roles" alt="" coords="201,8044,330,8132">
+<area shape="rect" id="node37" href="user_sideload_usage.html" target="_top" title="user_sideload_usage" alt="" coords="641,1828,883,2092">
+<area shape="rect" id="node38" href="user_vdx_request.html" target="_top" title="user_vdx_request" alt="" coords="651,2109,873,2256">
+<area shape="rect" id="node39" href="user_website_usage.html" target="_top" title="user_website_usage" alt="" coords="643,2273,881,2537">
+<area shape="rect" id="node40" href="user_work_review.html" target="_top" title="user_work_review" alt="" coords="624,2555,900,2731">
+<area shape="rect" id="node41" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="569,228,955,433">
 </map>
                                         <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/user.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>

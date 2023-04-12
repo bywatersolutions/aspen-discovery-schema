@@ -296,6 +296,7 @@ user_ils_usage
 user_hoopla_usage
 user_hold
 user_events_usage
+user_events_entry
 user_ebscohost_usage
 user_ebsco_eds_usage
 user_cloud_library_usage

@@ -71,6 +71,7 @@ user_checkout
 user_cloud_library_usage
 user_ebsco_eds_usage
 user_ebscohost_usage
+user_events_entry
 user_events_usage
 user_hold
 user_hoopla_usage
