@@ -237,6 +237,7 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="5" name="logoAppIcon" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="6" name="showFavicons" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="logoNotification" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="8" name="appName" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="aspen_lida_branded_settings_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -1527,7 +1528,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="db_update" numRows="1490" remarks="" type="TABLE">
+      <table catalog="aspen" name="db_update" numRows="1494" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="update_key" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="current_timestamp()" digits="0" id="1" name="date_run" nullable="false" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="update_key" sequenceNumberInPK="1"/>
@@ -4267,6 +4268,7 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="68" name="vdxLocation" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="69" name="vdxFormId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="70" name="validSelfRegistrationBranch" nullable="false" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="1" digits="0" id="71" name="useLibraryThemes" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <primaryKey column="locationId" sequenceNumberInPK="1"/>
          <index name="location_s_pk" unique="true">
             <column ascending="true" name="locationId"/>
@@ -7656,7 +7658,7 @@
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="userId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <parent catalog="aspen" column="id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user"/>
          </column>
-         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="sourceId" nullable="false" remarks="" size="36" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="sourceId" nullable="false" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="title" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="4" name="eventDate" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="5" name="regRequired" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
@@ -7669,7 +7671,8 @@
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>
          </index>
-         <index name="sourceId" unique="true">
+         <index name="userId" unique="true">
+            <column ascending="true" name="userId"/>
             <column ascending="true" name="sourceId"/>
          </index>
       </table>
