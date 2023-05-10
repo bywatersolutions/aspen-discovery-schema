@@ -19,6 +19,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "user_ebsco_eds_usage":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_ebscohost_usage":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_events_entry":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "user_events_registrations":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_events_usage":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_hold":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "user_hoopla_usage":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -178,7 +179,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="username" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="224" HEIGHT="16">username</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="source" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="224" HEIGHT="16">source</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">38 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">39 &gt;</TD></TR>
     </TABLE>>
     URL="user.html"
     target="_top"
@@ -271,6 +272,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     URL="user_events_entry.html"
     target="_top"
     tooltip="user_events_entry"
+  ];
+  "user_events_registrations" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="153" HEIGHT="16"><B>user_events_registrations</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="user_events_registrations.html"
+    target="_top"
+    tooltip="user_events_registrations"
   ];
   "user_events_usage" [
    label=<

@@ -72,6 +72,7 @@ user_cloud_library_usage
 user_ebsco_eds_usage
 user_ebscohost_usage
 user_events_entry
+user_events_registrations
 user_events_usage
 user_hold
 user_hoopla_usage
@@ -115,6 +116,7 @@ aspen_release
 aspen_site_checks
 aspen_site_cpu_usage
 aspen_site_memory_usage
+aspen_site_scheduled_update
 aspen_site_stats
 aspen_site_wait_time
 aspen_sites
@@ -274,6 +276,7 @@ overdrive_record_usage
 overdrive_scopes
 overdrive_settings
 overdrive_stats
+paypal_payflow_settings
 paypal_settings
 permissions
 placard_language

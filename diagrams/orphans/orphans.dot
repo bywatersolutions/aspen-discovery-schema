@@ -445,6 +445,26 @@ digraph "orphans" {
     target="_top"
     tooltip="aspen_site_memory_usage"
   ];
+  "aspen_site_scheduled_update" [
+   label=<
+    <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="4"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="176" HEIGHT="16"><B>aspen_site_scheduled_update</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="176" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="dateScheduled" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="176" HEIGHT="16">dateScheduled</TD></TR></TABLE></TD><TD PORT="dateScheduled.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="updateToVersion" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="176" HEIGHT="16">updateToVersion</TD></TR></TABLE></TD><TD PORT="updateToVersion.type" ALIGN="LEFT">varchar[32]</TD></TR>
+      <TR><TD PORT="updateType" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="176" HEIGHT="16">updateType</TD></TR></TABLE></TD><TD PORT="updateType.type" ALIGN="LEFT">varchar[10]</TD></TR>
+      <TR><TD PORT="dateRun" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="176" HEIGHT="16">dateRun</TD></TR></TABLE></TD><TD PORT="dateRun.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="status" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="176" HEIGHT="16">status</TD></TR></TABLE></TD><TD PORT="status.type" ALIGN="LEFT">varchar[10]</TD></TR>
+      <TR><TD PORT="notes" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="176" HEIGHT="16">notes</TD></TR></TABLE></TD><TD PORT="notes.type" ALIGN="LEFT">text[65535]</TD></TR>
+      <TR><TD PORT="siteId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="176" HEIGHT="16">siteId</TD></TR></TABLE></TD><TD PORT="siteId.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="greenhouseId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="176" HEIGHT="16">greenhouseId</TD></TR></TABLE></TD><TD PORT="greenhouseId.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="remoteUpdate" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="176" HEIGHT="16">remoteUpdate</TD></TR></TABLE></TD><TD PORT="remoteUpdate.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
+    </TABLE>>
+    URL="tables/aspen_site_scheduled_update.html"
+    target="_top"
+    tooltip="aspen_site_scheduled_update"
+  ];
   "aspen_site_stats" [
    label=<
     <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -514,6 +534,7 @@ digraph "orphans" {
       <TR><TD PORT="lastOnlineTime" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="151" HEIGHT="16">lastOnlineTime</TD></TR></TABLE></TD><TD PORT="lastOnlineTime.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="isOnline" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="151" HEIGHT="16">isOnline</TD></TR></TABLE></TD><TD PORT="isOnline.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="monitored" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="151" HEIGHT="16">monitored</TD></TR></TABLE></TD><TD PORT="monitored.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="optOutBatchUpdates" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="151" HEIGHT="16">optOutBatchUpdates</TD></TR></TABLE></TD><TD PORT="optOutBatchUpdates.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="tables/aspen_sites.html"
@@ -1330,7 +1351,7 @@ digraph "orphans" {
       <TR><TD COLSPAN="4"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="62" HEIGHT="16"><B>db_update</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="update_key" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="68" HEIGHT="16">update_key</TD></TR></TABLE></TD><TD PORT="update_key.type" ALIGN="LEFT">varchar[100]</TD></TR>
       <TR><TD PORT="date_run" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="68" HEIGHT="16">date_run</TD></TR></TABLE></TD><TD PORT="date_run.type" ALIGN="LEFT">timestamp[19]</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1,494 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1,512 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="tables/db_update.html"
     target="_top"
@@ -1344,7 +1365,6 @@ digraph "orphans" {
       <TR><TD PORT="name" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="213" HEIGHT="16">name</TD></TR></TABLE></TD><TD PORT="name.type" ALIGN="LEFT">varchar[50]</TD></TR>
       <TR><TD PORT="sandboxMode" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="213" HEIGHT="16">sandboxMode</TD></TR></TABLE></TD><TD PORT="sandboxMode.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="applicationId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="213" HEIGHT="16">applicationId</TD></TR></TABLE></TD><TD PORT="applicationId.type" ALIGN="LEFT">varchar[500]</TD></TR>
-      <TR><TD PORT="securityId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="213" HEIGHT="16">securityId</TD></TR></TABLE></TD><TD PORT="securityId.type" ALIGN="LEFT">varchar[500]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="tables/deluxe_certified_payments_settings.html"
@@ -3252,6 +3272,7 @@ digraph "orphans" {
       <TR><TD PORT="materialsRequestNewEmail" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">materialsRequestNewEmail</TD></TR></TABLE></TD><TD PORT="materialsRequestNewEmail.type" ALIGN="LEFT">varchar[125]</TD></TR>
       <TR><TD PORT="novelistSettingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">novelistSettingId</TD></TR></TABLE></TD><TD PORT="novelistSettingId.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="deluxeCertifiedPaymentsSettingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">deluxeCertifiedPaymentsSettingId</TD></TR></TABLE></TD><TD PORT="deluxeCertifiedPaymentsSettingId.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="paypalPayflowSettingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">paypalPayflowSettingId</TD></TR></TABLE></TD><TD PORT="paypalPayflowSettingId.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="tables/library.html"
@@ -4269,6 +4290,7 @@ digraph "orphans" {
       <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="129" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="sourceCollection" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="129" HEIGHT="16">sourceCollection</TD></TR></TABLE></TD><TD PORT="sourceCollection.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="permanentUrl" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="129" HEIGHT="16">permanentUrl</TD></TR></TABLE></TD><TD PORT="permanentUrl.type" ALIGN="LEFT">varchar[512]</TD></TR>
+      <TR><TD PORT="lastSeen" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="129" HEIGHT="16">lastSeen</TD></TR></TABLE></TD><TD PORT="lastSeen.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="tables/open_archives_record.html"
@@ -4542,6 +4564,23 @@ digraph "orphans" {
     target="_top"
     tooltip="overdrive_stats"
   ];
+  "paypal_payflow_settings" [
+   label=<
+    <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="4"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="145" HEIGHT="16"><B>paypal_payflow_settings</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="145" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="name" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="145" HEIGHT="16">name</TD></TR></TABLE></TD><TD PORT="name.type" ALIGN="LEFT">varchar[50]</TD></TR>
+      <TR><TD PORT="sandboxMode" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="145" HEIGHT="16">sandboxMode</TD></TR></TABLE></TD><TD PORT="sandboxMode.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="partner" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="145" HEIGHT="16">partner</TD></TR></TABLE></TD><TD PORT="partner.type" ALIGN="LEFT">varchar[72]</TD></TR>
+      <TR><TD PORT="vendor" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="145" HEIGHT="16">vendor</TD></TR></TABLE></TD><TD PORT="vendor.type" ALIGN="LEFT">varchar[72]</TD></TR>
+      <TR><TD PORT="user" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="145" HEIGHT="16">user</TD></TR></TABLE></TD><TD PORT="user.type" ALIGN="LEFT">varchar[72]</TD></TR>
+      <TR><TD PORT="password" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="145" HEIGHT="16">password</TD></TR></TABLE></TD><TD PORT="password.type" ALIGN="LEFT">varchar[72]</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
+    </TABLE>>
+    URL="tables/paypal_payflow_settings.html"
+    target="_top"
+    tooltip="paypal_payflow_settings"
+  ];
   "paypal_settings" [
    label=<
     <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -4569,7 +4608,7 @@ digraph "orphans" {
       <TR><TD PORT="requiredModule" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="96" HEIGHT="16">requiredModule</TD></TR></TABLE></TD><TD PORT="requiredModule.type" ALIGN="LEFT">varchar[50]</TD></TR>
       <TR><TD PORT="weight" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="96" HEIGHT="16">weight</TD></TR></TABLE></TD><TD PORT="weight.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="description" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="96" HEIGHT="16">description</TD></TR></TABLE></TD><TD PORT="description.type" ALIGN="LEFT">varchar[250]</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">176 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">178 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="tables/permissions.html"
     target="_top"
@@ -5044,7 +5083,7 @@ digraph "orphans" {
       <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="101" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="roleId" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="101" HEIGHT="16">roleId</TD></TR></TABLE></TD><TD PORT="roleId.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="permissionId" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="101" HEIGHT="16">permissionId</TD></TR></TABLE></TD><TD PORT="permissionId.type" ALIGN="LEFT">int[10]</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">252 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">254 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="tables/role_permissions.html"
     target="_top"
@@ -5527,6 +5566,7 @@ digraph "orphans" {
       <TR><TD PORT="ldapLabel" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="181" HEIGHT="16">ldapLabel</TD></TR></TABLE></TD><TD PORT="ldapLabel.type" ALIGN="LEFT">varchar[75]</TD></TR>
       <TR><TD PORT="ssoAuthOnly" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="181" HEIGHT="16">ssoAuthOnly</TD></TR></TABLE></TD><TD PORT="ssoAuthOnly.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="ssoILSUniqueAttribute" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="181" HEIGHT="16">ssoILSUniqueAttribute</TD></TR></TABLE></TD><TD PORT="ssoILSUniqueAttribute.type" ALIGN="LEFT">varchar[255]</TD></TR>
+      <TR><TD PORT="bypassAspenPatronLogin" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="181" HEIGHT="16">bypassAspenPatronLogin</TD></TR></TABLE></TD><TD PORT="bypassAspenPatronLogin.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="tables/sso_setting.html"
@@ -5932,6 +5972,14 @@ digraph "orphans" {
       <TR><TD PORT="headerBackgroundImageRepeat" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="310" HEIGHT="16">headerBackgroundImageRepeat</TD></TR></TABLE></TD><TD PORT="headerBackgroundImageRepeat.type" ALIGN="LEFT">varchar[75]</TD></TR>
       <TR><TD PORT="displayName" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="310" HEIGHT="16">displayName</TD></TR></TABLE></TD><TD PORT="displayName.type" ALIGN="LEFT">varchar[60]</TD></TR>
       <TR><TD PORT="isHighContrast" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="310" HEIGHT="16">isHighContrast</TD></TR></TABLE></TD><TD PORT="isHighContrast.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="inactiveTabBackgroundColor" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="310" HEIGHT="16">inactiveTabBackgroundColor</TD></TR></TABLE></TD><TD PORT="inactiveTabBackgroundColor.type" ALIGN="LEFT">char[7]</TD></TR>
+      <TR><TD PORT="inactiveTabBackgroundColorDefault" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="310" HEIGHT="16">inactiveTabBackgroundColorDefault</TD></TR></TABLE></TD><TD PORT="inactiveTabBackgroundColorDefault.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="inactiveTabForegroundColor" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="310" HEIGHT="16">inactiveTabForegroundColor</TD></TR></TABLE></TD><TD PORT="inactiveTabForegroundColor.type" ALIGN="LEFT">char[7]</TD></TR>
+      <TR><TD PORT="inactiveTabForegroundColorDefault" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="310" HEIGHT="16">inactiveTabForegroundColorDefault</TD></TR></TABLE></TD><TD PORT="inactiveTabForegroundColorDefault.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="activeTabBackgroundColor" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="310" HEIGHT="16">activeTabBackgroundColor</TD></TR></TABLE></TD><TD PORT="activeTabBackgroundColor.type" ALIGN="LEFT">char[7]</TD></TR>
+      <TR><TD PORT="activeTabBackgroundColorDefault" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="310" HEIGHT="16">activeTabBackgroundColorDefault</TD></TR></TABLE></TD><TD PORT="activeTabBackgroundColorDefault.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD PORT="activeTabForegroundColor" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="310" HEIGHT="16">activeTabForegroundColor</TD></TR></TABLE></TD><TD PORT="activeTabForegroundColor.type" ALIGN="LEFT">char[7]</TD></TR>
+      <TR><TD PORT="activeTabForegroundColorDefault" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="310" HEIGHT="16">activeTabForegroundColorDefault</TD></TR></TABLE></TD><TD PORT="activeTabForegroundColorDefault.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="tables/themes.html"
@@ -6421,13 +6469,28 @@ digraph "orphans" {
       <TR><TD PORT="title" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="108" HEIGHT="16">title</TD></TR></TABLE></TD><TD PORT="title.type" ALIGN="LEFT">varchar[255]</TD></TR>
       <TR><TD PORT="eventDate" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="108" HEIGHT="16">eventDate</TD></TR></TABLE></TD><TD PORT="eventDate.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="regRequired" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="108" HEIGHT="16">regRequired</TD></TR></TABLE></TD><TD PORT="regRequired.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="location" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="108" HEIGHT="16">location</TD></TR></TABLE></TD><TD PORT="location.type" ALIGN="LEFT">varchar[50]</TD></TR>
+      <TR><TD PORT="location" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="108" HEIGHT="16">location</TD></TR></TABLE></TD><TD PORT="location.type" ALIGN="LEFT">varchar[255]</TD></TR>
       <TR><TD PORT="dateAdded" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="108" HEIGHT="16">dateAdded</TD></TR></TABLE></TD><TD PORT="dateAdded.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
     </TABLE>>
     URL="tables/user_events_entry.html"
     target="_top"
     tooltip="user_events_entry"
+  ];
+  "user_events_registrations" [
+   label=<
+    <TABLE BORDER="2" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="4"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="153" HEIGHT="16"><B>user_events_registrations</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="id" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/primaryKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="153" HEIGHT="16">id</TD></TR></TABLE></TD><TD PORT="id.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="userId" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="153" HEIGHT="16">userId</TD></TR></TABLE></TD><TD PORT="userId.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="userBarcode" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="153" HEIGHT="16">userBarcode</TD></TR></TABLE></TD><TD PORT="userBarcode.type" ALIGN="LEFT">varchar[256]</TD></TR>
+      <TR><TD PORT="sourceId" COLSPAN="2" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="153" HEIGHT="16">sourceId</TD></TR></TABLE></TD><TD PORT="sourceId.type" ALIGN="LEFT">varchar[50]</TD></TR>
+      <TR><TD PORT="waitlist" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="153" HEIGHT="16">waitlist</TD></TR></TABLE></TD><TD PORT="waitlist.type" ALIGN="LEFT">tinyint[3]</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 0</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 &gt;</TD></TR>
+    </TABLE>>
+    URL="tables/user_events_registrations.html"
+    target="_top"
+    tooltip="user_events_registrations"
   ];
   "user_events_usage" [
    label=<

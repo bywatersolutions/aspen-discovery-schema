@@ -94,6 +94,7 @@ placard_location
 placard_language
 permissions
 paypal_settings
+paypal_payflow_settings
 overdrive_stats
 overdrive_settings
 overdrive_scopes
@@ -253,6 +254,7 @@ aspen_usage
 aspen_sites
 aspen_site_wait_time
 aspen_site_stats
+aspen_site_scheduled_update
 aspen_site_memory_usage
 aspen_site_cpu_usage
 aspen_site_checks
@@ -296,6 +298,7 @@ user_ils_usage
 user_hoopla_usage
 user_hold
 user_events_usage
+user_events_registrations
 user_events_entry
 user_ebscohost_usage
 user_ebsco_eds_usage
