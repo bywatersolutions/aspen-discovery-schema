@@ -347,6 +347,7 @@ holiday
 hold_request_confirmation
 grouped_work_record_item_url
 greenhouse_cache
+event_library_map_values
 ebscohost_database
 ebsco_research_starter_dismissals
 donations_value
@@ -358,6 +359,7 @@ development_task_qa_link
 development_task_developer_link
 component_ticket_link
 collection_spotlights
+browse_category_group_users
 browse_category_dismissal
 aspen_lida_quick_searches
 aspen_lida_notifications_library

@@ -5,10 +5,12 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "browse_category":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "browse_category":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "browse_category_dismissal":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "browse_category_group_users":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "collection_spotlights":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "development_task_developer_link":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "development_task_qa_link":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "ebsco_research_starter_dismissals":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "event_library_map_values":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "greenhouse_cache":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "hold_request_confirmation":"elipses":w -> "user":"id":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "holiday":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -120,6 +122,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="browse_category_dismissal"
   ];
+  "browse_category_group_users" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="178" HEIGHT="16"><B>browse_category_group_users</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="browse_category_group_users.html"
+    target="_top"
+    tooltip="browse_category_group_users"
+  ];
   "collection_spotlights" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -174,6 +187,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     URL="ebsco_research_starter_dismissals.html"
     target="_top"
     tooltip="ebsco_research_starter_dismissals"
+  ];
+  "event_library_map_values" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="154" HEIGHT="16"><B>event_library_map_values</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="event_library_map_values.html"
+    target="_top"
+    tooltip="event_library_map_values"
   ];
   "greenhouse_cache" [
    label=<
@@ -249,7 +273,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="subdomain" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">subdomain</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="donationSettingId" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">donationSettingId</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">36 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">37 &gt;</TD></TR>
     </TABLE>>
     URL="library.html"
     target="_top"
@@ -604,7 +628,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="username" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="224" HEIGHT="16">username</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="source" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="224" HEIGHT="16">source</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">39 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">  </TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">2 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">40 &gt;</TD></TR>
     </TABLE>>
     URL="user.html"
     target="_top"

@@ -124,6 +124,7 @@
          <column autoUpdated="false" defaultValue="1" digits="0" id="27" name="libraryForRecordingPayments" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="-1" digits="0" id="28" name="ssoSettingId" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="''" digits="0" id="29" name="iiiLoginConfiguration" nullable="false" remarks="" size="16" type="enum('', 'barcode_pin', 'name_barcode', 'name_barcode_pin')" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="''" digits="0" id="30" name="overrideCode" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="account_profiles_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -879,9 +880,6 @@
             <column ascending="true" name="titleId"/>
             <column ascending="true" name="settingId"/>
          </index>
-         <index name="titleId2" unique="false">
-            <column ascending="true" name="titleId"/>
-         </index>
       </table>
       <table catalog="aspen" name="bad_words" numRows="0" remarks="Stores information about bad_words that should be removed fr" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="A unique Id for bad_word" size="10" type="INT" typeCode="4"/>
@@ -1005,6 +1003,24 @@
          <index name="browseCategoryGroupId" unique="true">
             <column ascending="true" name="browseCategoryGroupId"/>
             <column ascending="true" name="browseCategoryId"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
+      <table catalog="aspen" name="browse_category_group_users" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="browseCategoryGroupId" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="2" name="userId" nullable="true" remarks="" size="10" type="INT" typeCode="4">
+            <parent catalog="aspen" column="id" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="user"/>
+         </column>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="browse_category_group_users_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="browseCategoryGroupId" unique="true">
+            <column ascending="true" name="browseCategoryGroupId"/>
+            <column ascending="true" name="userId"/>
          </index>
          <index name="PRIMARY" unique="true">
             <column ascending="true" name="id"/>
@@ -1548,7 +1564,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="db_update" numRows="1512" remarks="" type="TABLE">
+      <table catalog="aspen" name="db_update" numRows="1522" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="update_key" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="current_timestamp()" digits="0" id="1" name="date_run" nullable="false" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="update_key" sequenceNumberInPK="1"/>
@@ -2094,6 +2110,25 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
+      <table catalog="aspen" name="event_library_map_values" numRows="0" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="aspenLocation" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="eventsLocation" nullable="false" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="locationId" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="libraryId" nullable="false" remarks="" size="10" type="INT" typeCode="4">
+            <parent catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="library"/>
+         </column>
+         <primaryKey column="id" sequenceNumberInPK="1"/>
+         <index name="event_library_map_values_s_pk" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+         <index name="locationId" unique="true">
+            <column ascending="true" name="locationId"/>
+         </index>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="id"/>
+         </index>
+      </table>
       <table catalog="aspen" name="events_indexing_log" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="The id of log entry" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="150" type="VARCHAR" typeCode="12"/>
@@ -2412,6 +2447,7 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="39" name="sortOwnedEditionsFirst" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="40" name="show856LinksAsAccessOnlineButtons" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="41" name="showSearchToolsAtTop" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="42" name="showEditionCovers" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="grouped_work_display_settings_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -3329,6 +3365,7 @@
          <column autoUpdated="false" defaultValue="'o|1'" digits="0" id="99" name="orderRecordsStatusesToInclude" nullable="true" remarks="" size="25" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="100" name="hideOrderRecordsForBibsWithPhysicalItems" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="101" name="orderRecordsToSuppressByDate" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="102" name="checkSierraMatTypeForFormat" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="indexing_profiles_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -3372,6 +3409,7 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="11" name="logAllQueries" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <column autoUpdated="false" defaultValue="1" digits="0" id="12" name="defaultLogMeOutAfterPlacingHoldOn" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="13" name="authenticatedForEBSCOhost" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="14" name="blockedForSpam" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-6"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="ip_lookup_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -3490,6 +3528,7 @@
             <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="aspen_lida_quick_searches"/>
             <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="browse_category"/>
             <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="collection_spotlights"/>
+            <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="event_library_map_values"/>
             <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="greenhouse_cache"/>
             <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="holiday"/>
             <child catalog="aspen" column="libraryId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="hoopla_settings"/>
@@ -5494,7 +5533,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="permissions" numRows="178" remarks="" type="TABLE">
+      <table catalog="aspen" name="permissions" numRows="179" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="name" nullable="false" remarks="" size="75" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="sectionName" nullable="false" remarks="" size="75" type="VARCHAR" typeCode="12"/>
@@ -6624,6 +6663,9 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="62" name="ssoAuthOnly" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="63" name="ssoILSUniqueAttribute" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="64" name="bypassAspenPatronLogin" nullable="true" remarks="" size="3" type="TINYINT" typeCode="-7"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="65" name="samlStudentPTypeAttr" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="66" name="samlStudentPTypeAttrValue" nullable="true" remarks="" size="255" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="67" name="samlStudentPType" nullable="true" remarks="" size="30" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="sso_setting_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -7350,6 +7392,7 @@
          <column autoUpdated="false" defaultValue="0" digits="0" id="8" name="lastRequest" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="9" name="numLoginAttempts" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="0" digits="0" id="10" name="numFailedLoginAttempts" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="11" name="numSpammyRequests" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="usage_by_ip_address_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -7391,6 +7434,7 @@
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4">
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="browse_category"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="browse_category_dismissal"/>
+            <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="browse_category_group_users"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="development_task_developer_link"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="development_task_qa_link"/>
             <child catalog="aspen" column="userId" foreignKey="Implied Constraint" implied="true" onDeleteCascade="false" table="ebsco_research_starter_dismissals"/>

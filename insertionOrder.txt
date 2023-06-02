@@ -13,6 +13,7 @@ accelerated_reading_subject_to_title
 aspen_lida_notifications_library
 aspen_lida_quick_searches
 browse_category_dismissal
+browse_category_group_users
 collection_spotlights
 component_ticket_link
 development_task_developer_link
@@ -24,6 +25,7 @@ donations_form_fields
 donations_value
 ebsco_research_starter_dismissals
 ebscohost_database
+event_library_map_values
 greenhouse_cache
 grouped_work_record_item_url
 hold_request_confirmation
