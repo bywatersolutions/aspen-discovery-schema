@@ -50,7 +50,7 @@ jobs:
       - name: cat schema file
         run: cat aspen.sql
       - name: Fix aspen.sql collation
-        run: sed -i 's/utf8mb4_0900_ai_ci/utf8mb4_general_ci/g' install/aspen.sql
+        run: sed -i 's/utf8mb4_0900_ai_ci/utf8mb4_general_ci/g' aspen.sql
       - name: Setup DB
         run: docker exec -i mydb sh -c 'exec mariadb -uroot -ppassword aspen' < aspen.sql
       - name: Path to build dir
