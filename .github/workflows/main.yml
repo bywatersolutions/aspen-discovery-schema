@@ -48,7 +48,7 @@ jobs:
       - name: Get schema file
         run: wget https://raw.githubusercontent.com/mdnoble73/aspen-discovery/${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }}/install/aspen.sql
       - name: Setup DB
-        run: docker exec -i mydb sh -c 'exec mysql -uroot -ppassword aspen' < aspen.sql
+        run: docker exec -i mydb sh -c 'exec mariadb -uroot -ppassword aspen' < aspen.sql
       - name: Path to build dir
         run: realpath build
       - name: Execute schemaspy
