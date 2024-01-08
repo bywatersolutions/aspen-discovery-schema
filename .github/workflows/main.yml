@@ -49,6 +49,8 @@ jobs:
         run: wget https://raw.githubusercontent.com/mdnoble73/aspen-discovery/${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }}/install/aspen.sql
       - name: cat schema file
         run: cat aspen.sql
+      - name: Fix aspen.sql collation
+        run: sed -i 's/utf8mb4_0900_ai_ci/utf8mb4_general_ci/g' install/aspen.sql
       - name: Setup DB
         run: docker exec -i mydb sh -c 'exec mariadb -uroot -ppassword aspen' < aspen.sql
       - name: Path to build dir
