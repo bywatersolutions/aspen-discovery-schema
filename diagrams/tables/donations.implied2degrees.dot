@@ -17,7 +17,9 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "library":"donationSettingId":w -> "donations":"id.type":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_cloud_library_scope":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_combined_results_section":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_email_template":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_events_setting":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_ill_item_type":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_links":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_open_archives_collection":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_records_to_include":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -27,6 +29,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "library_web_builder_basic_page":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_custom_form":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_portal_page":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "library_web_builder_quick_poll":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_web_builder_resource":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "library_website_indexing":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "location":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
@@ -41,7 +44,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
   "staff_members":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "system_message_library":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "web_builder_custom_from_submission":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
-  "web_builder_menu":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
+  "web_builder_quick_poll_submission":"elipses":w -> "library":"libraryId":e [arrowhead=none dir=back arrowtail=crowodot style=dashed];
   "aspen_lida_notifications_library" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -102,9 +105,9 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="honoreeFirstName" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">honoreeFirstName</TD></TR></TABLE></TD><TD PORT="honoreeFirstName.type" ALIGN="LEFT">varchar[256]</TD></TR>
       <TR><TD PORT="honoreeLastName" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">honoreeLastName</TD></TR></TABLE></TD><TD PORT="honoreeLastName.type" ALIGN="LEFT">varchar[256]</TD></TR>
       <TR><TD PORT="sendEmailToUser" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">sendEmailToUser</TD></TR></TABLE></TD><TD PORT="sendEmailToUser.type" ALIGN="LEFT">tinyint[3]</TD></TR>
-      <TR><TD PORT="donateToLibraryId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">donateToLibraryId</TD></TR></TABLE></TD><TD PORT="donateToLibraryId.type" ALIGN="LEFT">int[10]</TD></TR>
+      <TR><TD PORT="donateToLocationId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">donateToLocationId</TD></TR></TABLE></TD><TD PORT="donateToLocationId.type" ALIGN="LEFT">int[10]</TD></TR>
       <TR><TD PORT="donationSettingId" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">donationSettingId</TD></TR></TABLE></TD><TD PORT="donationSettingId.type" ALIGN="LEFT">int[10]</TD></TR>
-      <TR><TD PORT="donateToLibrary" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">donateToLibrary</TD></TR></TABLE></TD><TD PORT="donateToLibrary.type" ALIGN="LEFT">varchar[60]</TD></TR>
+      <TR><TD PORT="donateToLocation" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">donateToLocation</TD></TR></TABLE></TD><TD PORT="donateToLocation.type" ALIGN="LEFT">varchar[60]</TD></TR>
       <TR><TD PORT="shouldBeNotified" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">shouldBeNotified</TD></TR></TABLE></TD><TD PORT="shouldBeNotified.type" ALIGN="LEFT">tinyint[3]</TD></TR>
       <TR><TD PORT="notificationFirstName" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">notificationFirstName</TD></TR></TABLE></TD><TD PORT="notificationFirstName.type" ALIGN="LEFT">varchar[75]</TD></TR>
       <TR><TD PORT="notificationLastName" COLSPAN="2" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="132" HEIGHT="16">notificationLastName</TD></TR></TABLE></TD><TD PORT="notificationLastName.type" ALIGN="LEFT">varchar[75]</TD></TR>
@@ -245,7 +248,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
       <TR><TD PORT="subdomain" COLSPAN="3" BGCOLOR="#ffffff" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">subdomain</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="donationSettingId" COLSPAN="3" ALIGN="LEFT"><TABLE BORDER="0" CELLSPACING="0" ALIGN="LEFT"><TR ALIGN="LEFT"><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="15" HEIGHT="16"><IMG SRC="../../images/foreignKeys.png"/></TD><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="318" HEIGHT="16">donationSettingId</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">37 &gt;</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">40 &gt;</TD></TR>
     </TABLE>>
     URL="library.html"
     target="_top"
@@ -273,6 +276,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="library_combined_results_section"
   ];
+  "library_email_template" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="138" HEIGHT="16"><B>library_email_template</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_email_template.html"
+    target="_top"
+    tooltip="library_email_template"
+  ];
   "library_events_setting" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
@@ -283,6 +297,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     URL="library_events_setting.html"
     target="_top"
     tooltip="library_events_setting"
+  ];
+  "library_ill_item_type" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="120" HEIGHT="16"><B>library_ill_item_type</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_ill_item_type.html"
+    target="_top"
+    tooltip="library_ill_item_type"
   ];
   "library_links" [
    label=<
@@ -344,7 +369,7 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
       <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="89" HEIGHT="16"><B>library_themes</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">1 row</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
     URL="library_themes.html"
     target="_top"
@@ -382,6 +407,17 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     URL="library_web_builder_portal_page.html"
     target="_top"
     tooltip="library_web_builder_portal_page"
+  ];
+  "library_web_builder_quick_poll" [
+   label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="182" HEIGHT="16"><B>library_web_builder_quick_poll</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+    </TABLE>>
+    URL="library_web_builder_quick_poll.html"
+    target="_top"
+    tooltip="library_web_builder_quick_poll"
   ];
   "library_web_builder_resource" [
    label=<
@@ -537,15 +573,15 @@ digraph "twoDegreesRelationshipsDiagramImplied" {
     target="_top"
     tooltip="web_builder_custom_from_submission"
   ];
-  "web_builder_menu" [
+  "web_builder_quick_poll_submission" [
    label=<
     <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0" BGCOLOR="#ffffff">
-      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="112" HEIGHT="16"><B>web_builder_menu</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
+      <TR><TD COLSPAN="3"  BGCOLOR="#f5f5f5"><TABLE BORDER="0" CELLSPACING="0"><TR><TD ALIGN="LEFT" FIXEDSIZE="TRUE" WIDTH="210" HEIGHT="16"><B>web_builder_quick_poll_submission</B></TD><TD ALIGN="RIGHT">[table]</TD></TR></TABLE></TD></TR>
       <TR><TD PORT="elipses" COLSPAN="3" ALIGN="LEFT">...</TD></TR>
-      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 1</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
+      <TR><TD ALIGN="LEFT" BGCOLOR="#ffffff">&lt; 2</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">0 rows</TD><TD ALIGN="RIGHT" BGCOLOR="#ffffff">  </TD></TR>
     </TABLE>>
-    URL="web_builder_menu.html"
+    URL="web_builder_quick_poll_submission.html"
     target="_top"
-    tooltip="web_builder_menu"
+    tooltip="web_builder_quick_poll_submission"
   ];
 }
