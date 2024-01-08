@@ -1,4 +1,4 @@
-iame: Build Aspen SchemaSpy
+name: Build Aspen SchemaSpy
 
 on:
   push:
