@@ -1,4 +1,4 @@
-name: Build Aspen SchemaSpy
+iame: Build Aspen SchemaSpy
 
 on:
   push:
@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     services:
       db:
-        image: mariadb
+        image: mariadb:11.2.2
         env:
           MARIADB_ROOT_PASSWORD: password
           MARIADB_DATABASE: aspen
@@ -47,6 +47,8 @@ jobs:
         run: docker ps
       - name: Get schema file
         run: wget https://raw.githubusercontent.com/mdnoble73/aspen-discovery/${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }}/install/aspen.sql
+      - name: cat schema file
+        run: cat aspen.sql
       - name: Setup DB
         run: docker exec -i mydb sh -c 'exec mariadb -uroot -ppassword aspen' < aspen.sql
       - name: Path to build dir
