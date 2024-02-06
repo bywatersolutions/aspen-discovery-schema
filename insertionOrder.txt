@@ -236,6 +236,7 @@ indexed_item_type
 indexed_language
 indexed_location_code
 indexed_physical_description
+indexed_place_of_publication
 indexed_publication_date
 indexed_publisher
 indexed_record_source

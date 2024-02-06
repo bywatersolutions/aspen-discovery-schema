@@ -170,6 +170,7 @@ indexed_shelf_location
 indexed_record_source
 indexed_publisher
 indexed_publication_date
+indexed_place_of_publication
 indexed_physical_description
 indexed_location_code
 indexed_language
