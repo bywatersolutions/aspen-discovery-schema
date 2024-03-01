@@ -3317,7 +3317,7 @@
       </table>
       <table catalog="aspen" name="indexed_place_of_publication" numRows="0" remarks="" type="TABLE">
          <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="id" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
-         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="placeOfPublication" nullable="true" remarks="" size="1000" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="NULL" digits="0" id="1" name="placeOfPublication" nullable="true" remarks="" size="500" type="VARCHAR" typeCode="12"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="indexed_place_of_publication_s_pk" unique="true">
             <column ascending="true" name="id"/>
