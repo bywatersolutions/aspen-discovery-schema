@@ -304,6 +304,7 @@ placard_language
 placard_location
 placard_trigger
 placards
+processes_to_stop
 propay_settings
 ptype
 ptype_restricted_locations

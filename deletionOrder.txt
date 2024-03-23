@@ -103,6 +103,7 @@ quipu_ecard_setting
 ptype_restricted_locations
 ptype
 propay_settings
+processes_to_stop
 placards
 placard_trigger
 placard_location
