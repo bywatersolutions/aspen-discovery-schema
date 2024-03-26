@@ -4003,23 +4003,6 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="selfRegistrationUserProfile">selfRegistrationUserProfile</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>20</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>&#39;SELFREG&#39;</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="aciSpeedpaySettingId">aciSpeedpaySettingId</span></td>
                                     <td>INT</td>
                                     <td>10</td>
@@ -4360,40 +4343,6 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="promptForParentInSelfReg">promptForParentInSelfReg</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title=''></td>
-                                    <td title=''></td>
-                                    <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="promptForSMSNoticesInSelfReg">promptForSMSNoticesInSelfReg</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title=''></td>
-                                    <td title=''></td>
-                                    <td>0</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
                                     <td><span id="selfRegRequirePhone">selfRegRequirePhone</span></td>
                                     <td>TINYINT</td>
                                     <td>3</td>
@@ -4570,23 +4519,6 @@
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>-1</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="cityStateField">cityStateField</span></td>
-                                    <td>TINYINT</td>
-                                    <td>3</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>0</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -5226,6 +5158,125 @@
                                     </td>
                                     <td></td>
                                 </tr>
+                                <tr>
+                                    <td><span id="summonSettingsId">summonSettingsId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>-1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="summonApiId">summonApiId</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>50</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="summonApiPassword">summonApiPassword</span></td>
+                                    <td>VARCHAR</td>
+                                    <td>50</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>NULL</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="showPaymentHistory">showPaymentHistory</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="deletePaymentHistoryOlderThan">deletePaymentHistoryOlderThan</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="showHoldPosition">showHoldPosition</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>1</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td><span id="minSelfRegAge">minSelfRegAge</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
+                                    <td title='nullable'>√</td>
+                                    <td title=''></td>
+                                    <td>0</td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td>
+                                        <table border='0' cellspacing='0' cellpadding='0'>
+                                        </table>
+                                    </td>
+                                    <td></td>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>
@@ -5298,14 +5349,14 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="library.html" target="_top" title="library" alt="" coords="5,5,651,8552">
+<area shape="rect" id="node1" href="library.html" target="_top" title="library" alt="" coords="5,5,651,8640">
 </map>
                                         <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/library.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                     <div class="chart tab-pane " id="oneimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagramImplied" name="oneDegreeRelationshipsDiagramImplied">
 <area shape="rect" id="node1" href="aspen_lida_notifications_library.html" target="_top" title="aspen_lida_notifications_library" alt="" coords="991,5,1322,152">
-<area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="275,3459,920,12005">
+<area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="275,3459,920,12093">
 <area shape="rect" id="node12" href="donations.html" target="_top" title="donations" alt="" coords="5,9005,231,9123">
 <area shape="rect" id="node3" href="aspen_lida_quick_searches.html" target="_top" title="aspen_lida_quick_searches" alt="" coords="1011,169,1302,316">
 <area shape="rect" id="node4" href="browse_category.html" target="_top" title="browse_category" alt="" coords="1039,333,1275,539">
@@ -5352,54 +5403,53 @@
                                     <div class="chart tab-pane " id="twoimpliedDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="twoDegreesRelationshipsDiagramImplied" name="twoDegreesRelationshipsDiagramImplied">
 <area shape="rect" id="node1" href="aspen_lida_notifications_library.html" target="_top" title="aspen_lida_notifications_library" alt="" coords="991,3049,1322,3196">
-<area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="275,3404,920,11951">
-<area shape="rect" id="node8" href="donations.html" target="_top" title="donations" alt="" coords="5,3191,231,3308">
+<area shape="rect" id="node2" href="library.html" target="_top" title="library" alt="" coords="275,3404,920,12039">
+<area shape="rect" id="node8" href="donations.html" target="_top" title="donations" alt="" coords="5,10503,231,10620">
 <area shape="rect" id="node3" href="aspen_lida_quick_searches.html" target="_top" title="aspen_lida_quick_searches" alt="" coords="1011,3213,1302,3360">
-<area shape="rect" id="node4" href="browse_category.html" target="_top" title="browse_category" alt="" coords="1039,10621,1275,10827">
-<area shape="rect" id="node5" href="user.html" target="_top" title="user" alt="" coords="533,12179,662,12267">
+<area shape="rect" id="node4" href="browse_category.html" target="_top" title="browse_category" alt="" coords="1039,10855,1275,11060">
+<area shape="rect" id="node5" href="user.html" target="_top" title="user" alt="" coords="533,12477,662,12565">
 <area shape="rect" id="node6" href="collection_spotlights.html" target="_top" title="collection_spotlights" alt="" coords="1035,3377,1278,3524">
-<area shape="rect" id="node7" href="donations_dedicate_type.html" target="_top" title="donations_dedicate_type" alt="" coords="459,2983,736,3071">
-<area shape="rect" id="node9" href="donations_earmark.html" target="_top" title="donations_earmark" alt="" coords="480,3088,715,3176">
-<area shape="rect" id="node10" href="donations_form_fields.html" target="_top" title="donations_form_fields" alt="" coords="469,3193,725,3281">
-<area shape="rect" id="node11" href="donations_value.html" target="_top" title="donations_value" alt="" coords="493,3299,702,3387">
-<area shape="rect" id="node12" href="event_library_map_values.html" target="_top" title="event_library_map_values" alt="" coords="1014,3541,1299,3717">
-<area shape="rect" id="node13" href="greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="1022,3735,1291,3881">
-<area shape="rect" id="node14" href="holiday.html" target="_top" title="holiday" alt="" coords="1087,3899,1226,4075">
-<area shape="rect" id="node15" href="hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="1013,4092,1301,4239">
-<area shape="rect" id="node16" href="host_information.html" target="_top" title="host_information" alt="" coords="1048,4256,1265,4403">
-<area shape="rect" id="node17" href="javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="1015,4420,1299,4572">
-<area shape="rect" id="node18" href="library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="1009,6683,1304,6835">
-<area shape="rect" id="node19" href="scope.html" target="_top" title="scope" alt="" coords="535,11968,660,12056">
-<area shape="rect" id="node20" href="library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="985,4589,1329,4736">
-<area shape="rect" id="node21" href="library_email_template.html" target="_top" title="library_email_template" alt="" coords="1025,4753,1289,4905">
-<area shape="rect" id="node22" href="library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="1029,4923,1284,5128">
-<area shape="rect" id="node23" href="library_ill_item_type.html" target="_top" title="library_ill_item_type" alt="" coords="1037,5145,1277,5292">
-<area shape="rect" id="node24" href="library_links.html" target="_top" title="library_links" alt="" coords="1021,5309,1292,5456">
-<area shape="rect" id="node25" href="library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="988,5473,1325,5625">
-<area shape="rect" id="node26" href="library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="1013,5643,1301,5819">
-<area shape="rect" id="node27" href="library_search_source.html" target="_top" title="library_search_source" alt="" coords="1031,5836,1283,5983">
-<area shape="rect" id="node28" href="library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="1023,9252,1290,9404">
-<area shape="rect" id="node29" href="sideloads.html" target="_top" title="sideloads" alt="" coords="520,12073,675,12161">
-<area shape="rect" id="node30" href="library_themes.html" target="_top" title="library_themes" alt="" coords="1057,6000,1256,6176">
-<area shape="rect" id="node31" href="library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="993,6193,1321,6345">
-<area shape="rect" id="node32" href="library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="983,6363,1331,6515">
-<area shape="rect" id="node33" href="library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="989,5,1325,157">
-<area shape="rect" id="node34" href="library_web_builder_quick_poll.html" target="_top" title="library_web_builder_quick_poll" alt="" coords="995,175,1318,351">
-<area shape="rect" id="node35" href="library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="1000,368,1313,520">
-<area shape="rect" id="node36" href="library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="1018,537,1295,689">
-<area shape="rect" id="node37" href="location.html" target="_top" title="location" alt="" coords="964,707,1349,971">
-<area shape="rect" id="node38" href="materials_request.html" target="_top" title="materials_request" alt="" coords="1033,988,1281,1369">
-<area shape="rect" id="node39" href="materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="976,1387,1337,1563">
-<area shape="rect" id="node40" href="materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="997,1580,1317,1727">
-<area shape="rect" id="node41" href="materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="1009,1744,1304,1891">
-<area shape="rect" id="node42" href="materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="1017,1908,1297,2143">
-<area shape="rect" id="node43" href="materials_request_usage.html" target="_top" title="materials_request_usage" alt="" coords="1018,2160,1295,2307">
-<area shape="rect" id="node44" href="overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="981,2324,1333,2529">
-<area shape="rect" id="node45" href="placard_library.html" target="_top" title="placard_library" alt="" coords="1057,2547,1256,2699">
-<area shape="rect" id="node46" href="staff_members.html" target="_top" title="staff_members" alt="" coords="1057,2716,1256,2863">
-<area shape="rect" id="node47" href="system_message_library.html" target="_top" title="system_message_library" alt="" coords="1021,2880,1293,3032">
-<area shape="rect" id="node48" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="964,11444,1349,11649">
-<area shape="rect" id="node49" href="web_builder_quick_poll_submission.html" target="_top" title="web_builder_quick_poll_submission" alt="" coords="977,11967,1337,12143">
+<area shape="rect" id="node7" href="donations_dedicate_type.html" target="_top" title="donations_dedicate_type" alt="" coords="459,12056,736,12144">
+<area shape="rect" id="node9" href="donations_earmark.html" target="_top" title="donations_earmark" alt="" coords="480,12161,715,12249">
+<area shape="rect" id="node10" href="donations_value.html" target="_top" title="donations_value" alt="" coords="493,3299,702,3387">
+<area shape="rect" id="node11" href="event_library_map_values.html" target="_top" title="event_library_map_values" alt="" coords="1014,3541,1299,3717">
+<area shape="rect" id="node12" href="greenhouse_cache.html" target="_top" title="greenhouse_cache" alt="" coords="1022,3735,1291,3881">
+<area shape="rect" id="node13" href="holiday.html" target="_top" title="holiday" alt="" coords="1087,3899,1226,4075">
+<area shape="rect" id="node14" href="hoopla_settings.html" target="_top" title="hoopla_settings" alt="" coords="1013,4092,1301,4239">
+<area shape="rect" id="node15" href="host_information.html" target="_top" title="host_information" alt="" coords="1048,4256,1265,4403">
+<area shape="rect" id="node16" href="javascript_snippet_library.html" target="_top" title="javascript_snippet_library" alt="" coords="1015,4420,1299,4572">
+<area shape="rect" id="node17" href="library_cloud_library_scope.html" target="_top" title="library_cloud_library_scope" alt="" coords="1009,6692,1304,6844">
+<area shape="rect" id="node18" href="scope.html" target="_top" title="scope" alt="" coords="535,12267,660,12355">
+<area shape="rect" id="node19" href="library_combined_results_section.html" target="_top" title="library_combined_results_section" alt="" coords="985,4589,1329,4736">
+<area shape="rect" id="node20" href="library_email_template.html" target="_top" title="library_email_template" alt="" coords="1025,4753,1289,4905">
+<area shape="rect" id="node21" href="library_events_setting.html" target="_top" title="library_events_setting" alt="" coords="1029,4923,1284,5128">
+<area shape="rect" id="node22" href="library_ill_item_type.html" target="_top" title="library_ill_item_type" alt="" coords="1037,5145,1277,5292">
+<area shape="rect" id="node23" href="library_links.html" target="_top" title="library_links" alt="" coords="1021,5309,1292,5456">
+<area shape="rect" id="node24" href="library_open_archives_collection.html" target="_top" title="library_open_archives_collection" alt="" coords="988,5473,1325,5625">
+<area shape="rect" id="node25" href="library_records_to_include.html" target="_top" title="library_records_to_include" alt="" coords="1013,5643,1301,5819">
+<area shape="rect" id="node26" href="library_search_source.html" target="_top" title="library_search_source" alt="" coords="1031,5836,1283,5983">
+<area shape="rect" id="node27" href="library_sideload_scopes.html" target="_top" title="library_sideload_scopes" alt="" coords="1023,9411,1290,9563">
+<area shape="rect" id="node28" href="sideloads.html" target="_top" title="sideloads" alt="" coords="520,12372,675,12460">
+<area shape="rect" id="node29" href="library_themes.html" target="_top" title="library_themes" alt="" coords="1057,6000,1256,6176">
+<area shape="rect" id="node30" href="library_web_builder_basic_page.html" target="_top" title="library_web_builder_basic_page" alt="" coords="993,6193,1321,6345">
+<area shape="rect" id="node31" href="library_web_builder_custom_form.html" target="_top" title="library_web_builder_custom_form" alt="" coords="983,6363,1331,6515">
+<area shape="rect" id="node32" href="library_web_builder_portal_page.html" target="_top" title="library_web_builder_portal_page" alt="" coords="989,5,1325,157">
+<area shape="rect" id="node33" href="library_web_builder_quick_poll.html" target="_top" title="library_web_builder_quick_poll" alt="" coords="995,175,1318,351">
+<area shape="rect" id="node34" href="library_web_builder_resource.html" target="_top" title="library_web_builder_resource" alt="" coords="1000,368,1313,520">
+<area shape="rect" id="node35" href="library_website_indexing.html" target="_top" title="library_website_indexing" alt="" coords="1018,537,1295,689">
+<area shape="rect" id="node36" href="location.html" target="_top" title="location" alt="" coords="964,707,1349,971">
+<area shape="rect" id="node37" href="materials_request.html" target="_top" title="materials_request" alt="" coords="1033,988,1281,1369">
+<area shape="rect" id="node38" href="materials_request_fields_to_display.html" target="_top" title="materials_request_fields_to_display" alt="" coords="976,1387,1337,1563">
+<area shape="rect" id="node39" href="materials_request_form_fields.html" target="_top" title="materials_request_form_fields" alt="" coords="997,1580,1317,1727">
+<area shape="rect" id="node40" href="materials_request_formats.html" target="_top" title="materials_request_formats" alt="" coords="1009,1744,1304,1891">
+<area shape="rect" id="node41" href="materials_request_status.html" target="_top" title="materials_request_status" alt="" coords="1017,1908,1297,2143">
+<area shape="rect" id="node42" href="materials_request_usage.html" target="_top" title="materials_request_usage" alt="" coords="1018,2160,1295,2307">
+<area shape="rect" id="node43" href="overdrive_api_product_availability.html" target="_top" title="overdrive_api_product_availability" alt="" coords="981,2324,1333,2529">
+<area shape="rect" id="node44" href="placard_library.html" target="_top" title="placard_library" alt="" coords="1057,2547,1256,2699">
+<area shape="rect" id="node45" href="staff_members.html" target="_top" title="staff_members" alt="" coords="1057,2716,1256,2863">
+<area shape="rect" id="node46" href="system_message_library.html" target="_top" title="system_message_library" alt="" coords="1021,2880,1293,3032">
+<area shape="rect" id="node47" href="web_builder_custom_from_submission.html" target="_top" title="web_builder_custom_from_submission" alt="" coords="964,11715,1349,11920">
+<area shape="rect" id="node48" href="web_builder_quick_poll_submission.html" target="_top" title="web_builder_quick_poll_submission" alt="" coords="977,12256,1337,12432">
 </map>
                                         <a name='diagram'><img id="twoimpliedDegreeImg" src="../diagrams/tables/library.implied2degrees.png" usemap="#twoDegreesRelationshipsDiagramImplied" class="diagram" border="0" align="left"></a>
                                     </div>

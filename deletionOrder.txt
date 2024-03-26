@@ -34,6 +34,8 @@ vdx_hold_groups
 vdx_hold_group_location
 vdx_form
 variables
+usps_settings
+user_payment_lines
 user_list_entry
 user_list
 user_link_blocks
@@ -57,11 +59,14 @@ ticket_severity_feed
 ticket_queue_feed
 ticket_component_feed
 themes
+text_block_translation
 system_variables
 system_messages
 system_message_location
 syndetics_settings
 syndetics_data
+summon_usage
+summon_settings
 stripe_settings
 status_map_values
 sso_setting
@@ -81,6 +86,7 @@ shared_session
 shared_content
 session
 sendgrid_settings
+self_registration_tos
 self_registration_form
 self_reg_form_values
 search_update_log
@@ -114,6 +120,7 @@ paypal_payflow_settings
 palace_project_title
 palace_project_settings
 palace_project_scopes
+palace_project_record_usage
 palace_project_export_log
 overdrive_stats
 overdrive_settings
@@ -193,6 +200,7 @@ hoopla_record_usage
 hoopla_export_log
 hoopla_export
 hide_subject_facets
+hide_series
 grouped_work_variation
 grouped_work_test_search
 grouped_work_scheduled_index
@@ -316,10 +324,12 @@ browse_category
 user_work_review
 user_website_usage
 user_vdx_request
+user_summon_usage
 user_sideload_usage
 user_reading_history_work
 user_rbdigital_usage
 user_payments
+user_palace_project_usage
 user_overdrive_usage
 user_open_archives_usage
 user_notifications
@@ -386,7 +396,6 @@ event_library_map_values
 ebscohost_database
 ebsco_research_starter_dismissals
 donations_value
-donations_form_fields
 donations_earmark
 donations_dedicate_type
 development_task_ticket_link

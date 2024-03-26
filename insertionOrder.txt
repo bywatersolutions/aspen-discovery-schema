@@ -21,7 +21,6 @@ development_task_qa_link
 development_task_ticket_link
 donations_dedicate_type
 donations_earmark
-donations_form_fields
 donations_value
 ebsco_research_starter_dismissals
 ebscohost_database
@@ -88,10 +87,12 @@ user_notification_tokens
 user_notifications
 user_open_archives_usage
 user_overdrive_usage
+user_palace_project_usage
 user_payments
 user_rbdigital_usage
 user_reading_history_work
 user_sideload_usage
+user_summon_usage
 user_vdx_request
 user_website_usage
 user_work_review
@@ -215,6 +216,7 @@ grouped_work_records
 grouped_work_scheduled_index
 grouped_work_test_search
 grouped_work_variation
+hide_series
 hide_subject_facets
 hoopla_export
 hoopla_export_log
@@ -294,6 +296,7 @@ overdrive_scopes
 overdrive_settings
 overdrive_stats
 palace_project_export_log
+palace_project_record_usage
 palace_project_scopes
 palace_project_settings
 palace_project_title
@@ -327,6 +330,7 @@ search_stats_new
 search_update_log
 self_reg_form_values
 self_registration_form
+self_registration_tos
 sendgrid_settings
 session
 shared_content
@@ -346,11 +350,14 @@ sso_mapping
 sso_setting
 status_map_values
 stripe_settings
+summon_settings
+summon_usage
 syndetics_data
 syndetics_settings
 system_message_location
 system_messages
 system_variables
+text_block_translation
 themes
 ticket_component_feed
 ticket_queue_feed
@@ -374,6 +381,8 @@ user_link
 user_link_blocks
 user_list
 user_list_entry
+user_payment_lines
+usps_settings
 variables
 vdx_form
 vdx_hold_group_location
