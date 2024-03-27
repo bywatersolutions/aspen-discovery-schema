@@ -1370,6 +1370,7 @@
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="7" name="registrationModalBody" nullable="true" remarks="" size="16777215" type="MEDIUMTEXT" typeCode="-1"/>
          <column autoUpdated="false" defaultValue="365" digits="0" id="8" name="numberOfDaysToIndex" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <column autoUpdated="false" defaultValue="NULL" digits="0" id="9" name="registrationModalBodyApp" nullable="true" remarks="" size="500" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="0" digits="0" id="10" name="lastUpdateOfAllEvents" nullable="true" remarks="" size="10" type="INT" typeCode="4"/>
          <primaryKey column="id" sequenceNumberInPK="1"/>
          <index name="communico_settings_s_pk" unique="true">
             <column ascending="true" name="id"/>
@@ -1647,7 +1648,7 @@
             <column ascending="true" name="id"/>
          </index>
       </table>
-      <table catalog="aspen" name="db_update" numRows="1710" remarks="" type="TABLE">
+      <table catalog="aspen" name="db_update" numRows="1712" remarks="" type="TABLE">
          <column autoUpdated="false" defaultValue="null" digits="0" id="0" name="update_key" nullable="false" remarks="" size="100" type="VARCHAR" typeCode="12"/>
          <column autoUpdated="false" defaultValue="current_timestamp()" digits="0" id="1" name="date_run" nullable="false" remarks="" size="19" type="TIMESTAMP" typeCode="93"/>
          <primaryKey column="update_key" sequenceNumberInPK="1"/>
