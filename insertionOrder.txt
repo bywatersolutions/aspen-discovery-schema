@@ -295,11 +295,13 @@ overdrive_record_usage
 overdrive_scopes
 overdrive_settings
 overdrive_stats
+palace_project_collections
 palace_project_export_log
 palace_project_record_usage
 palace_project_scopes
 palace_project_settings
 palace_project_title
+palace_project_title_availability
 paypal_payflow_settings
 paypal_settings
 permissions

@@ -117,11 +117,13 @@ placard_language
 permissions
 paypal_settings
 paypal_payflow_settings
+palace_project_title_availability
 palace_project_title
 palace_project_settings
 palace_project_scopes
 palace_project_record_usage
 palace_project_export_log
+palace_project_collections
 overdrive_stats
 overdrive_settings
 overdrive_scopes

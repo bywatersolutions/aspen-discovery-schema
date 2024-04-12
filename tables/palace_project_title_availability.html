@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>palace_project_title - aspen.aspen</title>
+        <title>palace_project_title_availability - aspen.aspen</title>
         <!-- Tell the browser to be responsive to screen width -->
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <link rel="icon" type="image/png" sizes="16x16" href="../favicon.png">
@@ -73,7 +73,7 @@
             <div class="content-wrapper">
                 <!-- Content Header (Page header) -->
                 <section class="content-header">
-                    <h1>palace_project_title</h1><p><span id="recordNumber">0</span> rows</p><br />
+                    <h1>palace_project_title_availability</h1><p><span id="recordNumber">0</span> rows</p><br />
                 </section>
                 <!-- Main content -->
                 <section class="content">
@@ -126,12 +126,12 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="palaceProjectId">palaceProjectId</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>125</td>
-                                    <td title='nullable'>√</td>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="titleId">titleId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
                                     <td title=''></td>
-                                    <td>NULL</td>
+                                    <td title=''></td>
+                                    <td>null</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -143,12 +143,12 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="title">title</span></td>
-                                    <td>VARCHAR</td>
-                                    <td>750</td>
-                                    <td title='nullable'>√</td>
+                                    <td class='indexedColumn' title='Indexed'><i class='fa fa-sitemap fa-rotate-120' style='padding-right: 5px;'></i><span id="collectionId">collectionId</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
                                     <td title=''></td>
-                                    <td>NULL</td>
+                                    <td title=''></td>
+                                    <td>null</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -160,12 +160,12 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="rawChecksum">rawChecksum</span></td>
-                                    <td>BIGINT</td>
-                                    <td>19</td>
-                                    <td title='nullable'>√</td>
+                                    <td><span id="lastSeen">lastSeen</span></td>
+                                    <td>INT</td>
+                                    <td>10</td>
                                     <td title=''></td>
-                                    <td>NULL</td>
+                                    <td title=''></td>
+                                    <td>null</td>
                                     <td>
                                         <table border='0' cellspacing='0' cellpadding='0'>
                                         </table>
@@ -177,26 +177,9 @@
                                     <td></td>
                                 </tr>
                                 <tr>
-                                    <td><span id="rawResponse">rawResponse</span></td>
-                                    <td>MEDIUMBLOB</td>
-                                    <td>16777215</td>
-                                    <td title='nullable'>√</td>
-                                    <td title=''></td>
-                                    <td>NULL</td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td>
-                                        <table border='0' cellspacing='0' cellpadding='0'>
-                                        </table>
-                                    </td>
-                                    <td></td>
-                                </tr>
-                                <tr>
-                                    <td><span id="dateFirstDetected">dateFirstDetected</span></td>
-                                    <td>BIGINT</td>
-                                    <td>19</td>
+                                    <td><span id="deleted">deleted</span></td>
+                                    <td>TINYINT</td>
+                                    <td>3</td>
                                     <td title='nullable'>√</td>
                                     <td title=''></td>
                                     <td>NULL</td>
@@ -241,22 +224,22 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> palace_project_title_s_pk</td>
+                                    <td class='primaryKey' title='Primary Key'><i class='icon ion-key iconkey'></i> palace_project_title_availability_s_pk</td>
                                     <td>Primary key</td>
                                     <td><span title='Ascending'>Asc</span></td>
                                     <td>id</td>
-                                </tr>
-                                <tr>
-                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> palaceProjectId</td>
-                                    <td>Must be unique</td>
-                                    <td><span title='Ascending'>Asc</span></td>
-                                    <td>palaceProjectId</td>
                                 </tr>
                                 <tr>
                                     <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> PRIMARY</td>
                                     <td>Must be unique</td>
                                     <td><span title='Ascending'>Asc</span></td>
                                     <td>id</td>
+                                </tr>
+                                <tr>
+                                    <td class='uniqueKey' title='Unique Key'><i class='icon ion-key iconkey'></i> titleId</td>
+                                    <td>Must be unique</td>
+                                    <td><span title='Ascending'>Asc</span>/<span title='Ascending'>Asc</span></td>
+                                    <td>titleId + collectionId</td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -280,9 +263,9 @@
                                 <div class="tab-content no-padding">
                                     <div class="chart tab-pane active" id="oneDegreeImg-chart" style="position: relative; overflow-x:auto;">
                                         <map id="oneDegreeRelationshipsDiagram" name="oneDegreeRelationshipsDiagram">
-<area shape="rect" id="node1" href="palace_project_title.html" target="_top" title="palace_project_title" alt="" coords="5,5,387,251">
+<area shape="rect" id="node1" href="palace_project_title_availability.html" target="_top" title="palace_project_title_availability" alt="" coords="5,5,379,221">
 </map>
-                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/palace_project_title.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
+                                        <a name='diagram'><img id="oneDegreeImg" src="../diagrams/tables/palace_project_title_availability.1degree.png" usemap="#oneDegreeRelationshipsDiagram" class="diagram" border="0" align="left"></a>
                                     </div>
                                 </div>
                             </div>
