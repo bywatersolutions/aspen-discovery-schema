@@ -30,7 +30,7 @@ jobs:
       - name: Export additional variables
         id: extracted_variables
         run: |
-            export ASPEN_DEFAULT_BRANCH=$(curl -s https://api.github.com/repos/mdnoble73/aspen-discovery | jq .default_branch)
+            export ASPEN_DEFAULT_BRANCH=$(curl -s https://api.github.com/repos/Aspen-Discovery/aspen-discovery | jq .default_branch)
             echo "ASPEN_DEFAULT_BRANCH: $ASPEN_DEFAULT_BRANCH"
             echo ::set-output name=ASPEN_DEFAULT_BRANCH::$ASPEN_DEFAULT_BRANCH
 
@@ -46,7 +46,7 @@ jobs:
       - name: List docker containers
         run: docker ps
       - name: Get schema file
-        run: wget https://raw.githubusercontent.com/mdnoble73/aspen-discovery/${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }}/install/aspen.sql
+        run: wget https://raw.githubusercontent.com/Aspen-Discovery/aspen-discovery/${{ steps.extracted_variables.outputs.ASPEN_DEFAULT_BRANCH }}/install/aspen.sql
       - name: cat schema file
         run: cat aspen.sql
       - name: Fix aspen.sql collation
